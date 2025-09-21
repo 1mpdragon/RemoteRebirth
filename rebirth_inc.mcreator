@@ -1,0 +1,208 @@
+{
+  "mod_elements": [
+    {
+      "name": "Vacadachuva",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacadachuva",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/vacadachuva_spawn_egg.json",
+          "src/main/java/net/mcreator/rebirthinc/entity/model/VacadachuvaModel.java",
+          "src/main/resources/data/rebirth_inc/forge/biome_modifier/vacadachuva_biome_modifier.json",
+          "src/main/java/net/mcreator/rebirthinc/client/renderer/VacadachuvaRenderer.java",
+          "src/main/java/net/mcreator/rebirthinc/entity/VacadachuvaEntity.java"
+        ]
+      },
+      "path": "~/mobs"
+    },
+    {
+      "name": "Teste",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teste",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Minhoca",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minhoca",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/MinhocaItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/minhoca.json"
+        ]
+      }
+    },
+    {
+      "name": "VacadachuvaRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacadachuva_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/VacadachuvaRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Feedsize",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feedsize",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Porcodemusgo",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "porcodemusgo",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/entity/PorcodemusgoEntity.java",
+          "src/main/resources/assets/rebirth_inc/models/item/porcodemusgo_spawn_egg.json",
+          "src/main/java/net/mcreator/rebirthinc/client/renderer/PorcodemusgoRenderer.java",
+          "src/main/java/net/mcreator/rebirthinc/entity/model/PorcodemusgoModel.java",
+          "src/main/resources/data/rebirth_inc/forge/biome_modifier/porcodemusgo_biome_modifier.json"
+        ]
+      },
+      "path": "~/mobs"
+    },
+    {
+      "name": "PorcodemusgoEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "porcodemusgo_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/PorcodemusgoEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/mobs"
+    },
+    {
+      "name": "Damagetaken",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damagetaken",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/DamagetakenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/mobs"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "damage_delt",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {
+    "CUSTOM:Teste": [
+      "Minhoca",
+      "Vacadachuva",
+      "Porcodemusgo"
+    ]
+  },
+  "language_map": {
+    "en_us": {
+      "item.rebirth_inc.porcodemusgo_spawn_egg": "Porco de musgo Spawn Egg",
+      "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
+      "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
+      "item_group.rebirth_inc.teste": "Teste",
+      "item.rebirth_inc.minhoca": "Minhoca",
+      "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
+      "attribute.rebirth_inc.feedsize": "vaca da chuva feeding"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "mobs",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "rebirth_inc",
+    "modName": "Rebirth_inc",
+    "version": "1.0.0",
+    "author": "isaac, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "pehkui",
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.rebirthinc"
+  },
+  "mcreatorVersion": 202400452410
+}

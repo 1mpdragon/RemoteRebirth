@@ -1,0 +1,17 @@
+{
+  "_fv": 73,
+  "_type": "attribute",
+  "definition": {
+    "name": "vaca da chuva feeding",
+    "minValue": 0.0,
+    "maxValue": 10.0,
+    "defaultValue": 0.0,
+    "addToAllEntities": false,
+    "addToPlayers": false,
+    "entities": [
+      {
+        "value": "CUSTOM:Vacadachuva"
+      }
+    ]
+  }
+}

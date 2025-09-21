@@ -1,0 +1,11 @@
+{
+  "_fv": 73,
+  "_type": "tab",
+  "definition": {
+    "name": "Teste",
+    "icon": {
+      "value": "CUSTOM:Vacadachuva.spawn_egg"
+    },
+    "showSearch": false
+  }
+}
