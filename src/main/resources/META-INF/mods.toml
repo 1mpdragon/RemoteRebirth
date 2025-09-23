@@ -33,6 +33,12 @@ authors="isaac, MCreator"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.rebirth_inc]]
+    modId="playeranimator"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
 # Start of user code block dependencies configuration
