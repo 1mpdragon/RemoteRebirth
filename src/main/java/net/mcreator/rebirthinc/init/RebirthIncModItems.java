@@ -11,7 +11,7 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.item.Item;
 
-import net.mcreator.rebirthinc.item.SememItem;
+import net.mcreator.rebirthinc.item.SemenItem;
 import net.mcreator.rebirthinc.item.NailItem;
 import net.mcreator.rebirthinc.item.MinhocaItem;
 import net.mcreator.rebirthinc.RebirthIncMod;
@@ -22,7 +22,7 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> MINHOCA = REGISTRY.register("minhoca", () -> new MinhocaItem());
 	public static final RegistryObject<Item> PORCODEMUSGO_SPAWN_EGG = REGISTRY.register("porcodemusgo_spawn_egg", () -> new ForgeSpawnEggItem(RebirthIncModEntities.PORCODEMUSGO, -13382656, -16738048, new Item.Properties()));
 	public static final RegistryObject<Item> NAIL = REGISTRY.register("nail", () -> new NailItem());
-	public static final RegistryObject<Item> SEMEM = REGISTRY.register("semem", () -> new SememItem());
+	public static final RegistryObject<Item> SEMEN_BUCKET = REGISTRY.register("semen_bucket", () -> new SemenItem());
 	// Start of user code block custom items
 	// End of user code block custom items
 }

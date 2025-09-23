@@ -203,15 +203,20 @@
       "path": "~/mobs"
     },
     {
-      "name": "Semem",
-      "type": "tool",
+      "name": "Semen",
+      "type": "fluid",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "semem",
+      "registry_name": "semen",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/rebirthinc/item/SememItem.java",
-          "src/main/resources/assets/rebirth_inc/models/item/semem.json"
+          "src/main/java/net/mcreator/rebirthinc/item/SemenItem.java",
+          "src/main/java/net/mcreator/rebirthinc/fluid/SemenFluid.java",
+          "src/main/resources/assets/rebirth_inc/blockstates/semen.json",
+          "src/main/java/net/mcreator/rebirthinc/fluid/types/SemenFluidType.java",
+          "src/main/resources/assets/rebirth_inc/models/block/semen.json",
+          "src/main/resources/assets/rebirth_inc/models/item/semen_bucket.json",
+          "src/main/java/net/mcreator/rebirthinc/block/SemenBlock.java"
         ]
       }
     }
@@ -226,11 +231,11 @@
   ],
   "sound_elements": [],
   "tag_elements": {
-    "ITEMS:minecraft:pickaxes": [
-      "~CUSTOM:Semem"
-    ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:Nail"
+    ],
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Semen"
     ]
   },
   "tab_element_order": {
@@ -245,12 +250,14 @@
     "en_us": {
       "item.rebirth_inc.nail": "Nail",
       "item.rebirth_inc.porcodemusgo_spawn_egg": "Porco de musgo Spawn Egg",
+      "block.rebirth_inc.semen": "Semen",
+      "item.rebirth_inc.semen_bucket": "Semen Bucket",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
       "item_group.rebirth_inc.teste": "Teste",
-      "item.rebirth_inc.semem": "gamer",
       "item.rebirth_inc.minhoca": "Minhoca",
       "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
+      "fluid.rebirth_inc.semen": "Semen",
       "attribute.rebirth_inc.feedsize": "vaca da chuva feeding"
     }
   },
