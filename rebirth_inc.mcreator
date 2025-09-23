@@ -130,14 +130,69 @@
         "files": [
           "src/main/java/net/mcreator/rebirthinc/procedures/DamagetakenProcedure.java"
         ],
+        "dependencies": []
+      },
+      "path": "~/mobs"
+    },
+    {
+      "name": "Nail",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nail",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/NailItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/nail.json"
+        ]
+      },
+      "path": "~/ferramenta"
+    },
+    {
+      "name": "PogoJump",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pogo_jump",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/PogoJumpProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "sourceentity",
             "type": "entity"
           },
           {
-            "name": "amount",
-            "type": "number"
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ferramenta"
+    },
+    {
+      "name": "PorcodemusgoRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "porcodemusgo_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/PorcodemusgoRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           },
           {
             "name": "world",
@@ -157,16 +212,22 @@
     }
   ],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:Nail"
+    ]
+  },
   "tab_element_order": {
     "CUSTOM:Teste": [
       "Minhoca",
       "Vacadachuva",
-      "Porcodemusgo"
+      "Porcodemusgo",
+      "Nail"
     ]
   },
   "language_map": {
     "en_us": {
+      "item.rebirth_inc.nail": "Nail",
       "item.rebirth_inc.porcodemusgo_spawn_egg": "Porco de musgo Spawn Egg",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
@@ -181,6 +242,10 @@
     "children": [
       {
         "name": "mobs",
+        "children": []
+      },
+      {
+        "name": "ferramenta",
         "children": []
       }
     ]

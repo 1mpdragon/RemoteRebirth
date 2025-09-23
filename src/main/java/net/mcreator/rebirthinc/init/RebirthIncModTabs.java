@@ -21,5 +21,6 @@ public class RebirthIncModTabs {
 				tabData.accept(RebirthIncModItems.MINHOCA.get());
 				tabData.accept(RebirthIncModItems.VACADACHUVA_SPAWN_EGG.get());
 				tabData.accept(RebirthIncModItems.PORCODEMUSGO_SPAWN_EGG.get());
+				tabData.accept(RebirthIncModItems.NAIL.get());
 			}).build());
 }
