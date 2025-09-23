@@ -201,6 +201,19 @@
         ]
       },
       "path": "~/mobs"
+    },
+    {
+      "name": "Semem",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "semem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/SememItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/semem.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -213,6 +226,9 @@
   ],
   "sound_elements": [],
   "tag_elements": {
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:Semem"
+    ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:Nail"
     ]
@@ -232,6 +248,7 @@
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
       "item_group.rebirth_inc.teste": "Teste",
+      "item.rebirth_inc.semem": "gamer",
       "item.rebirth_inc.minhoca": "Minhoca",
       "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
       "attribute.rebirth_inc.feedsize": "vaca da chuva feeding"
