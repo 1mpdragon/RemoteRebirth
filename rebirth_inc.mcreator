@@ -74,7 +74,8 @@
       "registry_name": "feedsize",
       "metadata": {
         "files": []
-      }
+      },
+      "path": "~/atributos"
     },
     {
       "name": "Porcodemusgo",
@@ -203,22 +204,37 @@
       "path": "~/mobs"
     },
     {
-      "name": "Semen",
-      "type": "fluid",
+      "name": "Death",
+      "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "semen",
+      "registry_name": "death",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/rebirthinc/item/SemenItem.java",
-          "src/main/java/net/mcreator/rebirthinc/fluid/SemenFluid.java",
-          "src/main/resources/assets/rebirth_inc/blockstates/semen.json",
-          "src/main/java/net/mcreator/rebirthinc/fluid/types/SemenFluidType.java",
-          "src/main/resources/assets/rebirth_inc/models/block/semen.json",
-          "src/main/resources/assets/rebirth_inc/models/item/semen_bucket.json",
-          "src/main/java/net/mcreator/rebirthinc/block/SemenBlock.java"
+          "src/main/java/net/mcreator/rebirthinc/procedures/DeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
         ]
       }
+    },
+    {
+      "name": "Dead",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dead",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/atributos"
     }
   ],
   "variable_elements": [
@@ -233,9 +249,6 @@
   "tag_elements": {
     "ITEMS:minecraft:swords": [
       "~CUSTOM:Nail"
-    ],
-    "BLOCKS:minecraft:replaceable": [
-      "~CUSTOM:Semen"
     ]
   },
   "tab_element_order": {
@@ -250,14 +263,12 @@
     "en_us": {
       "item.rebirth_inc.nail": "Nail",
       "item.rebirth_inc.porcodemusgo_spawn_egg": "Porco de musgo Spawn Egg",
-      "block.rebirth_inc.semen": "Semen",
-      "item.rebirth_inc.semen_bucket": "Semen Bucket",
+      "attribute.rebirth_inc.dead": "Dead",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
       "item_group.rebirth_inc.teste": "Teste",
       "item.rebirth_inc.minhoca": "Minhoca",
       "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
-      "fluid.rebirth_inc.semen": "Semen",
       "attribute.rebirth_inc.feedsize": "vaca da chuva feeding"
     }
   },
@@ -270,6 +281,10 @@
       },
       {
         "name": "ferramenta",
+        "children": []
+      },
+      {
+        "name": "atributos",
         "children": []
       }
     ]
