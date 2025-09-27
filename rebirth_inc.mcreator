@@ -38,7 +38,8 @@
           "src/main/java/net/mcreator/rebirthinc/item/MinhocaItem.java",
           "src/main/resources/assets/rebirth_inc/models/item/minhoca.json"
         ]
-      }
+      },
+      "path": "~/Itens"
     },
     {
       "name": "VacadachuvaRightClickedOnEntity",
@@ -65,7 +66,7 @@
           }
         ]
       },
-      "path": "~/mobs"
+      "path": "~/mobs/Procedure Mobs"
     },
     {
       "name": "Feedsize",
@@ -120,21 +121,7 @@
           }
         ]
       },
-      "path": "~/mobs"
-    },
-    {
-      "name": "Damagetaken",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "damagetaken",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/DamagetakenProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/mobs"
+      "path": "~/mobs/Procedure Mobs"
     },
     {
       "name": "Nail",
@@ -148,7 +135,7 @@
           "src/main/resources/assets/rebirth_inc/models/item/nail.json"
         ]
       },
-      "path": "~/ferramenta"
+      "path": "~/Itens/ferramenta"
     },
     {
       "name": "PogoJump",
@@ -171,7 +158,7 @@
           }
         ]
       },
-      "path": "~/ferramenta"
+      "path": "~/Itens/ferramenta"
     },
     {
       "name": "PorcodemusgoRightClickedOnEntity",
@@ -202,7 +189,7 @@
           }
         ]
       },
-      "path": "~/mobs"
+      "path": "~/mobs/Procedure Mobs"
     },
     {
       "name": "Death",
@@ -320,24 +307,26 @@
       "registry_name": "minhocalhau",
       "metadata": {
         "files": [
+          "src/main/resources/assets/rebirth_inc/blockstates/minhocalhau.json",
           "src/main/java/net/mcreator/rebirthinc/block/MinhocalhauBlock.java",
           "src/main/resources/assets/rebirth_inc/models/item/minhocalhau.json",
-          "src/main/resources/assets/rebirth_inc/blockstates/minhocalhau.json",
           "src/main/resources/assets/rebirth_inc/models/block/minhocalhau.json"
         ]
-      }
+      },
+      "path": "~/Blocos"
     },
     {
-      "name": "Minhoco",
+      "name": "MinhocalhauLootingdrop",
       "type": "loottable",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "minhoco",
+      "registry_name": "minhocalhau_lootingdrop",
       "metadata": {
         "files": [
           "src/main/resources/data/rebirth_inc/loot_tables/blocks/minhocalhau.json"
         ]
-      }
+      },
+      "path": "~/Blocos/lootDrop"
     }
   ],
   "variable_elements": [
@@ -385,11 +374,12 @@
     "children": [
       {
         "name": "mobs",
-        "children": []
-      },
-      {
-        "name": "ferramenta",
-        "children": []
+        "children": [
+          {
+            "name": "Procedure Mobs",
+            "children": []
+          }
+        ]
       },
       {
         "name": "atributos",
@@ -398,6 +388,24 @@
       {
         "name": "Sistema de Morte",
         "children": []
+      },
+      {
+        "name": "Blocos",
+        "children": [
+          {
+            "name": "lootDrop",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Itens",
+        "children": [
+          {
+            "name": "ferramenta",
+            "children": []
+          }
+        ]
       }
     ]
   },

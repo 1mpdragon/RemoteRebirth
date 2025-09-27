@@ -7,7 +7,7 @@
       {
         "minrolls": 1,
         "maxrolls": 1,
-        "minbonusrolls": 0,
+        "minbonusrolls": 1,
         "maxbonusrolls": 1,
         "hasbonusrolls": false,
         "entries": [
@@ -18,13 +18,22 @@
             },
             "weight": 1,
             "minCount": 0,
-            "maxCount": 3,
+            "maxCount": 2,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
             "explosionDecay": false,
-            "silkTouchMode": 2
-          },
+            "silkTouchMode": 0
+          }
+        ]
+      },
+      {
+        "minrolls": 1,
+        "maxrolls": 1,
+        "minbonusrolls": 1,
+        "maxbonusrolls": 1,
+        "hasbonusrolls": false,
+        "entries": [
           {
             "type": "item",
             "item": {
@@ -37,7 +46,7 @@
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
             "explosionDecay": false,
-            "silkTouchMode": 1
+            "silkTouchMode": 0
           }
         ]
       }

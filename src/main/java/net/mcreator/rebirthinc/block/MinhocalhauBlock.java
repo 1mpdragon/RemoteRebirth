@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class MinhocalhauBlock extends Block {
 	public MinhocalhauBlock() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.DIRT).sound(SoundType.GRAVEL).strength(1f, 10f).requiresCorrectToolForDrops().randomTicks());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.DIRT).sound(SoundType.GRAVEL).strength(0.5f, 10f).randomTicks());
 	}
 
 	@Override
