@@ -307,9 +307,9 @@
       "registry_name": "minhocalhau",
       "metadata": {
         "files": [
-          "src/main/resources/assets/rebirth_inc/blockstates/minhocalhau.json",
           "src/main/java/net/mcreator/rebirthinc/block/MinhocalhauBlock.java",
           "src/main/resources/assets/rebirth_inc/models/item/minhocalhau.json",
+          "src/main/resources/assets/rebirth_inc/blockstates/minhocalhau.json",
           "src/main/resources/assets/rebirth_inc/models/block/minhocalhau.json"
         ]
       },
@@ -327,6 +327,37 @@
         ]
       },
       "path": "~/Blocos/lootDrop"
+    },
+    {
+      "name": "MinhocalhauPCD",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minhocalhau_pcd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/MinhocalhauPCDProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/procedure blocos"
     }
   ],
   "variable_elements": [
@@ -334,6 +365,24 @@
       "name": "damage_delt",
       "type": "number",
       "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "sx",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "sy",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "sz",
+      "type": "number",
+      "scope": "map",
       "value": "0"
     }
   ],
@@ -394,6 +443,10 @@
         "children": [
           {
             "name": "lootDrop",
+            "children": []
+          },
+          {
+            "name": "procedure blocos",
             "children": []
           }
         ]
