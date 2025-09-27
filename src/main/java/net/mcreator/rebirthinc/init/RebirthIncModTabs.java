@@ -22,5 +22,6 @@ public class RebirthIncModTabs {
 				tabData.accept(RebirthIncModItems.PORCODEMUSGO_SPAWN_EGG.get());
 				tabData.accept(RebirthIncModItems.NAIL.get());
 				tabData.accept(RebirthIncModItems.MINHOCA.get());
+				tabData.accept(RebirthIncModBlocks.MINHOCALHAU.get().asItem());
 			}).build());
 }
