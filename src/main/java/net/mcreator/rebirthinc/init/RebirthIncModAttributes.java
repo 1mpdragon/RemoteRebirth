@@ -28,7 +28,7 @@ import java.util.List;
 public class RebirthIncModAttributes {
 	public static final DeferredRegister<Attribute> REGISTRY = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, RebirthIncMod.MODID);
 	public static final RegistryObject<Attribute> FEEDSIZE = REGISTRY.register("feedsize", () -> new RangedAttribute("attribute.rebirth_inc.feedsize", 0, 0, 10).setSyncable(true));
-	public static final RegistryObject<Attribute> DEAD = REGISTRY.register("dead", () -> new RangedAttribute("attribute.rebirth_inc.dead", 0, 0, 1).setSyncable(true));
+	public static final RegistryObject<Attribute> DEAD = REGISTRY.register("dead", () -> new RangedAttribute("attribute.rebirth_inc.dead", 0, 0, 6).setSyncable(true));
 
 	@SubscribeEvent
 	public static void addAttributes(EntityAttributeModificationEvent event) {

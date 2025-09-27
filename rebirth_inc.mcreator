@@ -64,7 +64,8 @@
             "type": "itemstack"
           }
         ]
-      }
+      },
+      "path": "~/mobs"
     },
     {
       "name": "Feedsize",
@@ -223,7 +224,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Sistema de Morte"
     },
     {
       "name": "Dead",
@@ -235,6 +237,80 @@
         "files": []
       },
       "path": "~/atributos"
+    },
+    {
+      "name": "DeathHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/DeathHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Sistema de Morte"
+    },
+    {
+      "name": "ReviveDeath",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "revive_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/command/ReviveDeathCommand.java"
+        ]
+      },
+      "path": "~/Sistema de Morte"
+    },
+    {
+      "name": "DeathCommand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/DeathCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Sistema de Morte"
+    },
+    {
+      "name": "OnDeath",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/OnDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Sistema de Morte"
     }
   ],
   "variable_elements": [
@@ -253,10 +329,10 @@
   },
   "tab_element_order": {
     "CUSTOM:Teste": [
-      "Minhoca",
       "Vacadachuva",
       "Porcodemusgo",
-      "Nail"
+      "Nail",
+      "Minhoca"
     ]
   },
   "language_map": {
@@ -285,6 +361,10 @@
       },
       {
         "name": "atributos",
+        "children": []
+      },
+      {
+        "name": "Sistema de Morte",
         "children": []
       }
     ]

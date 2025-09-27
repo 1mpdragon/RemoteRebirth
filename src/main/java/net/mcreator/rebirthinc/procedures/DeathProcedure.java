@@ -9,6 +9,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.rebirthinc.init.RebirthIncModAttributes;
+
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
@@ -29,7 +31,9 @@ public class DeathProcedure {
 			return;
 		if (entity instanceof Player) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.setHealth(10);
+				_entity.setHealth(1);
+			if (entity instanceof LivingEntity _livingEntity3 && _livingEntity3.getAttributes().hasAttribute(RebirthIncModAttributes.DEAD.get()))
+				_livingEntity3.getAttribute(RebirthIncModAttributes.DEAD.get()).setBaseValue(1);
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}
