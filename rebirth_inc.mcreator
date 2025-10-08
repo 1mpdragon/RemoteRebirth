@@ -294,6 +294,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -307,9 +323,9 @@
       "registry_name": "minhocalhau",
       "metadata": {
         "files": [
+          "src/main/resources/assets/rebirth_inc/blockstates/minhocalhau.json",
           "src/main/java/net/mcreator/rebirthinc/block/MinhocalhauBlock.java",
           "src/main/resources/assets/rebirth_inc/models/item/minhocalhau.json",
-          "src/main/resources/assets/rebirth_inc/blockstates/minhocalhau.json",
           "src/main/resources/assets/rebirth_inc/models/block/minhocalhau.json"
         ]
       },
@@ -358,6 +374,20 @@
         ]
       },
       "path": "~/Blocos/procedure blocos"
+    },
+    {
+      "name": "SetupPlayerAnimator",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_player_animator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/SetupPlayerAnimatorProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Sistema de Morte"
     }
   ],
   "variable_elements": [
@@ -411,8 +441,8 @@
       "attribute.rebirth_inc.dead": "Dead",
       "block.rebirth_inc.minhocalhau": "Minhocalhau",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
-      "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
       "item_group.rebirth_inc.teste": "Teste",
+      "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
       "item.rebirth_inc.minhoca": "Minhoca",
       "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
       "attribute.rebirth_inc.feedsize": "vaca da chuva feeding"

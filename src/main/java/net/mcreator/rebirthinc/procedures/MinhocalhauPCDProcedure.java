@@ -6,7 +6,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
-import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -19,8 +18,6 @@ public class MinhocalhauPCDProcedure {
 		Direction local_random_direction = Direction.NORTH;
 		double random_int = 0;
 		if (Mth.nextDouble(RandomSource.create(), 1, 10) < 2) {
-			if (!world.isClientSide() && world.getServer() != null)
-				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("spread"), false);
 			local_random_direction = Direction.getRandom(RandomSource.create());
 			if (!((world.getBlockState(BlockPos.containing(x + local_random_direction.getStepX(), y + local_random_direction.getStepY(), z + local_random_direction.getStepZ()))).getBlock() == Blocks.AIR)) {
 				{
