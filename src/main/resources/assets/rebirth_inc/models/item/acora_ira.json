@@ -1,0 +1,6 @@
+{
+  "parent": "rebirth_inc:displaysettings/anchor_ira",
+  "textures": {
+    "layer0": "rebirth_inc:item/anchor_ira"
+  }
+}

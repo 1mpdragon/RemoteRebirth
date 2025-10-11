@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.rebirthinc.item.NailItem;
 import net.mcreator.rebirthinc.item.MinhocaItem;
+import net.mcreator.rebirthinc.item.AcoraIraItem;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
 public class RebirthIncModItems {
@@ -24,6 +25,7 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> PORCODEMUSGO_SPAWN_EGG = REGISTRY.register("porcodemusgo_spawn_egg", () -> new ForgeSpawnEggItem(RebirthIncModEntities.PORCODEMUSGO, -13382656, -16738048, new Item.Properties()));
 	public static final RegistryObject<Item> NAIL = REGISTRY.register("nail", () -> new NailItem());
 	public static final RegistryObject<Item> MINHOCALHAU = block(RebirthIncModBlocks.MINHOCALHAU);
+	public static final RegistryObject<Item> ACORA_IRA = REGISTRY.register("acora_ira", () -> new AcoraIraItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

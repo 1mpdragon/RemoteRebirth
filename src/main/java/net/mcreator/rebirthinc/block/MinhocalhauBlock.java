@@ -1,6 +1,9 @@
 
 package net.mcreator.rebirthinc.block;
 
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -15,7 +18,7 @@ import net.mcreator.rebirthinc.procedures.MinhocalhauPCDProcedure;
 
 public class MinhocalhauBlock extends Block {
 	public MinhocalhauBlock() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.DIRT).sound(SoundType.GRAVEL).strength(0.5f, 10f).randomTicks());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.DIRT).sound(SoundType.GRAVEL).strength(0.5f).speedFactor(0.6f).jumpFactor(0.9f).noOcclusion().randomTicks().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
@@ -26,6 +29,16 @@ public class MinhocalhauBlock extends Block {
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 0;
+	}
+
+	@Override
+	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return Shapes.empty();
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return box(0, 0, 0, 16, 14, 16);
 	}
 
 	@Override

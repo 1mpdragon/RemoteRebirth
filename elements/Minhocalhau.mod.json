@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "block",
   "definition": {
-    "texture": "minecraft:bamboo_block_top",
+    "texture": "minhocalhau",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -18,7 +18,7 @@
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",
     "disableOffset": false,
@@ -28,7 +28,7 @@
         "my": 0.0,
         "mz": 0.0,
         "Mx": 16.0,
-        "My": 16.0,
+        "My": 14.0,
         "Mz": 16.0,
         "subtract": false
       }
@@ -39,7 +39,7 @@
       "fixedValue": []
     },
     "hardness": 0.5,
-    "resistance": 10.0,
+    "resistance": 0.5,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTabs": [
@@ -78,8 +78,8 @@
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
-    "speedFactor": 1.0,
-    "jumpFactor": 1.0,
+    "speedFactor": 0.6,
+    "jumpFactor": 0.9,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,

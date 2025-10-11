@@ -23,5 +23,6 @@ public class RebirthIncModTabs {
 				tabData.accept(RebirthIncModItems.NAIL.get());
 				tabData.accept(RebirthIncModItems.MINHOCA.get());
 				tabData.accept(RebirthIncModBlocks.MINHOCALHAU.get().asItem());
+				tabData.accept(RebirthIncModItems.ACORA_IRA.get());
 			}).build());
 }

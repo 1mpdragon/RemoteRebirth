@@ -19,7 +19,7 @@ public class MinhocalhauPCDProcedure {
 		double random_int = 0;
 		if (Mth.nextDouble(RandomSource.create(), 1, 10) < 2) {
 			local_random_direction = Direction.getRandom(RandomSource.create());
-			if (!((world.getBlockState(BlockPos.containing(x + local_random_direction.getStepX(), y + local_random_direction.getStepY(), z + local_random_direction.getStepZ()))).getBlock() == Blocks.AIR)) {
+			if ((world.getBlockState(BlockPos.containing(x + local_random_direction.getStepX(), y + local_random_direction.getStepY(), z + local_random_direction.getStepZ()))).getBlock() == Blocks.DIRT) {
 				{
 					BlockPos _bp = BlockPos.containing(x + local_random_direction.getStepX(), y + local_random_direction.getStepY(), z + local_random_direction.getStepZ());
 					BlockState _bs = RebirthIncModBlocks.MINHOCALHAU.get().defaultBlockState();
