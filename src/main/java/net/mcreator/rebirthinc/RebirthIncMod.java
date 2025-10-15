@@ -18,9 +18,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.rebirthinc.init.RebirthIncModTabs;
+import net.mcreator.rebirthinc.init.RebirthIncModMenus;
 import net.mcreator.rebirthinc.init.RebirthIncModItems;
 import net.mcreator.rebirthinc.init.RebirthIncModEntities;
 import net.mcreator.rebirthinc.init.RebirthIncModBlocks;
+import net.mcreator.rebirthinc.init.RebirthIncModBlockEntities;
 import net.mcreator.rebirthinc.init.RebirthIncModAttributes;
 
 import java.util.function.Supplier;
@@ -44,12 +46,13 @@ public class RebirthIncMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		RebirthIncModBlocks.REGISTRY.register(bus);
-
+		RebirthIncModBlockEntities.REGISTRY.register(bus);
 		RebirthIncModItems.REGISTRY.register(bus);
 		RebirthIncModEntities.REGISTRY.register(bus);
 
 		RebirthIncModTabs.REGISTRY.register(bus);
 
+		RebirthIncModMenus.REGISTRY.register(bus);
 		RebirthIncModAttributes.REGISTRY.register(bus);
 		// Start of user code block mod init
 		// End of user code block mod init

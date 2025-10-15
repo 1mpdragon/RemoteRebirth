@@ -26,6 +26,7 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> NAIL = REGISTRY.register("nail", () -> new NailItem());
 	public static final RegistryObject<Item> MINHOCALHAU = block(RebirthIncModBlocks.MINHOCALHAU);
 	public static final RegistryObject<Item> ACORA_IRA = REGISTRY.register("acora_ira", () -> new AcoraIraItem());
+	public static final RegistryObject<Item> BACKPACK = block(RebirthIncModBlocks.BACKPACK);
 
 	// Start of user code block custom items
 	// End of user code block custom items

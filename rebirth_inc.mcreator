@@ -443,6 +443,100 @@
         ]
       },
       "path": "~/Itens"
+    },
+    {
+      "name": "Backpack",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/world/inventory/BackpackMenu.java",
+          "src/main/java/net/mcreator/rebirthinc/client/gui/BackpackScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "Backpacjk",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/block/entity/BackpacjkBlockEntity.java",
+          "src/main/resources/assets/rebirth_inc/models/item/backpack.json",
+          "src/main/resources/assets/rebirth_inc/models/block/backpack.json",
+          "src/main/java/net/mcreator/rebirthinc/block/BackpacjkBlock.java",
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/backpack.json",
+          "src/main/resources/assets/rebirth_inc/blockstates/backpack.json"
+        ]
+      }
+    },
+    {
+      "name": "BackpackBlockDestroyedByPlayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpack_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/BackpackBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BackpacjkBlockIsPlacedBy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpacjk_block_is_placed_by",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/BackpacjkBlockIsPlacedByProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -477,7 +571,8 @@
       "~CUSTOM:Minhocalhau"
     ],
     "ITEMS:minecraft:swords": [
-      "~CUSTOM:Nail"
+      "~CUSTOM:Nail",
+      "CUSTOM:AcoraIra"
     ]
   },
   "tab_element_order": {
@@ -487,7 +582,8 @@
       "Nail",
       "Minhoca",
       "Minhocalhau",
-      "AcoraIra"
+      "AcoraIra",
+      "Backpacjk"
     ]
   },
   "language_map": {
@@ -495,6 +591,7 @@
       "item.rebirth_inc.acora_ira": "Acora Irá",
       "attribute.rebirth_inc.dead": "Dead",
       "block.rebirth_inc.minhocalhau": "Minhocalhau",
+      "block.rebirth_inc.backpack": "Backpack",
       "item_group.rebirth_inc.teste": "Teste",
       "item.rebirth_inc.minhoca": "Minhoca",
       "entity.rebirth_inc.vacadachuva": "Vaca da chuva",

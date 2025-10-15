@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/jigsaw_top",
+    "up": "minecraft:block/jigsaw_top",
+    "north": "minecraft:block/jigsaw_top",
+    "east": "minecraft:block/jigsaw_top",
+    "south": "minecraft:block/jigsaw_top",
+    "west": "minecraft:block/jigsaw_top",
+    "particle": "minecraft:block/jigsaw_top"
+  },
+  "render_type": "solid"
+}
