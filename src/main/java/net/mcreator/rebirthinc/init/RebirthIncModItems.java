@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.rebirthinc.item.NailItem;
 import net.mcreator.rebirthinc.item.MinhocaItem;
+import net.mcreator.rebirthinc.item.BackpackitemItem;
 import net.mcreator.rebirthinc.item.AcoraIraItem;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
@@ -27,6 +28,7 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> MINHOCALHAU = block(RebirthIncModBlocks.MINHOCALHAU);
 	public static final RegistryObject<Item> ACORA_IRA = REGISTRY.register("acora_ira", () -> new AcoraIraItem());
 	public static final RegistryObject<Item> BACKPACK = block(RebirthIncModBlocks.BACKPACK);
+	public static final RegistryObject<Item> BACKPACKITEM = REGISTRY.register("backpackitem", () -> new BackpackitemItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

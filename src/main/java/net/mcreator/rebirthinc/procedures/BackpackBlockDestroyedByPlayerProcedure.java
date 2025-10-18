@@ -13,7 +13,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.rebirthinc.init.RebirthIncModBlocks;
+import net.mcreator.rebirthinc.init.RebirthIncModItems;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -23,7 +23,7 @@ public class BackpackBlockDestroyedByPlayerProcedure {
 		ItemStack itemstack = ItemStack.EMPTY;
 		BlockState gamer = Blocks.AIR.defaultBlockState();
 		double itemQuantity = 0;
-		itemstack = new ItemStack(RebirthIncModBlocks.BACKPACK.get()).copy();
+		itemstack = new ItemStack(RebirthIncModItems.BACKPACKITEM.get()).copy();
 		itemQuantity = 0;
 		if (!world.isClientSide() && world.getServer() != null)
 			world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(((new Object() {
@@ -92,6 +92,19 @@ public class BackpackBlockDestroyedByPlayerProcedure {
 			ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemstack);
 			entityToSpawn.setPickUpDelay(30);
 			_level.addFreshEntity(entityToSpawn);
+		}
+		itemQuantity = 0;
+		for (int index1 = 0; index1 < 54; index1++) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("" + (new Object() {
+					public ItemStack getItemStack(int sltid, ItemStack _isc) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						_isc.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+						return _retval.get();
+					}
+				}.getItemStack((int) itemQuantity, itemstack)))), false);
 		}
 	}
 }
