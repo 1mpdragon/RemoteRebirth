@@ -55,6 +55,7 @@ public class RebirthIncModVariables {
 
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "rebirth_inc_worldvars";
+		public boolean winds = true;
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -63,10 +64,12 @@ public class RebirthIncModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
+			winds = nbt.getBoolean("winds");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
+			nbt.putBoolean("winds", winds);
 			return nbt;
 		}
 

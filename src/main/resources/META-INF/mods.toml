@@ -34,6 +34,12 @@ authors="isaac, MCreator"
     ordering="NONE"
     side="BOTH"
 [[dependencies.rebirth_inc]]
+    modId="effekseer"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.rebirth_inc]]
     modId="playeranimator"
     mandatory=false
     versionRange="[0,)"

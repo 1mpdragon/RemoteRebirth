@@ -30,6 +30,7 @@
     "glowCondition": {
       "fixedValue": false
     },
+    "guiBoundTo": "Backpack",
     "inventorySize": 54,
     "inventoryStackSize": 64,
     "enableRanged": false,

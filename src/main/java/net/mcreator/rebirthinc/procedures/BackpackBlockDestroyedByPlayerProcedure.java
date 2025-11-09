@@ -93,18 +93,5 @@ public class BackpackBlockDestroyedByPlayerProcedure {
 			entityToSpawn.setPickUpDelay(30);
 			_level.addFreshEntity(entityToSpawn);
 		}
-		itemQuantity = 0;
-		for (int index1 = 0; index1 < 54; index1++) {
-			if (!world.isClientSide() && world.getServer() != null)
-				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("" + (new Object() {
-					public ItemStack getItemStack(int sltid, ItemStack _isc) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						_isc.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).copy());
-						});
-						return _retval.get();
-					}
-				}.getItemStack((int) itemQuantity, itemstack)))), false);
-		}
 	}
 }

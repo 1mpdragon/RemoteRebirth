@@ -547,7 +547,30 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/rebirthinc/item/BackpackitemItem.java",
+          "src/main/java/net/mcreator/rebirthinc/item/inventory/BackpackitemInventoryCapability.java",
           "src/main/resources/assets/rebirth_inc/models/item/backpackitem.json"
+        ]
+      }
+    },
+    {
+      "name": "BackpackitemRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpackitem_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/BackpackitemRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       }
     }
@@ -576,6 +599,12 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "winds",
+      "type": "logic",
+      "scope": "world",
+      "value": "true"
     }
   ],
   "sound_elements": [],
@@ -674,6 +703,7 @@
     "mcreatorDependencies": [
       "pehkui",
       "geckolib",
+      "effekseer",
       "playeranimator"
     ],
     "currentGenerator": "forge-1.20.1",
