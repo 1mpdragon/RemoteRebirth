@@ -28,6 +28,12 @@ authors="isaac, MCreator"
     ordering="NONE"
     side="BOTH"
 [[dependencies.rebirth_inc]]
+    modId="nexus_compiled_mods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.rebirth_inc]]
     modId="geckolib"
     mandatory=false
     versionRange="[0,)"

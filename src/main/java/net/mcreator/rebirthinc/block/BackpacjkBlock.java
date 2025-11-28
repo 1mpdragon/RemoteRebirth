@@ -21,11 +21,9 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.rebirthinc.world.inventory.BackpackMenu;
-import net.mcreator.rebirthinc.procedures.BackpackBlockDestroyedByPlayerProcedure;
 import net.mcreator.rebirthinc.block.entity.BackpacjkBlockEntity;
 
 import io.netty.buffer.Unpooled;
@@ -56,14 +54,6 @@ public class BackpacjkBlock extends Block implements EntityBlock {
 				}
 			}, pos);
 		}
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		double hitX = hit.getLocation().x;
-		double hitY = hit.getLocation().y;
-		double hitZ = hit.getLocation().z;
-		Direction direction = hit.getDirection();
-		BackpackBlockDestroyedByPlayerProcedure.execute(world, x, y, z);
 		return InteractionResult.SUCCESS;
 	}
 

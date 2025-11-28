@@ -95,6 +95,9 @@ public class RebirthIncModVariables {
 		public double sx = 0;
 		public double sy = 0;
 		public double sz = 0;
+		public String remember = "\"\"";
+		public boolean rememberon = false;
+		public double number = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -106,6 +109,9 @@ public class RebirthIncModVariables {
 			sx = nbt.getDouble("sx");
 			sy = nbt.getDouble("sy");
 			sz = nbt.getDouble("sz");
+			remember = nbt.getString("remember");
+			rememberon = nbt.getBoolean("rememberon");
+			number = nbt.getDouble("number");
 		}
 
 		@Override
@@ -113,6 +119,9 @@ public class RebirthIncModVariables {
 			nbt.putDouble("sx", sx);
 			nbt.putDouble("sy", sy);
 			nbt.putDouble("sz", sz);
+			nbt.putString("remember", remember);
+			nbt.putBoolean("rememberon", rememberon);
+			nbt.putDouble("number", number);
 			return nbt;
 		}
 

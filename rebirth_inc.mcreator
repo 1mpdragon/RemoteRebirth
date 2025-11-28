@@ -472,7 +472,8 @@
           "src/main/resources/data/rebirth_inc/loot_tables/blocks/backpack.json",
           "src/main/resources/assets/rebirth_inc/blockstates/backpack.json"
         ]
-      }
+      },
+      "path": "~/Itens/Backpack"
     },
     {
       "name": "BackpackBlockDestroyedByPlayer",
@@ -486,38 +487,8 @@
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "BackpacjkBlockIsPlacedBy",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "backpacjk_block_is_placed_by",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/BackpacjkBlockIsPlacedByProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
+            "name": "blockstate",
+            "type": "blockstate"
           },
           {
             "name": "x",
@@ -536,7 +507,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Itens/Backpack"
     },
     {
       "name": "Backpackitem",
@@ -550,29 +522,8 @@
           "src/main/java/net/mcreator/rebirthinc/item/inventory/BackpackitemInventoryCapability.java",
           "src/main/resources/assets/rebirth_inc/models/item/backpackitem.json"
         ]
-      }
-    },
-    {
-      "name": "BackpackitemRightclicked",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "backpackitem_rightclicked",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/BackpackitemRightclickedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
+      },
+      "path": "~/Itens/Backpack"
     }
   ],
   "variable_elements": [
@@ -605,6 +556,24 @@
       "type": "logic",
       "scope": "world",
       "value": "true"
+    },
+    {
+      "name": "remember",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "rememberon",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "number",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -684,6 +653,10 @@
           {
             "name": "ferramenta",
             "children": []
+          },
+          {
+            "name": "Backpack",
+            "children": []
           }
         ]
       }
@@ -702,6 +675,7 @@
     "dependants": [],
     "mcreatorDependencies": [
       "pehkui",
+      "nexus_compiled_mods",
       "geckolib",
       "effekseer",
       "playeranimator"

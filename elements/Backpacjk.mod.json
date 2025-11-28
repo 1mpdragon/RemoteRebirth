@@ -150,9 +150,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "BackpackBlockDestroyedByPlayer"
-    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
