@@ -27,7 +27,7 @@ public class KeyCancell {
 
                 ci.cancel();
             }
-        }else if (key == GLFW.GLFW_KEY_TAB){
+        } else if (key == GLFW.GLFW_KEY_TAB) {
             Minecraft mc = Minecraft.getInstance();
             if (mc.player != null && !mc.player.hasPermissions(4)) {
 

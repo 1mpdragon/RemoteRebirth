@@ -524,6 +524,42 @@
         ]
       },
       "path": "~/Itens/Backpack"
+    },
+    {
+      "name": "Ociloscopio",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ociloscopio",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/ociloscopio.json",
+          "src/main/java/net/mcreator/rebirthinc/item/OciloscopioItem.java"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "OciloscopioItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ociloscopio_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/OciloscopioItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -594,7 +630,8 @@
       "Minhoca",
       "Minhocalhau",
       "AcoraIra",
-      "Backpacjk"
+      "Backpacjk",
+      "Ociloscopio"
     ]
   },
   "language_map": {
@@ -611,7 +648,8 @@
       "item.rebirth_inc.porcodemusgo_spawn_egg": "Porco de musgo Spawn Egg",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
-      "item.rebirth_inc.backpackitem": "Backpackitem"
+      "item.rebirth_inc.backpackitem": "Backpackitem",
+      "item.rebirth_inc.ociloscopio": "Ociloscopio"
     }
   },
   "foldersRoot": {
@@ -622,27 +660,6 @@
         "children": [
           {
             "name": "Procedure Mobs",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "atributos",
-        "children": []
-      },
-      {
-        "name": "Sistema de Morte",
-        "children": []
-      },
-      {
-        "name": "Blocos",
-        "children": [
-          {
-            "name": "lootDrop",
-            "children": []
-          },
-          {
-            "name": "procedure blocos",
             "children": []
           }
         ]
@@ -659,6 +676,27 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Blocos",
+        "children": [
+          {
+            "name": "lootDrop",
+            "children": []
+          },
+          {
+            "name": "procedure blocos",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "atributos",
+        "children": []
+      },
+      {
+        "name": "Sistema de Morte",
+        "children": []
       }
     ]
   },

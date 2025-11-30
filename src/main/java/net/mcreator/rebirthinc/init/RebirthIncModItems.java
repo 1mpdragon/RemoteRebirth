@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.rebirthinc.item.OciloscopioItem;
 import net.mcreator.rebirthinc.item.NailItem;
 import net.mcreator.rebirthinc.item.MinhocaItem;
 import net.mcreator.rebirthinc.item.BackpackitemItem;
@@ -29,6 +30,7 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> ACORA_IRA = REGISTRY.register("acora_ira", () -> new AcoraIraItem());
 	public static final RegistryObject<Item> BACKPACK = block(RebirthIncModBlocks.BACKPACK);
 	public static final RegistryObject<Item> BACKPACKITEM = REGISTRY.register("backpackitem", () -> new BackpackitemItem());
+	public static final RegistryObject<Item> OCILOSCOPIO = REGISTRY.register("ociloscopio", () -> new OciloscopioItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -25,5 +25,6 @@ public class RebirthIncModTabs {
 				tabData.accept(RebirthIncModBlocks.MINHOCALHAU.get().asItem());
 				tabData.accept(RebirthIncModItems.ACORA_IRA.get());
 				tabData.accept(RebirthIncModBlocks.BACKPACK.get().asItem());
+				tabData.accept(RebirthIncModItems.OCILOSCOPIO.get());
 			}).build());
 }
