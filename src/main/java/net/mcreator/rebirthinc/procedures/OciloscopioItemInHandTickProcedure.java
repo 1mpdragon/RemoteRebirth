@@ -26,13 +26,24 @@ public class OciloscopioItemInHandTickProcedure {
 		double distance = 0;
 		double RaioDistance = 0;
 		double Temp = 0;
+		double HorizontalDist = 0;
+		double dy = 0;
+		double PitchToTarget = 0;
+		double dist2 = 0;
+		double DistanceToTarget = 0;
 		RaioDistance = 5;
 		BX = 0.5;
+		BY = 0.5;
 		BZ = 0.5;
 		PX = entity.getX();
+		PY = entity.getY();
 		PZ = entity.getZ();
-		distance = Math.sqrt(Math.pow(BX - PX, 2) + Math.pow(BZ - PZ, 2));
+		dy = BY - (PY + 1.6);
+		HorizontalDist = Math.sqrt(Math.pow(BX - PX, 2) + Math.pow(BZ - PZ, 2));
+		PitchToTarget = Math.atan2(dy, HorizontalDist) * (-1) * (180 / Math.PI);
+		distance = Math.sqrt(Math.pow(BX - PX, 2) + Math.pow(BZ - PZ, 2) + Math.pow(BY - PY, 2));
 		angleToTarget = Math.atan2(BZ - PZ, BX - PX) * (180 / Math.PI);
+		dist2 = PitchToTarget - entity.getXRot();
 		angleToTarget = angleToTarget - 90;
 		Temp = angleToTarget - entity.getYRot();
 		while (Temp > 180) {
@@ -42,8 +53,11 @@ public class OciloscopioItemInHandTickProcedure {
 			Temp = Temp + 360;
 		}
 		Dist = Temp;
+		DistanceToTarget = Math.sqrt(Math.pow(Dist, 2) + Math.pow(dist2, 2));
 		if (!world.isClientSide() && world.getServer() != null)
-			world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Angulo:" + Math.round(Math.pow(10, 1) * angleToTarget) / Math.pow(10, 1) + " " + "Distance:" + Math.round(Math.pow(10, 1) * distance) / Math.pow(10, 1) + " "
-					+ "distancia at\u00E9 o angulo:" + Math.round(Math.pow(10, 1) * Dist) / Math.pow(10, 1))), false);
+			world.getServer().getPlayerList()
+					.broadcastSystemMessage(Component.literal(("Angulo:" + Math.round(Math.pow(10, 1) * angleToTarget) / Math.pow(10, 1) + " " + "Distance:" + Math.round(Math.pow(10, 1) * distance) / Math.pow(10, 1) + " " + "Dis:"
+							+ Math.round(Math.pow(10, 1) * Dist) / Math.pow(10, 1) + " " + "PitchTT:" + Math.round(Math.pow(10, 1) * PitchToTarget) / Math.pow(10, 1) + " " + "Dis2:" + Math.round(Math.pow(10, 1) * dist2) / Math.pow(10, 1) + " "
+							+ "Final:" + Math.round(Math.pow(10, 1) * DistanceToTarget) / Math.pow(10, 1))), false);
 	}
 }
