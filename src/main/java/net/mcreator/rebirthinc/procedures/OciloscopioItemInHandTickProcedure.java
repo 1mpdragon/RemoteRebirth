@@ -8,7 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 
 public class OciloscopioItemInHandTickProcedure {
-	public static double execute(LevelAccessor world, Entity entity) {
+	public static double execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return 0;
 		Direction OciloscopioCalibrator = Direction.NORTH;
@@ -32,9 +32,9 @@ public class OciloscopioItemInHandTickProcedure {
 		double dist2 = 0;
 		double DistanceToTarget = 0;
 		RaioDistance = 5;
-		BX = 0.5;
-		BY = 0.5;
-		BZ = 0.5;
+		BX = x;
+		BY = y;
+		BZ = z;
 		PX = entity.getX();
 		PY = entity.getY();
 		PZ = entity.getZ();
