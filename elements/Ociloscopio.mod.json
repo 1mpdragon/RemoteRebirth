@@ -36,7 +36,7 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onItemInUseTick": {
+    "onItemInInventoryTick": {
       "name": "OciloscopioItemInHandTick"
     },
     "enableRanged": false,

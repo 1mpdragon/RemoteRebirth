@@ -536,8 +536,7 @@
           "src/main/resources/assets/rebirth_inc/models/item/ociloscopio.json",
           "src/main/java/net/mcreator/rebirthinc/item/OciloscopioItem.java"
         ]
-      },
-      "path": "~/Itens"
+      }
     },
     {
       "name": "OciloscopioItemInHandTick",
@@ -557,6 +556,39 @@
           {
             "name": "world",
             "type": "world"
+          }
+        ],
+        "return_type": "number"
+      }
+    },
+    {
+      "name": "OciloscopioFunction",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ociloscopio_function",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/OciloscopioFunctionProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "OciloscopioDistance",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ociloscopio_distance",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/OciloscopioDistanceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       }

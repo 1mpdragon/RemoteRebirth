@@ -8,9 +8,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 
 public class OciloscopioItemInHandTickProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static double execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
-			return;
+			return 0;
 		Direction OciloscopioCalibrator = Direction.NORTH;
 		double BX = 0;
 		double BY = 0;
@@ -55,9 +55,7 @@ public class OciloscopioItemInHandTickProcedure {
 		Dist = Temp;
 		DistanceToTarget = Math.sqrt(Math.pow(Dist, 2) + Math.pow(dist2, 2));
 		if (!world.isClientSide() && world.getServer() != null)
-			world.getServer().getPlayerList()
-					.broadcastSystemMessage(Component.literal(("Angulo:" + Math.round(Math.pow(10, 1) * angleToTarget) / Math.pow(10, 1) + " " + "Distance:" + Math.round(Math.pow(10, 1) * distance) / Math.pow(10, 1) + " " + "Dis:"
-							+ Math.round(Math.pow(10, 1) * Dist) / Math.pow(10, 1) + " " + "PitchTT:" + Math.round(Math.pow(10, 1) * PitchToTarget) / Math.pow(10, 1) + " " + "Dis2:" + Math.round(Math.pow(10, 1) * dist2) / Math.pow(10, 1) + " "
-							+ "Final:" + Math.round(Math.pow(10, 1) * DistanceToTarget) / Math.pow(10, 1))), false);
+			world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Final:" + Math.round(Math.pow(10, 1) * DistanceToTarget) / Math.pow(10, 1))), false);
+		return Math.abs(DistanceToTarget);
 	}
 }
