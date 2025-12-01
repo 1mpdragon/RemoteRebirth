@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "rebirth_inc:block/radio"
+    },
+    "facing=east": {
+      "model": "rebirth_inc:block/radio",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "rebirth_inc:block/radio",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "rebirth_inc:block/radio",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "rebirth_inc:block/radio",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "rebirth_inc:block/radio",
+      "x": 90
+    }
+  }
+}

@@ -12,7 +12,7 @@ import net.minecraftforge.client.event.ScreenEvent;
 import net.minecraftforge.client.event.RenderGuiEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -35,7 +35,9 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.rebirthinc.network.RebirthIncModVariables;
 import net.mcreator.rebirthinc.init.RebirthIncModItems;
+import net.mcreator.rebirthinc.init.RebirthIncModBlocks;
 
 import javax.annotation.Nullable;
 
@@ -398,7 +400,11 @@ public class OciloscopioFunctionProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
+		boolean found = false;
 		double gamer = 0;
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
 		if (target(2)) {
 			if (Minecraft.getInstance().player != null) {
 				Entity entity = Minecraft.getInstance().player;
@@ -408,8 +414,8 @@ public class OciloscopioFunctionProcedure {
 				LevelAccessor world = entity.level();
 				ResourceKey<Level> dimension = entity.level().dimension();
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RebirthIncModItems.OCILOSCOPIO.get()) {
-					int horizontalRadiusSphere = (int) 50 - 1;
-					int verticalRadiusSphere = (int) 50 - 1;
+					int horizontalRadiusSphere = (int) 32 - 1;
+					int verticalRadiusSphere = (int) 16 - 1;
 					int yIterationsSphere = verticalRadiusSphere;
 					for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 						for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -417,11 +423,15 @@ public class OciloscopioFunctionProcedure {
 								double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
 										+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 								if (distanceSq <= 1.0) {
-									if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.PISTON) {
-										if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RebirthIncModItems.OCILOSCOPIO.get()
-												&& OciloscopioItemInHandTickProcedure.execute(world, x + xi, y + i, z + zi, entity) >= 3 && OciloscopioItemInHandTickProcedure.execute(world, x + xi, y + i, z + zi, entity) <= 100) {
-											renderTexts(OciloscopioDistanceProcedure.execute(entity), (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 + 20),
-													0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 1);
+									if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == RebirthIncModBlocks.RADIO.get() && new Object() {
+										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+											BlockEntity blockEntity = world.getBlockEntity(pos);
+											if (blockEntity != null)
+												return blockEntity.getPersistentData().getDouble(tag);
+											return -1;
+										}
+									}.getValue(world, BlockPos.containing(x + xi, y + i, z + zi), "Hz") == (entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Hz) {
+										if (OciloscopioItemInHandTickProcedure.execute(world, x + xi, y + i, z + zi, entity) >= 3 && OciloscopioItemInHandTickProcedure.execute(world, x + xi, y + i, z + zi, entity) <= 100) {
 											RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopaim_left" + ".png")));
 											renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2 - OciloscopioItemInHandTickProcedure.execute(world, x + xi, y + i, z + zi, entity)),
 													(float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0, (float) (Minecraft.getInstance().getWindow().getGuiScale() * 1),
@@ -435,17 +445,23 @@ public class OciloscopioFunctionProcedure {
 															| (int) (255 - OciloscopioItemInHandTickProcedure.execute(world, x + xi, y + i, z + zi, entity)),
 													4);
 										}
-										if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RebirthIncModItems.OCILOSCOPIO.get()
-												&& OciloscopioItemInHandTickProcedure.execute(world, x + xi, y + i, z + zi, entity) < 3) {
+										if (OciloscopioItemInHandTickProcedure.execute(world, x + xi, y + i, z + zi, entity) < 3) {
 											RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopain_all" + ".png")));
 											renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0,
 													(float) (Minecraft.getInstance().getWindow().getGuiScale() * 1), 255 << 24 | 0 << 16 | 255 << 8 | 0, 4);
+											renderTexts(OciloscopioDistanceProcedure.execute(entity), (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 + 20),
+													0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 1);
 										}
 									}
 								}
 							}
 						}
 					}
+					renderTexts(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Hz + "Hz"), (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2),
+							(float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 - 25), 0, 0, (float) 0.8, 255 << 24 | 255 << 16 | 255 << 8 | 255, 1);
+					RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopain_all" + ".png")));
+					renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0, (float) (Minecraft.getInstance().getWindow().getGuiScale() * 1),
+							135 << 24 | 135 << 16 | 135 << 8 | 135, 4);
 				}
 			}
 			release();

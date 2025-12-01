@@ -604,6 +604,135 @@
           }
         ]
       }
+    },
+    {
+      "name": "Radio",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radio",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/radio.json",
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/radio.json",
+          "src/main/resources/assets/rebirth_inc/models/block/radio.json",
+          "src/main/java/net/mcreator/rebirthinc/block/RadioBlock.java",
+          "src/main/java/net/mcreator/rebirthinc/block/entity/RadioBlockEntity.java",
+          "src/main/resources/assets/rebirth_inc/blockstates/radio.json"
+        ]
+      }
+    },
+    {
+      "name": "RadioBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radio_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/RadioBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RadioOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radio_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/RadioOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RenderHz",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_hz",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/RenderHzProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OciloscopioRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ociloscopio_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/OciloscopioRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -654,6 +783,12 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "Hz",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "45.0"
     }
   ],
   "sound_elements": [],
@@ -681,6 +816,7 @@
   "language_map": {
     "en_us": {
       "item.rebirth_inc.acora_ira": "Acora Irá",
+      "block.rebirth_inc.radio": "Radio",
       "attribute.rebirth_inc.dead": "Dead",
       "block.rebirth_inc.minhocalhau": "Minhocalhau",
       "block.rebirth_inc.backpack": "Backpack",

@@ -31,6 +31,7 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> BACKPACK = block(RebirthIncModBlocks.BACKPACK);
 	public static final RegistryObject<Item> BACKPACKITEM = REGISTRY.register("backpackitem", () -> new BackpackitemItem());
 	public static final RegistryObject<Item> OCILOSCOPIO = REGISTRY.register("ociloscopio", () -> new OciloscopioItem());
+	public static final RegistryObject<Item> RADIO = block(RebirthIncModBlocks.RADIO);
 
 	// Start of user code block custom items
 	// End of user code block custom items
