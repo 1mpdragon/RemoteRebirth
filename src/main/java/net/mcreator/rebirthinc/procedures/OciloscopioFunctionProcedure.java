@@ -396,6 +396,7 @@ public class OciloscopioFunctionProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
+		double gamer = 0;
 		if (target(2)) {
 			if (Minecraft.getInstance().player != null) {
 				Entity entity = Minecraft.getInstance().player;
@@ -404,48 +405,19 @@ public class OciloscopioFunctionProcedure {
 				double z = entity.getZ();
 				LevelAccessor world = entity.level();
 				ResourceKey<Level> dimension = entity.level().dimension();
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RebirthIncModItems.OCILOSCOPIO.get() && OciloscopioItemInHandTickProcedure.execute(world, entity) <= 100) {
-					renderTexts(OciloscopioDistanceProcedure.execute(entity), (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 + 20), 0, 0, 1,
-							255 << 24 | 255 << 16 | 255 << 8 | 255, 1);
-				}
-			}
-			if (Minecraft.getInstance().player != null) {
-				Entity entity = Minecraft.getInstance().player;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				LevelAccessor world = entity.level();
-				ResourceKey<Level> dimension = entity.level().dimension();
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RebirthIncModItems.OCILOSCOPIO.get() && OciloscopioItemInHandTickProcedure.execute(world, entity) >= 3
 						&& OciloscopioItemInHandTickProcedure.execute(world, entity) <= 100) {
+					renderTexts(OciloscopioDistanceProcedure.execute(entity), (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 + 20), 0, 0, 1,
+							255 << 24 | 255 << 16 | 255 << 8 | 255, 1);
 					RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopaim_left" + ".png")));
 					renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2 - OciloscopioItemInHandTickProcedure.execute(world, entity)), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0,
 							(float) (Minecraft.getInstance().getWindow().getGuiScale() * 1),
 							255 << 24 | 255 << 16 | (int) (255 - OciloscopioItemInHandTickProcedure.execute(world, entity)) << 8 | (int) (255 - OciloscopioItemInHandTickProcedure.execute(world, entity)), 4);
-				}
-			}
-			if (Minecraft.getInstance().player != null) {
-				Entity entity = Minecraft.getInstance().player;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				LevelAccessor world = entity.level();
-				ResourceKey<Level> dimension = entity.level().dimension();
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RebirthIncModItems.OCILOSCOPIO.get() && OciloscopioItemInHandTickProcedure.execute(world, entity) >= 3
-						&& OciloscopioItemInHandTickProcedure.execute(world, entity) <= 100) {
 					RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopaim_right" + ".png")));
 					renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2 + OciloscopioItemInHandTickProcedure.execute(world, entity)), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0,
 							(float) (Minecraft.getInstance().getWindow().getGuiScale() * 1),
 							255 << 24 | 255 << 16 | (int) (255 - OciloscopioItemInHandTickProcedure.execute(world, entity)) << 8 | (int) (255 - OciloscopioItemInHandTickProcedure.execute(world, entity)), 4);
 				}
-			}
-			if (Minecraft.getInstance().player != null) {
-				Entity entity = Minecraft.getInstance().player;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				LevelAccessor world = entity.level();
-				ResourceKey<Level> dimension = entity.level().dimension();
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RebirthIncModItems.OCILOSCOPIO.get() && OciloscopioItemInHandTickProcedure.execute(world, entity) < 3) {
 					RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopain_all" + ".png")));
 					renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0, (float) (Minecraft.getInstance().getWindow().getGuiScale() * 1),
