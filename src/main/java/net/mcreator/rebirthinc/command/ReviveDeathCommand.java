@@ -33,7 +33,7 @@ public class ReviveDeathCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DeathCommandProcedure.execute(world, arguments);
+			DeathCommandProcedure.execute(arguments, entity);
 			return 0;
 		}))));
 	}

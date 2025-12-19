@@ -12,9 +12,11 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
@@ -24,6 +26,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.rebirthinc.world.inventory.BackpackMenu;
+import net.mcreator.rebirthinc.procedures.BackpacjkBlockIsPlacedByProcedure;
 import net.mcreator.rebirthinc.block.entity.BackpacjkBlockEntity;
 
 import io.netty.buffer.Unpooled;
@@ -36,6 +39,12 @@ public class BackpacjkBlock extends Block implements EntityBlock {
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 15;
+	}
+
+	@Override
+	public void setPlacedBy(Level world, BlockPos pos, BlockState blockstate, LivingEntity entity, ItemStack itemstack) {
+		super.setPlacedBy(world, pos, blockstate, entity, itemstack);
+		BackpacjkBlockIsPlacedByProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

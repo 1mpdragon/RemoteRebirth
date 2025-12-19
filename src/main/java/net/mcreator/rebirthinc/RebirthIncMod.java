@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.rebirthinc.init.RebirthIncModTabs;
+import net.mcreator.rebirthinc.init.RebirthIncModSounds;
 import net.mcreator.rebirthinc.init.RebirthIncModMenus;
 import net.mcreator.rebirthinc.init.RebirthIncModItems;
 import net.mcreator.rebirthinc.init.RebirthIncModEntities;
@@ -44,7 +45,7 @@ public class RebirthIncMod {
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
+		RebirthIncModSounds.REGISTRY.register(bus);
 		RebirthIncModBlocks.REGISTRY.register(bus);
 		RebirthIncModBlockEntities.REGISTRY.register(bus);
 		RebirthIncModItems.REGISTRY.register(bus);

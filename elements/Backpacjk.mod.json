@@ -150,6 +150,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockPlayedBy": {
+      "name": "BackpacjkBlockIsPlacedBy"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

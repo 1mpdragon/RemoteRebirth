@@ -212,7 +212,7 @@
           }
         ]
       },
-      "path": "~/Sistema de Morte"
+      "path": "~/Mecanicas/Sistema de Morte"
     },
     {
       "name": "Dead",
@@ -242,7 +242,7 @@
           }
         ]
       },
-      "path": "~/Sistema de Morte"
+      "path": "~/Mecanicas/Sistema de Morte"
     },
     {
       "name": "ReviveDeath",
@@ -255,7 +255,7 @@
           "src/main/java/net/mcreator/rebirthinc/command/ReviveDeathCommand.java"
         ]
       },
-      "path": "~/Sistema de Morte"
+      "path": "~/Mecanicas/Sistema de Morte"
     },
     {
       "name": "DeathCommand",
@@ -273,12 +273,12 @@
             "type": "cmdcontext"
           },
           {
-            "name": "world",
-            "type": "world"
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
-      "path": "~/Sistema de Morte"
+      "path": "~/Mecanicas/Sistema de Morte"
     },
     {
       "name": "OnDeath",
@@ -313,7 +313,7 @@
           }
         ]
       },
-      "path": "~/Sistema de Morte"
+      "path": "~/Mecanicas/Sistema de Morte"
     },
     {
       "name": "Minhocalhau",
@@ -387,7 +387,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Sistema de Morte"
+      "path": "~/Mecanicas/Sistema de Morte"
     },
     {
       "name": "AcoraIra",
@@ -491,6 +491,10 @@
             "type": "blockstate"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -511,21 +515,6 @@
       "path": "~/Itens/Backpack"
     },
     {
-      "name": "Backpackitem",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "backpackitem",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/item/BackpackitemItem.java",
-          "src/main/java/net/mcreator/rebirthinc/item/inventory/BackpackitemInventoryCapability.java",
-          "src/main/resources/assets/rebirth_inc/models/item/backpackitem.json"
-        ]
-      },
-      "path": "~/Itens/Backpack"
-    },
-    {
       "name": "Ociloscopio",
       "type": "item",
       "compiles": true,
@@ -536,7 +525,8 @@
           "src/main/resources/assets/rebirth_inc/models/item/ociloscopio.json",
           "src/main/java/net/mcreator/rebirthinc/item/OciloscopioItem.java"
         ]
-      }
+      },
+      "path": "~/Ociloscopio"
     },
     {
       "name": "OciloscopioItemInHandTick",
@@ -554,15 +544,15 @@
             "type": "entity"
           },
           {
-            "name": "x",
+            "name": "Xi",
             "type": "number"
           },
           {
-            "name": "y",
+            "name": "Yi",
             "type": "number"
           },
           {
-            "name": "z",
+            "name": "Zi",
             "type": "number"
           },
           {
@@ -571,12 +561,13 @@
           }
         ],
         "return_type": "number"
-      }
+      },
+      "path": "~/Ociloscopio"
     },
     {
       "name": "OciloscopioFunction",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ociloscopio_function",
       "metadata": {
@@ -584,7 +575,8 @@
           "src/main/java/net/mcreator/rebirthinc/procedures/OciloscopioFunctionProcedure.java"
         ],
         "dependencies": []
-      }
+      },
+      "path": "~/Ociloscopio"
     },
     {
       "name": "OciloscopioDistance",
@@ -601,9 +593,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "Xi",
+            "type": "number"
+          },
+          {
+            "name": "Yi",
+            "type": "number"
+          },
+          {
+            "name": "Zi",
+            "type": "number"
           }
         ]
-      }
+      },
+      "path": "~/Ociloscopio"
     },
     {
       "name": "Radio",
@@ -620,7 +625,8 @@
           "src/main/java/net/mcreator/rebirthinc/block/entity/RadioBlockEntity.java",
           "src/main/resources/assets/rebirth_inc/blockstates/radio.json"
         ]
-      }
+      },
+      "path": "~/Ociloscopio"
     },
     {
       "name": "RadioBlockAdded",
@@ -650,7 +656,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Ociloscopio"
     },
     {
       "name": "RadioOnBlockRightClicked",
@@ -680,7 +687,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Ociloscopio"
     },
     {
       "name": "RenderHz",
@@ -698,7 +706,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Ociloscopio"
     },
     {
       "name": "OciloscopioRightclicked",
@@ -732,7 +741,161 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Ociloscopio"
+    },
+    {
+      "name": "RadioBlockBroken",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radio_block_broken",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/RadioBlockBrokenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ociloscopio"
+    },
+    {
+      "name": "Esquiva",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "esquiva_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/EsquivaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mecanicas/Esquiva"
+    },
+    {
+      "name": "RealmenteEsquivar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "realmente_esquivar",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/RealmenteEsquivarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mecanicas/Esquiva"
+    },
+    {
+      "name": "EsquivaVizualize",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "esquiva_vizualize",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/EsquivaVizualizeProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Mecanicas/Esquiva"
+    },
+    {
+      "name": "BackpacjkBlockIsPlacedBy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpacjk_block_is_placed_by",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/BackpacjkBlockIsPlacedByProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mecanicas/Esquiva"
+    },
+    {
+      "name": "Sync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sync",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/SyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ociloscopio"
     }
   ],
   "variable_elements": [
@@ -782,16 +945,43 @@
       "name": "number",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "Hz",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "45.0"
+      "value": "0.0"
+    },
+    {
+      "name": "Radio_Location",
+      "type": "arraylist",
+      "scope": "map",
+      "value": "new ArrayList\u003c\u003e()"
+    },
+    {
+      "name": "Ivunerabilidade",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "Radio_Location_PlayerSync",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "parry",
+      "files": [
+        "parry"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
   "tag_elements": {
     "BLOCKS:minecraft:mineable/shovel": [
       "~CUSTOM:Minhocalhau"
@@ -826,9 +1016,9 @@
       "attribute.rebirth_inc.feedsize": "vaca da chuva feeding",
       "item.rebirth_inc.nail": "Nail",
       "item.rebirth_inc.porcodemusgo_spawn_egg": "Porco de musgo Spawn Egg",
+      "subtitles.parry": "",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
-      "item.rebirth_inc.backpackitem": "Backpackitem",
       "item.rebirth_inc.ociloscopio": "Ociloscopio"
     }
   },
@@ -875,8 +1065,25 @@
         "children": []
       },
       {
-        "name": "Sistema de Morte",
+        "name": "Ociloscopio",
         "children": []
+      },
+      {
+        "name": "Mecanicas",
+        "children": [
+          {
+            "name": "Sistema de Morte",
+            "children": []
+          },
+          {
+            "name": "Esquiva",
+            "children": []
+          },
+          {
+            "name": "Sons",
+            "children": []
+          }
+        ]
       }
     ]
   },

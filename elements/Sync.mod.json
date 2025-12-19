@@ -1,0 +1,7 @@
+{
+  "_fv": 73,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"-76\" y=\"26\"><field name=\"trigger\">player_useitem_start</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"entity_is_holding_item\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Ociloscopio</field></block></value></block></value><statement name=\"DO0\"><block type=\"world_send_chat\"><value name=\"text\"><block type=\"text_join\"><mutation items=\"1\"></mutation><value name=\"ADD0\"><block type=\"arraylist_convert_to_string\"><value name=\"var\"><block type=\"variables_get_arraylist\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">global:Radio_Location</field></block></value><value name=\"separator\"><block type=\"text\"><field name=\"TEXT\">,</field></block></value></block></value></block></value></block></statement></block></next></block><block type=\"text\" x=\"300\" y=\"198\"><field name=\"TEXT\">Message</field></block><block type=\"compare_mcitems\" x=\"-51\" y=\"390\"></block></xml>"
+  }
+}

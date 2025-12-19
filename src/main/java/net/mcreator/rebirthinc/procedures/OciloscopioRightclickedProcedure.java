@@ -11,6 +11,8 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.rebirthinc.network.RebirthIncModVariables;
 
+import java.util.stream.Collectors;
+
 import com.mojang.blaze3d.platform.InputConstants;
 
 public class OciloscopioRightclickedProcedure {
@@ -58,6 +60,13 @@ public class OciloscopioRightclickedProcedure {
 					});
 				}
 			}
+		}
+		{
+			String _setval = RebirthIncModVariables.MapVariables.get(world).Radio_Location.stream().map(String::valueOf).collect(Collectors.joining(","));
+			entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Radio_Location_PlayerSync = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 	}
 }

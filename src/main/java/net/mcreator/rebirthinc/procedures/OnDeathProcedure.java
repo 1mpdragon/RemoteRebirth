@@ -44,7 +44,7 @@ public class OnDeathProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player
-				&& (entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(RebirthIncModAttributes.DEAD.get()) ? _livingEntity1.getAttribute(RebirthIncModAttributes.DEAD.get()).getBaseValue() : 0) >= 1) {
+				&& (entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(RebirthIncModAttributes.DEAD.get()) ? _livingEntity1.getAttribute(RebirthIncModAttributes.DEAD.get()).getBaseValue() : 0) == 1) {
 			ScaleTypes.MINING_SPEED.getScaleData(entity).setTargetScale((float) ScaleOperations.SET.applyAsDouble(ScaleTypes.MINING_SPEED.getScaleData(entity).getTargetScale(), 0));
 			ScaleTypes.MOTION.getScaleData(entity).setTargetScale((float) ScaleOperations.SET.applyAsDouble(ScaleTypes.MOTION.getScaleData(entity).getTargetScale(), 0));
 			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(x, y, z));

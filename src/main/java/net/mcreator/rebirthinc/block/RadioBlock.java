@@ -2,6 +2,7 @@
 package net.mcreator.rebirthinc.block;
 
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
@@ -14,6 +15,7 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -26,6 +28,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.rebirthinc.procedures.RadioOnBlockRightClickedProcedure;
+import net.mcreator.rebirthinc.procedures.RadioBlockBrokenProcedure;
 import net.mcreator.rebirthinc.procedures.RadioBlockAddedProcedure;
 import net.mcreator.rebirthinc.block.entity.RadioBlockEntity;
 
@@ -33,7 +36,7 @@ public class RadioBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public RadioBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRAVEL).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -65,6 +68,19 @@ public class RadioBlock extends Block implements EntityBlock {
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
 		RadioBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@Override
+	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
+		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+		RadioBlockBrokenProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		return retval;
+	}
+
+	@Override
+	public void wasExploded(Level world, BlockPos pos, Explosion e) {
+		super.wasExploded(world, pos, e);
+		RadioBlockBrokenProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

@@ -1,30 +1,12 @@
 package net.mcreator.rebirthinc.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.Direction;
 
-import javax.annotation.Nullable;
-
-@Mod.EventBusSubscriber
 public class OciloscopioDistanceProcedure {
-	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player);
-		}
-	}
-
-	public static String execute(Entity entity) {
-		return execute(null, entity);
-	}
-
-	private static String execute(@Nullable Event event, Entity entity) {
+	public static String execute(Entity entity, double Xi, double Yi, double Zi) {
 		if (entity == null)
 			return "";
 		Direction OciloscopioCalibrator = Direction.NORTH;
@@ -48,9 +30,9 @@ public class OciloscopioDistanceProcedure {
 		double dist2 = 0;
 		double DistanceToTarget = 0;
 		RaioDistance = 5;
-		BX = 0.5;
-		BY = 0.5;
-		BZ = 0.5;
+		BX = Xi > 0.1 ? Xi + 0.5 : Xi - 0.5;
+		BY = Yi > 0.1 ? Yi + 0.5 : Yi - 0.5;
+		BZ = Zi > 0.1 ? Zi + 0.5 : Zi - 0.5;
 		PX = entity.getX();
 		PY = entity.getY();
 		PZ = entity.getZ();

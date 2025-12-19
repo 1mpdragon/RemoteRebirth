@@ -1,5 +1,7 @@
 package net.mcreator.rebirthinc.network;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -26,6 +28,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
+import net.minecraft.nbt.StringTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.Direction;
 import net.minecraft.client.Minecraft;
@@ -33,6 +37,7 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
 import java.util.function.Supplier;
+import java.util.ArrayList;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RebirthIncModVariables {
@@ -74,8 +79,10 @@ public class RebirthIncModVariables {
 			event.getOriginal().revive();
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+			clone.Radio_Location_PlayerSync = original.Radio_Location_PlayerSync;
 			if (!event.isWasDeath()) {
 				clone.Hz = original.Hz;
+				clone.Ivunerabilidade = original.Ivunerabilidade;
 			}
 		}
 
@@ -145,7 +152,8 @@ public class RebirthIncModVariables {
 		public double sz = 0;
 		public String remember = "\"\"";
 		public boolean rememberon = false;
-		public double number = 0;
+		public double number = 0.0;
+		public ArrayList<Object> Radio_Location = new ArrayList<>();
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -160,6 +168,12 @@ public class RebirthIncModVariables {
 			remember = nbt.getString("remember");
 			rememberon = nbt.getBoolean("rememberon");
 			number = nbt.getDouble("number");
+			{
+				ListTag Radio_Location_list = nbt.getList("Radio_Location", Tag.TAG_STRING);
+				for (int i = 0; i < Radio_Location_list.size(); i++) {
+					Radio_Location.add(Radio_Location_list.getString(i));
+				}
+			}
 		}
 
 		@Override
@@ -170,6 +184,13 @@ public class RebirthIncModVariables {
 			nbt.putString("remember", remember);
 			nbt.putBoolean("rememberon", rememberon);
 			nbt.putDouble("number", number);
+			{
+				ListTag Radio_Location_list = new ListTag();
+				for (String s : Radio_Location.stream().map(String::valueOf).toList()) {
+					Radio_Location_list.add(StringTag.valueOf(s));
+				}
+				nbt.put("Radio_Location", Radio_Location_list);
+			}
 			return nbt;
 		}
 
@@ -262,7 +283,9 @@ public class RebirthIncModVariables {
 	}
 
 	public static class PlayerVariables {
-		public double Hz = 45.0;
+		public double Hz = 0.0;
+		public double Ivunerabilidade = 0.0;
+		public String Radio_Location_PlayerSync = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -272,12 +295,16 @@ public class RebirthIncModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("Hz", Hz);
+			nbt.putDouble("Ivunerabilidade", Ivunerabilidade);
+			nbt.putString("Radio_Location_PlayerSync", Radio_Location_PlayerSync);
 			return nbt;
 		}
 
 		public void readNBT(Tag tag) {
 			CompoundTag nbt = (CompoundTag) tag;
 			Hz = nbt.getDouble("Hz");
+			Ivunerabilidade = nbt.getDouble("Ivunerabilidade");
+			Radio_Location_PlayerSync = nbt.getString("Radio_Location_PlayerSync");
 		}
 	}
 
@@ -303,6 +330,8 @@ public class RebirthIncModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.Hz = message.data.Hz;
+					variables.Ivunerabilidade = message.data.Ivunerabilidade;
+					variables.Radio_Location_PlayerSync = message.data.Radio_Location_PlayerSync;
 				}
 			});
 			context.setPacketHandled(true);

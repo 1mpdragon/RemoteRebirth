@@ -1,0 +1,10 @@
+{
+  "parry": {
+    "sounds": [
+      {
+        "name": "rebirth_inc:parry",
+        "stream": false
+      }
+    ]
+  }
+}

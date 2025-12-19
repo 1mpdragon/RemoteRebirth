@@ -1,0 +1,7 @@
+{
+  "_fv": 73,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"22\" y=\"39\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"blockstate_set_literal_uuid_nbt\"><value name=\"tagName\"><block type=\"text\"><field name=\"TEXT\">Items</field></block></value><value name=\"x\"><block type=\"coord_x\"></block></value><value name=\"y\"><block type=\"coord_y\"></block></value><value name=\"z\"><block type=\"coord_z\"></block></value><value name=\"uuid\"><block type=\"default_uuid\"></block></value></block></next></block><block type=\"random_uuid\" x=\"627\" y=\"161\"></block></xml>"
+  }
+}
