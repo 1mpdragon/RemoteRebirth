@@ -2,13 +2,11 @@ package net.mcreator.rebirthinc.procedures;
 
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 
 public class OciloscopioItemInHandTickProcedure {
-	public static double execute(LevelAccessor world, Entity entity, double Xi, double Yi, double Zi) {
+	public static double execute(Entity entity, double Xi, double Yi, double Zi) {
 		if (entity == null)
 			return 0;
 		Direction OciloscopioCalibrator = Direction.NORTH;
@@ -32,9 +30,9 @@ public class OciloscopioItemInHandTickProcedure {
 		double dist2 = 0;
 		double DistanceToTarget = 0;
 		RaioDistance = 5;
-		BX = Xi > -0.1 ? Xi + 0.5 : Xi - 0.5;
-		BY = Yi > -0.1 ? Yi + 0.5 : Yi - 0.5;
-		BZ = Zi > -0.1 ? Zi + 0.5 : Zi - 0.5;
+		BX = Xi + 0.5;
+		BY = Yi + 0.5;
+		BZ = Zi + 0.5;
 		PX = entity.getX();
 		PY = entity.getY();
 		PZ = entity.getZ();
@@ -54,8 +52,6 @@ public class OciloscopioItemInHandTickProcedure {
 		}
 		Dist = Temp;
 		DistanceToTarget = Math.sqrt(Math.pow(Dist, 2) + Math.pow(dist2, 2));
-		if (!world.isClientSide() && world.getServer() != null)
-			world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Final:" + Math.round(Math.pow(10, 1) * DistanceToTarget) / Math.pow(10, 1))), false);
 		return Math.abs(DistanceToTarget);
 	}
 }

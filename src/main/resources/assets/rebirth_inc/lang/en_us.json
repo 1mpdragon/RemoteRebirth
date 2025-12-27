@@ -4,6 +4,7 @@
   "attribute.rebirth_inc.dead": "Dead",
   "block.rebirth_inc.minhocalhau": "Minhocalhau",
   "block.rebirth_inc.backpack": "Backpack",
+  "item.rebirth_inc.folha": "Folha",
   "item_group.rebirth_inc.teste": "Teste",
   "item.rebirth_inc.minhoca": "Minhoca",
   "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
@@ -13,5 +14,6 @@
   "subtitles.parry": "",
   "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
   "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
+  "subtitles.ociloscopio_frequency": "",
   "item.rebirth_inc.ociloscopio": "Ociloscopio"
 }

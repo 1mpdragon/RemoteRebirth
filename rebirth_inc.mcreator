@@ -526,7 +526,7 @@
           "src/main/java/net/mcreator/rebirthinc/item/OciloscopioItem.java"
         ]
       },
-      "path": "~/Ociloscopio"
+      "path": "~/Itens/Ociloscopio"
     },
     {
       "name": "OciloscopioItemInHandTick",
@@ -554,20 +554,16 @@
           {
             "name": "Zi",
             "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ],
         "return_type": "number"
       },
-      "path": "~/Ociloscopio"
+      "path": "~/Itens/Ociloscopio"
     },
     {
       "name": "OciloscopioFunction",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ociloscopio_function",
       "metadata": {
@@ -576,7 +572,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Ociloscopio"
+      "path": "~/Itens/Ociloscopio"
     },
     {
       "name": "OciloscopioDistance",
@@ -608,25 +604,7 @@
           }
         ]
       },
-      "path": "~/Ociloscopio"
-    },
-    {
-      "name": "Radio",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "radio",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/rebirth_inc/models/item/radio.json",
-          "src/main/resources/data/rebirth_inc/loot_tables/blocks/radio.json",
-          "src/main/resources/assets/rebirth_inc/models/block/radio.json",
-          "src/main/java/net/mcreator/rebirthinc/block/RadioBlock.java",
-          "src/main/java/net/mcreator/rebirthinc/block/entity/RadioBlockEntity.java",
-          "src/main/resources/assets/rebirth_inc/blockstates/radio.json"
-        ]
-      },
-      "path": "~/Ociloscopio"
+      "path": "~/Itens/Ociloscopio"
     },
     {
       "name": "RadioBlockAdded",
@@ -657,7 +635,7 @@
           }
         ]
       },
-      "path": "~/Ociloscopio"
+      "path": "~/Itens/Ociloscopio"
     },
     {
       "name": "RadioOnBlockRightClicked",
@@ -670,6 +648,14 @@
           "src/main/java/net/mcreator/rebirthinc/procedures/RadioOnBlockRightClickedProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "direction",
+            "type": "direction"
+          },
           {
             "name": "x",
             "type": "number"
@@ -688,7 +674,7 @@
           }
         ]
       },
-      "path": "~/Ociloscopio"
+      "path": "~/Itens/Ociloscopio"
     },
     {
       "name": "RenderHz",
@@ -707,7 +693,7 @@
           }
         ]
       },
-      "path": "~/Ociloscopio"
+      "path": "~/Itens/Ociloscopio"
     },
     {
       "name": "OciloscopioRightclicked",
@@ -742,7 +728,7 @@
           }
         ]
       },
-      "path": "~/Ociloscopio"
+      "path": "~/Itens/Ociloscopio"
     },
     {
       "name": "RadioBlockBroken",
@@ -773,7 +759,7 @@
           }
         ]
       },
-      "path": "~/Ociloscopio"
+      "path": "~/Itens/Ociloscopio"
     },
     {
       "name": "Esquiva",
@@ -875,14 +861,14 @@
       "path": "~/Mecanicas/Esquiva"
     },
     {
-      "name": "Sync",
+      "name": "HandTickSync",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "sync",
+      "registry_name": "hand_tick_sync",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/SyncProcedure.java"
+          "src/main/java/net/mcreator/rebirthinc/procedures/HandTickSyncProcedure.java"
         ],
         "dependencies": [
           {
@@ -895,7 +881,169 @@
           }
         ]
       },
-      "path": "~/Ociloscopio"
+      "path": "~/Itens/Ociloscopio"
+    },
+    {
+      "name": "RadioAtualization",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radio_atualization",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/RadioAtualizationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Itens/Ociloscopio"
+    },
+    {
+      "name": "Radio",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radio",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/radio.json",
+          "src/main/java/net/mcreator/rebirthinc/block/model/RadioBlockModel.java",
+          "src/main/java/net/mcreator/rebirthinc/block/renderer/RadioDisplayItemRenderer.java",
+          "src/main/java/net/mcreator/rebirthinc/block/RadioBlock.java",
+          "src/main/java/net/mcreator/rebirthinc/block/entity/RadioTileEntity.java",
+          "src/main/resources/assets/rebirth_inc/models/custom/radio_particle.json",
+          "src/main/java/net/mcreator/rebirthinc/block/renderer/RadioTileRenderer.java",
+          "src/main/java/net/mcreator/rebirthinc/block/model/RadioDisplayModel.java",
+          "src/main/java/net/mcreator/rebirthinc/block/display/RadioDisplayItem.java",
+          "src/main/resources/assets/rebirth_inc/blockstates/radio.json"
+        ]
+      },
+      "path": "~/Itens/Ociloscopio"
+    },
+    {
+      "name": "Folha",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "folha",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/FolhaItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/folha.json"
+        ]
+      },
+      "path": "~/Itens/folha"
+    },
+    {
+      "name": "FolhaGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "folha_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/world/inventory/FolhaGUIMenu.java",
+          "src/main/java/net/mcreator/rebirthinc/client/gui/FolhaGUIScreen.java"
+        ]
+      },
+      "path": "~/Itens/folha"
+    },
+    {
+      "name": "FolhaOpenGui",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "folha_open_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/FolhaOpenGuiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Itens/folha"
+    },
+    {
+      "name": "FolhaText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "folha_text",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/FolhaTextProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Itens/folha"
+    },
+    {
+      "name": "FolhaComando",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "folha_comando",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/FolhaComandoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Itens/folha"
+    },
+    {
+      "name": "FolhaCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "folha_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/command/FolhaCommandCommand.java"
+        ]
+      },
+      "path": "~/Itens/folha"
     }
   ],
   "variable_elements": [
@@ -980,6 +1128,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "ociloscopio_frequency",
+      "files": [
+        "ociloscopiosound"
+      ],
+      "category": "ambient",
+      "subtitle": ""
     }
   ],
   "tag_elements": {
@@ -1000,7 +1156,8 @@
       "Minhocalhau",
       "AcoraIra",
       "Backpacjk",
-      "Ociloscopio"
+      "Ociloscopio",
+      "Radio"
     ]
   },
   "language_map": {
@@ -1010,6 +1167,7 @@
       "attribute.rebirth_inc.dead": "Dead",
       "block.rebirth_inc.minhocalhau": "Minhocalhau",
       "block.rebirth_inc.backpack": "Backpack",
+      "item.rebirth_inc.folha": "Folha",
       "item_group.rebirth_inc.teste": "Teste",
       "item.rebirth_inc.minhoca": "Minhoca",
       "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
@@ -1019,6 +1177,7 @@
       "subtitles.parry": "",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
+      "subtitles.ociloscopio_frequency": "",
       "item.rebirth_inc.ociloscopio": "Ociloscopio"
     }
   },
@@ -1044,6 +1203,14 @@
           {
             "name": "Backpack",
             "children": []
+          },
+          {
+            "name": "Ociloscopio",
+            "children": []
+          },
+          {
+            "name": "folha",
+            "children": []
           }
         ]
       },
@@ -1062,10 +1229,6 @@
       },
       {
         "name": "atributos",
-        "children": []
-      },
-      {
-        "name": "Ociloscopio",
         "children": []
       },
       {

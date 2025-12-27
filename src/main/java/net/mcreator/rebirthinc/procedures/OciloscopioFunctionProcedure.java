@@ -42,7 +42,6 @@ import javax.annotation.Nullable;
 
 import java.util.Map;
 import java.util.HashMap;
-import java.util.ArrayList;
 
 import com.mojang.blaze3d.vertex.VertexFormat;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -400,16 +399,14 @@ public class OciloscopioFunctionProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
-		boolean found = false;
-		ArrayList<Object> gamer2 = new ArrayList<>();
-		double gamer = 0;
+		String OciloscopioDistance = "";
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
-		double range = 0;
 		double arrayIndex = 0;
-		double arraysize = 0;
-		double index = 0;
+		double OciloscopioIteminHandTick = 0;
+		double biggerArray = 0;
+		double soundTimer = 0;
 		if (target(2)) {
 			if (Minecraft.getInstance().player != null) {
 				Entity entity = Minecraft.getInstance().player;
@@ -431,7 +428,7 @@ public class OciloscopioFunctionProcedure {
 								String[] resultTxt = (text).split(separator);
 								return resultTxt.length;
 							}
-						}.returnSize(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), ",") / 3); index0++) {
+						}.returnSize(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), ",") / 4); index0++) {
 							sx = new Object() {
 								double convert(String s) {
 									try {
@@ -451,7 +448,7 @@ public class OciloscopioFunctionProcedure {
 										return "";
 									}
 								}
-							}.returnValue(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), (arrayIndex + 0), ","));
+							}.returnValue(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), ((int) (arrayIndex + 0)), ","));
 							sy = new Object() {
 								double convert(String s) {
 									try {
@@ -471,7 +468,7 @@ public class OciloscopioFunctionProcedure {
 										return "";
 									}
 								}
-							}.returnValue(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), (arrayIndex + 1), ","));
+							}.returnValue(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), ((int) (arrayIndex + 1)), ","));
 							sz = new Object() {
 								double convert(String s) {
 									try {
@@ -491,23 +488,131 @@ public class OciloscopioFunctionProcedure {
 										return "";
 									}
 								}
-							}.returnValue(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), (arrayIndex + 2), ","));
-							if (OciloscopioItemInHandTickProcedure.execute(world, entity, sx, sy, sz) >= 3 && OciloscopioItemInHandTickProcedure.execute(world, entity, sx, sy, sz) <= 100) {
-								RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopaim_left" + ".png")));
-								renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2 - OciloscopioItemInHandTickProcedure.execute(world, entity, sx, sy, sz)),
-										(float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0, (float) (Minecraft.getInstance().getWindow().getGuiScale() * 1),
-										255 << 24 | 255 << 16 | (int) (255 - OciloscopioItemInHandTickProcedure.execute(world, entity, sx, sy, sz)) << 8 | (int) (255 - OciloscopioItemInHandTickProcedure.execute(world, entity, sx, sy, sz)), 4);
-								RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopaim_right" + ".png")));
-								renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2 + OciloscopioItemInHandTickProcedure.execute(world, entity, sx, sy, sz)),
-										(float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0, (float) (Minecraft.getInstance().getWindow().getGuiScale() * 1),
-										255 << 24 | 255 << 16 | (int) (255 - OciloscopioItemInHandTickProcedure.execute(world, entity, sx, sy, sz)) << 8 | (int) (255 - OciloscopioItemInHandTickProcedure.execute(world, entity, sx, sy, sz)), 4);
+							}.returnValue(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), ((int) (arrayIndex + 2)), ","));
+							OciloscopioIteminHandTick = OciloscopioItemInHandTickProcedure.execute(entity, sx, sy, sz);
+							OciloscopioDistance = OciloscopioDistanceProcedure.execute(entity, sx, sy, sz);
+							if (new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(OciloscopioDistanceProcedure.execute(entity, sx, sy, sz)) > new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(OciloscopioDistanceProcedure.execute(entity, new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								private String returnValue(String string, int Index, String sep) {
+									try {
+										return ((string).split(sep)[Index]);
+										// Utilisez account ici
+									} catch (ArrayIndexOutOfBoundsException e) {
+										// Gérer l'erreur ici, par exemple :
+										System.out.println("Valeur null !");
+										return "";
+									}
+								}
+							}.returnValue(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), ((int) (biggerArray + 0)), ",")),
+									new Object() {
+										double convert(String s) {
+											try {
+												return Double.parseDouble(s.trim());
+											} catch (Exception e) {
+											}
+											return 0;
+										}
+									}.convert(new Object() {
+										private String returnValue(String string, int Index, String sep) {
+											try {
+												return ((string).split(sep)[Index]);
+												// Utilisez account ici
+											} catch (ArrayIndexOutOfBoundsException e) {
+												// Gérer l'erreur ici, par exemple :
+												System.out.println("Valeur null !");
+												return "";
+											}
+										}
+									}.returnValue(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), ((int) (biggerArray + 1)), ",")),
+									new Object() {
+										double convert(String s) {
+											try {
+												return Double.parseDouble(s.trim());
+											} catch (Exception e) {
+											}
+											return 0;
+										}
+									}.convert(new Object() {
+										private String returnValue(String string, int Index, String sep) {
+											try {
+												return ((string).split(sep)[Index]);
+												// Utilisez account ici
+											} catch (ArrayIndexOutOfBoundsException e) {
+												// Gérer l'erreur ici, par exemple :
+												System.out.println("Valeur null !");
+												return "";
+											}
+										}
+									}.returnValue(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), ((int) (biggerArray + 2)), ","))))) {
+								biggerArray = arrayIndex;
 							}
-							if (OciloscopioItemInHandTickProcedure.execute(world, entity, sx, sy, sz) < 3) {
-								RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopain_all" + ".png")));
-								renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0,
-										(float) (Minecraft.getInstance().getWindow().getGuiScale() * 1), 255 << 24 | 0 << 16 | 255 << 8 | 0, 4);
-								renderTexts(OciloscopioDistanceProcedure.execute(entity, sx, sy, sz), (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 + 20),
-										0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 1);
+							if (new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								private String returnValue(String string, int Index, String sep) {
+									try {
+										return ((string).split(sep)[Index]);
+										// Utilisez account ici
+									} catch (ArrayIndexOutOfBoundsException e) {
+										// Gérer l'erreur ici, par exemple :
+										System.out.println("Valeur null !");
+										return "";
+									}
+								}
+							}.returnValue(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), ((int) (arrayIndex + 3)),
+									",")) == (entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Hz) {
+								if (OciloscopioIteminHandTick >= 3 && OciloscopioIteminHandTick <= 100) {
+									RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopaim_left" + ".png")));
+									renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2 - OciloscopioIteminHandTick), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0,
+											(float) (Minecraft.getInstance().getWindow().getGuiScale() * 1), 255 << 24 | 255 << 16 | (int) (255 - OciloscopioIteminHandTick) << 8 | (int) (255 - OciloscopioIteminHandTick), 4);
+									RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopaim_right" + ".png")));
+									renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2 + OciloscopioIteminHandTick), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0,
+											(float) (Minecraft.getInstance().getWindow().getGuiScale() * 1), 255 << 24 | 255 << 16 | (int) (255 - OciloscopioIteminHandTick) << 8 | (int) (255 - OciloscopioIteminHandTick), 4);
+								}
+								if (OciloscopioIteminHandTick < 3) {
+									RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopain_all" + ".png")));
+									renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0,
+											(float) (Minecraft.getInstance().getWindow().getGuiScale() * 1), 255 << 24 | 0 << 16 | (int) (255 - new Object() {
+												double convert(String s) {
+													try {
+														return Double.parseDouble(s.trim());
+													} catch (Exception e) {
+													}
+													return 0;
+												}
+											}.convert(OciloscopioDistance)) << 8 | 0, 4);
+									renderTexts(OciloscopioDistance, (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 + 20), 0, 0, 1,
+											255 << 24 | 255 << 16 | 255 << 8 | 255, 1);
+								}
 							}
 							if (arrayIndex + 1 > new Object() {
 								private int returnSize(String text, String separator) {
@@ -517,7 +622,7 @@ public class OciloscopioFunctionProcedure {
 							}.returnSize(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Radio_Location_PlayerSync), ",")) {
 								arrayIndex = 0;
 							} else {
-								arrayIndex = arrayIndex + 3;
+								arrayIndex = arrayIndex + 4;
 							}
 						}
 					}

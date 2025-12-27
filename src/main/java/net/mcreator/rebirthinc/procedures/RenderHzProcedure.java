@@ -12,6 +12,9 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.chunk.LevelChunk;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.RenderShape;
@@ -23,6 +26,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.core.SectionPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.renderer.texture.OverlayTexture;
@@ -248,6 +252,7 @@ public class RenderHzProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
+		double direcao = 0;
 		if (world instanceof ClientLevel _blockEntityContext) {
 			int _scanRange = Minecraft.getInstance().options.getEffectiveRenderDistance();
 			BlockPos _scanCenter = Minecraft.getInstance().player.blockPosition();
@@ -264,6 +269,55 @@ public class RenderHzProcedure {
 							positiony = _blockEntityEntry.getKey().getY();
 							positionz = _blockEntityEntry.getKey().getZ();
 							if (blockstateiterator.getBlock() == RebirthIncModBlocks.RADIO.get()) {
+								if (Direction.SOUTH == (new Object() {
+									public Direction getDirection(BlockState _bs) {
+										Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (_prop instanceof DirectionProperty _dp)
+											return _bs.getValue(_dp);
+										_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+										return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+												? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+												: Direction.NORTH;
+									}
+								}.getDirection(blockstateiterator))) {
+									direcao = 0;
+								} else if (Direction.WEST == (new Object() {
+									public Direction getDirection(BlockState _bs) {
+										Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (_prop instanceof DirectionProperty _dp)
+											return _bs.getValue(_dp);
+										_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+										return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+												? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+												: Direction.NORTH;
+									}
+								}.getDirection(blockstateiterator))) {
+									direcao = 90;
+								} else if (Direction.NORTH == (new Object() {
+									public Direction getDirection(BlockState _bs) {
+										Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (_prop instanceof DirectionProperty _dp)
+											return _bs.getValue(_dp);
+										_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+										return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+												? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+												: Direction.NORTH;
+									}
+								}.getDirection(blockstateiterator))) {
+									direcao = 180;
+								} else if (Direction.EAST == (new Object() {
+									public Direction getDirection(BlockState _bs) {
+										Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (_prop instanceof DirectionProperty _dp)
+											return _bs.getValue(_dp);
+										_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+										return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
+												? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
+												: Direction.NORTH;
+									}
+								}.getDirection(blockstateiterator))) {
+									direcao = -90;
+								}
 								renderTexts(((new Object() {
 									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 										BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -271,7 +325,8 @@ public class RenderHzProcedure {
 											return blockEntity.getPersistentData().getDouble(tag);
 										return -1;
 									}
-								}.getValue(world, new BlockPos(positionx, positiony, positionz), "Hz")) + "Hz"), (positionx + 0.5), (positiony + 1.01), (positionz + 0.5), 0, -90, 0, (float) 0.025, 255 << 24 | 255 << 16 | 255 << 8 | 255, false);
+								}.getValue(world, new BlockPos(positionx, positiony, positionz), "Hz")) + "Hz"), (positionx + 0.54), (positiony + 0.5), (positionz + 0.5), (float) direcao, -28, 15, (float) 0.015,
+										255 << 24 | 255 << 16 | 255 << 8 | 255, true);
 							}
 						}
 					}

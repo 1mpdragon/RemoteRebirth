@@ -1,0 +1,7 @@
+
+{
+  "parent": "rebirth_inc:displaysettings/radio_frequency",
+  "textures": {
+    "particle": "rebirth_inc:block/minecraft:iron_block"
+  }
+}

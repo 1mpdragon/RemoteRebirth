@@ -6,5 +6,13 @@
         "stream": false
       }
     ]
+  },
+  "ociloscopio_frequency": {
+    "sounds": [
+      {
+        "name": "rebirth_inc:ociloscopiosound",
+        "stream": false
+      }
+    ]
   }
 }

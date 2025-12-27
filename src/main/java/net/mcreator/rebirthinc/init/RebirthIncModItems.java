@@ -16,7 +16,9 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.rebirthinc.item.OciloscopioItem;
 import net.mcreator.rebirthinc.item.NailItem;
 import net.mcreator.rebirthinc.item.MinhocaItem;
+import net.mcreator.rebirthinc.item.FolhaItem;
 import net.mcreator.rebirthinc.item.AcoraIraItem;
+import net.mcreator.rebirthinc.block.display.RadioDisplayItem;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
 public class RebirthIncModItems {
@@ -29,7 +31,8 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> ACORA_IRA = REGISTRY.register("acora_ira", () -> new AcoraIraItem());
 	public static final RegistryObject<Item> BACKPACK = block(RebirthIncModBlocks.BACKPACK);
 	public static final RegistryObject<Item> OCILOSCOPIO = REGISTRY.register("ociloscopio", () -> new OciloscopioItem());
-	public static final RegistryObject<Item> RADIO = block(RebirthIncModBlocks.RADIO);
+	public static final RegistryObject<Item> RADIO = REGISTRY.register(RebirthIncModBlocks.RADIO.getId().getPath(), () -> new RadioDisplayItem(RebirthIncModBlocks.RADIO.get(), new Item.Properties()));
+	public static final RegistryObject<Item> FOLHA = REGISTRY.register("folha", () -> new FolhaItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

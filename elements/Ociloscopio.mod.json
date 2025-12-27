@@ -39,6 +39,9 @@
     "onRightClickedInAir": {
       "name": "OciloscopioRightclicked"
     },
+    "onItemInUseTick": {
+      "name": "HandTickSync"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

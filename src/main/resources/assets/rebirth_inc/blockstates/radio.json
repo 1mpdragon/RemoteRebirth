@@ -1,27 +1,19 @@
 {
   "variants": {
     "facing=north": {
-      "model": "rebirth_inc:block/radio"
+      "model": "rebirth_inc:custom/radio_particle"
     },
     "facing=east": {
-      "model": "rebirth_inc:block/radio",
+      "model": "rebirth_inc:custom/radio_particle",
       "y": 90
     },
     "facing=south": {
-      "model": "rebirth_inc:block/radio",
+      "model": "rebirth_inc:custom/radio_particle",
       "y": 180
     },
     "facing=west": {
-      "model": "rebirth_inc:block/radio",
+      "model": "rebirth_inc:custom/radio_particle",
       "y": 270
-    },
-    "facing=up": {
-      "model": "rebirth_inc:block/radio",
-      "x": 270
-    },
-    "facing=down": {
-      "model": "rebirth_inc:block/radio",
-      "x": 90
     }
   }
 }

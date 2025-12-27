@@ -16,4 +16,5 @@ import net.mcreator.rebirthinc.RebirthIncMod;
 public class RebirthIncModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, RebirthIncMod.MODID);
 	public static final RegistryObject<SoundEvent> PARRY = REGISTRY.register("parry", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("rebirth_inc", "parry")));
+	public static final RegistryObject<SoundEvent> OCILOSCOPIO_FREQUENCY = REGISTRY.register("ociloscopio_frequency", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("rebirth_inc", "ociloscopio_frequency")));
 }
