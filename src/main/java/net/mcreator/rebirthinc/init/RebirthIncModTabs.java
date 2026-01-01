@@ -27,5 +27,8 @@ public class RebirthIncModTabs {
 				tabData.accept(RebirthIncModBlocks.BACKPACK.get().asItem());
 				tabData.accept(RebirthIncModItems.OCILOSCOPIO.get());
 				tabData.accept(RebirthIncModBlocks.RADIO.get().asItem());
+				tabData.accept(RebirthIncModBlocks.WORK_SHOP.get().asItem());
+				tabData.accept(RebirthIncModBlocks.METALLURGIC_SMELTER.get().asItem());
+				tabData.accept(RebirthIncModItems.METALLURGIC_BUCKET.get());
 			}).build());
 }

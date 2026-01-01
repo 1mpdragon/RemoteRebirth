@@ -10,8 +10,10 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.rebirthinc.block.WorkShopBlock;
 import net.mcreator.rebirthinc.block.RadioBlock;
 import net.mcreator.rebirthinc.block.MinhocalhauBlock;
+import net.mcreator.rebirthinc.block.MetallurgicSmelterBlock;
 import net.mcreator.rebirthinc.block.BackpacjkBlock;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
@@ -20,6 +22,8 @@ public class RebirthIncModBlocks {
 	public static final RegistryObject<Block> MINHOCALHAU = REGISTRY.register("minhocalhau", () -> new MinhocalhauBlock());
 	public static final RegistryObject<Block> BACKPACK = REGISTRY.register("backpack", () -> new BackpacjkBlock());
 	public static final RegistryObject<Block> RADIO = REGISTRY.register("radio", () -> new RadioBlock());
+	public static final RegistryObject<Block> WORK_SHOP = REGISTRY.register("work_shop", () -> new WorkShopBlock());
+	public static final RegistryObject<Block> METALLURGIC_SMELTER = REGISTRY.register("metallurgic_smelter", () -> new MetallurgicSmelterBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

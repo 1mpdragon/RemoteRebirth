@@ -1,0 +1,60 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.smelter",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "estrutura",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-10, 0, -9], "size": [5, 4, 18], "uv": [82, 0]},
+						{"origin": [-9.25, 1.25, -5], "size": [3.5, 14.25, 10], "uv": [36, 20]},
+						{"origin": [5, 0, -9], "size": [5, 4, 18], "uv": [82, 0], "mirror": true},
+						{"origin": [5.75, 1.25, -5], "size": [3.5, 14.25, 10], "uv": [36, 20], "mirror": true}
+					]
+				},
+				{
+					"name": "bagulhoQueGira",
+					"parent": "estrutura",
+					"pivot": [0, 11.45, 0],
+					"cubes": [
+						{"origin": [-9.5, 10.7, -0.75], "size": [19, 1.5, 1.5], "uv": [42, 0]}
+					]
+				},
+				{
+					"name": "Baude",
+					"pivot": [0, 9.97727, 0.13636],
+					"cubes": [
+						{"origin": [-4, 0, -4], "size": [1, 8, 8], "uv": [42, 2]},
+						{"origin": [-3, 0, -4], "size": [6, 8, 1], "uv": [40, 44]},
+						{"origin": [-4, -1, -4], "size": [8, 1, 8], "uv": [0, 60]},
+						{"origin": [-4.5, 8, 3.5], "size": [9, 1, 1], "uv": [42, 18]},
+						{"origin": [-4.5, 8, -4.5], "size": [9, 1, 1], "uv": [14, 52]},
+						{"origin": [-4.5, 8, -3.5], "size": [1, 1, 7], "uv": [24, 44]},
+						{"origin": [-4.5, 9, -1], "size": [1, 1, 2.5], "uv": [34, 52]},
+						{"origin": [-3, 0, 3], "size": [6, 8, 1], "uv": [0, 51]},
+						{"origin": [3, 0, -4], "size": [1, 8, 8], "uv": [42, 2], "mirror": true},
+						{"origin": [3.5, 8, -3.5], "size": [1, 1, 7], "uv": [24, 44], "mirror": true},
+						{"origin": [3.5, 9, -1], "size": [1, 1, 2.5], "uv": [34, 52], "mirror": true}
+					]
+				},
+				{
+					"name": "corda",
+					"pivot": [0, 11.25, 0],
+					"cubes": [
+						{"origin": [-4, 9.3, -1], "size": [0, 2, 2], "uv": [40, 53]},
+						{"origin": [4, 9.3, -1], "size": [0, 2, 2], "uv": [40, 53], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

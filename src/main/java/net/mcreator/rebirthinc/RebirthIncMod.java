@@ -19,6 +19,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.rebirthinc.init.RebirthIncModTabs;
 import net.mcreator.rebirthinc.init.RebirthIncModSounds;
+import net.mcreator.rebirthinc.init.RebirthIncModParticleTypes;
 import net.mcreator.rebirthinc.init.RebirthIncModMenus;
 import net.mcreator.rebirthinc.init.RebirthIncModItems;
 import net.mcreator.rebirthinc.init.RebirthIncModEntities;
@@ -52,6 +53,8 @@ public class RebirthIncMod {
 		RebirthIncModEntities.REGISTRY.register(bus);
 
 		RebirthIncModTabs.REGISTRY.register(bus);
+
+		RebirthIncModParticleTypes.REGISTRY.register(bus);
 
 		RebirthIncModMenus.REGISTRY.register(bus);
 		RebirthIncModAttributes.REGISTRY.register(bus);

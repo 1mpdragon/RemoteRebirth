@@ -1,0 +1,7 @@
+
+{
+  "parent": "rebirth_inc:displaysettings/smelter",
+  "textures": {
+    "particle": "rebirth_inc:block/smelter_0"
+  }
+}

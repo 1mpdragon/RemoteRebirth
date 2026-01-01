@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.rebirthinc.init.RebirthIncModBlockEntities;
 import net.mcreator.rebirthinc.block.renderer.RadioTileRenderer;
+import net.mcreator.rebirthinc.block.renderer.MetallurgicSmelterTileRenderer;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
 @Mod.EventBusSubscriber(modid = RebirthIncMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -16,5 +17,6 @@ public class ClientListener {
 	@SubscribeEvent
 	public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerBlockEntityRenderer(RebirthIncModBlockEntities.RADIO.get(), context -> new RadioTileRenderer());
+		event.registerBlockEntityRenderer(RebirthIncModBlockEntities.METALLURGIC_SMELTER.get(), context -> new MetallurgicSmelterTileRenderer());
 	}
 }

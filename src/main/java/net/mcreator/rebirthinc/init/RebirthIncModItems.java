@@ -16,9 +16,13 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.rebirthinc.item.OciloscopioItem;
 import net.mcreator.rebirthinc.item.NailItem;
 import net.mcreator.rebirthinc.item.MinhocaItem;
+import net.mcreator.rebirthinc.item.MetallurgicBucketfullItem;
+import net.mcreator.rebirthinc.item.MetallurgicBucketItem;
+import net.mcreator.rebirthinc.item.LavaitemItem;
 import net.mcreator.rebirthinc.item.FolhaItem;
 import net.mcreator.rebirthinc.item.AcoraIraItem;
 import net.mcreator.rebirthinc.block.display.RadioDisplayItem;
+import net.mcreator.rebirthinc.block.display.MetallurgicSmelterDisplayItem;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
 public class RebirthIncModItems {
@@ -33,6 +37,12 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> OCILOSCOPIO = REGISTRY.register("ociloscopio", () -> new OciloscopioItem());
 	public static final RegistryObject<Item> RADIO = REGISTRY.register(RebirthIncModBlocks.RADIO.getId().getPath(), () -> new RadioDisplayItem(RebirthIncModBlocks.RADIO.get(), new Item.Properties()));
 	public static final RegistryObject<Item> FOLHA = REGISTRY.register("folha", () -> new FolhaItem());
+	public static final RegistryObject<Item> WORK_SHOP = block(RebirthIncModBlocks.WORK_SHOP);
+	public static final RegistryObject<Item> METALLURGIC_SMELTER = REGISTRY.register(RebirthIncModBlocks.METALLURGIC_SMELTER.getId().getPath(),
+			() -> new MetallurgicSmelterDisplayItem(RebirthIncModBlocks.METALLURGIC_SMELTER.get(), new Item.Properties()));
+	public static final RegistryObject<Item> METALLURGIC_BUCKET = REGISTRY.register("metallurgic_bucket", () -> new MetallurgicBucketItem());
+	public static final RegistryObject<Item> METALLURGIC_BUCKETFULL = REGISTRY.register("metallurgic_bucketfull", () -> new MetallurgicBucketfullItem());
+	public static final RegistryObject<Item> LAVAITEM = REGISTRY.register("lavaitem", () -> new LavaitemItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

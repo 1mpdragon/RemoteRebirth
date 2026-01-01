@@ -1044,6 +1044,271 @@
         ]
       },
       "path": "~/Itens/folha"
+    },
+    {
+      "name": "WorkShop",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "work_shop",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/blockstates/work_shop.json",
+          "src/main/resources/assets/rebirth_inc/models/block/work_shop.json",
+          "src/main/resources/assets/rebirth_inc/models/item/work_shop.json",
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/work_shop.json",
+          "src/main/java/net/mcreator/rebirthinc/block/WorkShopBlock.java"
+        ]
+      },
+      "path": "~/Blocos"
+    },
+    {
+      "name": "WorkShopOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "work_shop_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/WorkShopOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Blocos"
+    },
+    {
+      "name": "MetallurgicSmelter",
+      "type": "animatedblock",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgic_smelter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/block/model/MetallurgicSmelterDisplayModel.java",
+          "src/main/java/net/mcreator/rebirthinc/block/renderer/MetallurgicSmelterTileRenderer.java",
+          "src/main/java/net/mcreator/rebirthinc/block/display/MetallurgicSmelterDisplayItem.java",
+          "src/main/java/net/mcreator/rebirthinc/block/model/MetallurgicSmelterBlockModel.java",
+          "src/main/resources/assets/rebirth_inc/models/custom/metallurgic_smelter_particle.json",
+          "src/main/resources/assets/rebirth_inc/blockstates/metallurgic_smelter.json",
+          "src/main/java/net/mcreator/rebirthinc/block/MetallurgicSmelterBlock.java",
+          "src/main/java/net/mcreator/rebirthinc/block/entity/MetallurgicSmelterTileEntity.java",
+          "src/main/java/net/mcreator/rebirthinc/block/renderer/MetallurgicSmelterDisplayItemRenderer.java",
+          "src/main/resources/assets/rebirth_inc/models/block/metallurgic_smelter_blockstate_0.json",
+          "src/main/resources/assets/rebirth_inc/models/item/metallurgic_smelter.json"
+        ]
+      }
+    },
+    {
+      "name": "MetallurgicSmelterOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgic_smelter_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/MetallurgicSmelterOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MetallurgicBucket",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgic_bucket",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/metallurgic_bucket.json",
+          "src/main/java/net/mcreator/rebirthinc/item/MetallurgicBucketItem.java"
+        ]
+      }
+    },
+    {
+      "name": "MetallurgicBucketfull",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgic_bucketfull",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/MetallurgicBucketfullItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/metallurgic_bucketfull.json"
+        ]
+      }
+    },
+    {
+      "name": "RenderItemMetallurgicBucket",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_item_metallurgic_bucket",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/RenderItemMetallurgicBucketProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RenderShapeMetallurgircBucket",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_shape_metallurgirc_bucket",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/RenderShapeMetallurgircBucketProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MetallurgicSmelterBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgic_smelter_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/MetallurgicSmelterBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Smoke1",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/particles/smoke_1.json",
+          "src/main/java/net/mcreator/rebirthinc/client/particle/Smoke1Particle.java"
+        ]
+      }
+    },
+    {
+      "name": "Smoke2",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/particles/smoke_2.json",
+          "src/main/java/net/mcreator/rebirthinc/client/particle/Smoke2Particle.java"
+        ]
+      }
+    },
+    {
+      "name": "Smoke3",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/client/particle/Smoke3Particle.java",
+          "src/main/resources/assets/rebirth_inc/particles/smoke_3.json"
+        ]
+      }
+    },
+    {
+      "name": "Lavaitem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lavaitem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/lavaitem.json",
+          "src/main/java/net/mcreator/rebirthinc/item/LavaitemItem.java"
+        ]
+      }
+    },
+    {
+      "name": "MetallurgicSmelterOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgic_smelter_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/MetallurgicSmelterOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1139,12 +1404,48 @@
     }
   ],
   "tag_elements": {
+    "BLOCKS:mod:heat/sorce": [
+      "Blocks.CAMPFIRE",
+      "Blocks.SOUL_CAMPFIRE",
+      "Blocks.FIRE",
+      "Blocks.SOUL_FIRE",
+      "Blocks.FLOWING_LAVA",
+      "Blocks.LAVA",
+      "Blocks.LAVA_CAULDRON"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:MetallurgicSmelter"
+    ],
     "BLOCKS:minecraft:mineable/shovel": [
       "~CUSTOM:Minhocalhau"
+    ],
+    "BLOCKS:mod:ore": [
+      "Blocks.IRON_ORE"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:Nail",
       "CUSTOM:AcoraIra"
+    ],
+    "ITEMS:mod:ore": [
+      "Blocks.COAL_ORE",
+      "Blocks.IRON_ORE",
+      "Blocks.REDSTONE_ORE",
+      "Blocks.LIT_REDSTONE_ORE",
+      "Blocks.GOLD_ORE",
+      "Blocks.LAPIS_ORE",
+      "Blocks.DIAMOND_ORE",
+      "Blocks.EMERALD_ORE",
+      "Blocks.COPPER_ORE",
+      "Blocks.DEEPSLATE_COAL_ORE",
+      "Blocks.DEEPSLATE_IRON_ORE",
+      "Blocks.DEEPSLATE_REDSTONE_ORE",
+      "Blocks.DEEPSLATE_GOLD_ORE",
+      "Blocks.DEEPSLATE_LAPIS_ORE",
+      "Blocks.DEEPSLATE_DIAMOND_ORE",
+      "Blocks.DEEPSLATE_EMERALD_ORE",
+      "Blocks.DEEPSLATE_COPPER_ORE",
+      "Blocks.QUARTZ_ORE",
+      "Blocks.NETHER_GOLD_ORE"
     ]
   },
   "tab_element_order": {
@@ -1157,27 +1458,37 @@
       "AcoraIra",
       "Backpacjk",
       "Ociloscopio",
-      "Radio"
+      "Radio",
+      "Worshop",
+      "WorkShop",
+      "MetallurgicSmelter",
+      "MetallurgicBucket"
     ]
   },
   "language_map": {
     "en_us": {
       "item.rebirth_inc.acora_ira": "Acora Irá",
       "block.rebirth_inc.radio": "Radio",
+      "item.rebirth_inc.metallurgic_bucket": "Metallurgic Bucket",
+      "block.rebirth_inc.metallurgic_smelter": "Metallurgic Smelter",
       "attribute.rebirth_inc.dead": "Dead",
+      "block.rebirth_inc.workshop": "Workshop",
       "block.rebirth_inc.minhocalhau": "Minhocalhau",
       "block.rebirth_inc.backpack": "Backpack",
       "item.rebirth_inc.folha": "Folha",
       "item_group.rebirth_inc.teste": "Teste",
       "item.rebirth_inc.minhoca": "Minhoca",
       "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
+      "item.rebirth_inc.lavaitem": "Lavaitem",
       "attribute.rebirth_inc.feedsize": "vaca da chuva feeding",
+      "block.rebirth_inc.work_shop": "Work Shop",
       "item.rebirth_inc.nail": "Nail",
       "item.rebirth_inc.porcodemusgo_spawn_egg": "Porco de musgo Spawn Egg",
       "subtitles.parry": "",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
       "subtitles.ociloscopio_frequency": "",
+      "item.rebirth_inc.metallurgic_bucketfull": "Metallurgic Bucket",
       "item.rebirth_inc.ociloscopio": "Ociloscopio"
     }
   },
