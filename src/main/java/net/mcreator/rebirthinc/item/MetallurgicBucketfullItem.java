@@ -6,6 +6,6 @@ import net.minecraft.world.item.Item;
 
 public class MetallurgicBucketfullItem extends Item {
 	public MetallurgicBucketfullItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().durability(5).rarity(Rarity.UNCOMMON));
 	}
 }

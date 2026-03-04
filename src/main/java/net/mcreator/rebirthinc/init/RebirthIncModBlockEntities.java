@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 
 import net.mcreator.rebirthinc.block.entity.RadioTileEntity;
 import net.mcreator.rebirthinc.block.entity.MetallurgicSmelterTileEntity;
+import net.mcreator.rebirthinc.block.entity.MetallurgicClayMoldBlockEntity;
 import net.mcreator.rebirthinc.block.entity.BackpacjkBlockEntity;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
@@ -22,6 +23,7 @@ public class RebirthIncModBlockEntities {
 	public static final RegistryObject<BlockEntityType<RadioTileEntity>> RADIO = REGISTRY.register("radio", () -> BlockEntityType.Builder.of(RadioTileEntity::new, RebirthIncModBlocks.RADIO.get()).build(null));
 	public static final RegistryObject<BlockEntityType<MetallurgicSmelterTileEntity>> METALLURGIC_SMELTER = REGISTRY.register("metallurgic_smelter",
 			() -> BlockEntityType.Builder.of(MetallurgicSmelterTileEntity::new, RebirthIncModBlocks.METALLURGIC_SMELTER.get()).build(null));
+	public static final RegistryObject<BlockEntityType<?>> METALLURGIC_CLAY_MOLD = register("metallurgic_clay_mold", RebirthIncModBlocks.METALLURGIC_CLAY_MOLD, MetallurgicClayMoldBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities

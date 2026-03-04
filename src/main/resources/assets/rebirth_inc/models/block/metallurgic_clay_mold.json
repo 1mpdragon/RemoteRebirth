@@ -1,0 +1,9 @@
+{
+  "parent": "rebirth_inc:custom/moldebarra",
+  "textures": {
+    "all": "minecraft:block/clay",
+    "particle": "minecraft:block/clay",
+    "1": "minecraft:block/clay"
+  },
+  "render_type": "solid"
+}

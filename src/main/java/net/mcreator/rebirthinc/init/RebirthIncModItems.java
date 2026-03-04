@@ -16,6 +16,7 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.rebirthinc.item.OciloscopioItem;
 import net.mcreator.rebirthinc.item.NailItem;
 import net.mcreator.rebirthinc.item.MinhocaItem;
+import net.mcreator.rebirthinc.item.MetallurgicclampItem;
 import net.mcreator.rebirthinc.item.MetallurgicBucketfullItem;
 import net.mcreator.rebirthinc.item.MetallurgicBucketItem;
 import net.mcreator.rebirthinc.item.LavaitemItem;
@@ -43,6 +44,8 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> METALLURGIC_BUCKET = REGISTRY.register("metallurgic_bucket", () -> new MetallurgicBucketItem());
 	public static final RegistryObject<Item> METALLURGIC_BUCKETFULL = REGISTRY.register("metallurgic_bucketfull", () -> new MetallurgicBucketfullItem());
 	public static final RegistryObject<Item> LAVAITEM = REGISTRY.register("lavaitem", () -> new LavaitemItem());
+	public static final RegistryObject<Item> METALLURGIC_CLAY_MOLD = block(RebirthIncModBlocks.METALLURGIC_CLAY_MOLD);
+	public static final RegistryObject<Item> METALLURGICCLAMP = REGISTRY.register("metallurgicclamp", () -> new MetallurgicclampItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

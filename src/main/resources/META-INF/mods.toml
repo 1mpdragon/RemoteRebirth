@@ -22,6 +22,12 @@ authors="isaac, MCreator"
 
 
 [[dependencies.rebirth_inc]]
+    modId="photon"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.rebirth_inc]]
     modId="pehkui"
     mandatory=false
     versionRange="[0,)"
@@ -35,12 +41,6 @@ authors="isaac, MCreator"
     side="BOTH"
 [[dependencies.rebirth_inc]]
     modId="geckolib"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.rebirth_inc]]
-    modId="effekseer"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

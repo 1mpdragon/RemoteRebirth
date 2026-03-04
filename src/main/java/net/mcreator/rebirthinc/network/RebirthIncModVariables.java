@@ -80,6 +80,7 @@ public class RebirthIncModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.Radio_Location_PlayerSync = original.Radio_Location_PlayerSync;
+			clone.ChatDelay = original.ChatDelay;
 			if (!event.isWasDeath()) {
 				clone.Hz = original.Hz;
 				clone.Ivunerabilidade = original.Ivunerabilidade;
@@ -286,6 +287,7 @@ public class RebirthIncModVariables {
 		public double Hz = 0.0;
 		public double Ivunerabilidade = 0.0;
 		public String Radio_Location_PlayerSync = "\"\"";
+		public double ChatDelay = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -297,6 +299,7 @@ public class RebirthIncModVariables {
 			nbt.putDouble("Hz", Hz);
 			nbt.putDouble("Ivunerabilidade", Ivunerabilidade);
 			nbt.putString("Radio_Location_PlayerSync", Radio_Location_PlayerSync);
+			nbt.putDouble("ChatDelay", ChatDelay);
 			return nbt;
 		}
 
@@ -305,6 +308,7 @@ public class RebirthIncModVariables {
 			Hz = nbt.getDouble("Hz");
 			Ivunerabilidade = nbt.getDouble("Ivunerabilidade");
 			Radio_Location_PlayerSync = nbt.getString("Radio_Location_PlayerSync");
+			ChatDelay = nbt.getDouble("ChatDelay");
 		}
 	}
 
@@ -332,6 +336,7 @@ public class RebirthIncModVariables {
 					variables.Hz = message.data.Hz;
 					variables.Ivunerabilidade = message.data.Ivunerabilidade;
 					variables.Radio_Location_PlayerSync = message.data.Radio_Location_PlayerSync;
+					variables.ChatDelay = message.data.ChatDelay;
 				}
 			});
 			context.setPacketHandled(true);

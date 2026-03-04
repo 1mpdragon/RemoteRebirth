@@ -1074,7 +1074,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Blocos"
+      "path": "~/Blocos/procedure blocos"
     },
     {
       "name": "MetallurgicSmelter",
@@ -1096,12 +1096,13 @@
           "src/main/resources/assets/rebirth_inc/models/block/metallurgic_smelter_blockstate_0.json",
           "src/main/resources/assets/rebirth_inc/models/item/metallurgic_smelter.json"
         ]
-      }
+      },
+      "path": "~/Blocos"
     },
     {
       "name": "MetallurgicSmelterOnBlockRightClicked",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "metallurgic_smelter_on_block_right_clicked",
       "metadata": {
@@ -1134,7 +1135,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Blocos/procedure blocos/MetallurgicSmelter"
     },
     {
       "name": "MetallurgicBucket",
@@ -1147,7 +1149,8 @@
           "src/main/resources/assets/rebirth_inc/models/item/metallurgic_bucket.json",
           "src/main/java/net/mcreator/rebirthinc/item/MetallurgicBucketItem.java"
         ]
-      }
+      },
+      "path": "~/Itens"
     },
     {
       "name": "MetallurgicBucketfull",
@@ -1178,7 +1181,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Blocos/procedure blocos/MetallurgicSmelter"
     },
     {
       "name": "RenderShapeMetallurgircBucket",
@@ -1196,7 +1200,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Blocos/procedure blocos/MetallurgicSmelter"
     },
     {
       "name": "MetallurgicSmelterBlockAdded",
@@ -1226,7 +1231,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Blocos/procedure blocos/MetallurgicSmelter"
     },
     {
       "name": "Smoke1",
@@ -1308,7 +1314,281 @@
             "type": "world"
           }
         ]
+      },
+      "path": "~/Blocos/procedure blocos/MetallurgicSmelter"
+    },
+    {
+      "name": "MetaisAtributos",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metais_atributos",
+      "metadata": {
+        "return_type": "arraylist",
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/MetaisAtributosProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "metal",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Mecanicas/Minerios"
+    },
+    {
+      "name": "MetallurgicClayMold",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgic_clay_mold",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/blockstates/metallurgic_clay_mold.json",
+          "src/main/java/net/mcreator/rebirthinc/block/entity/MetallurgicClayMoldBlockEntity.java",
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/metallurgic_clay_mold.json",
+          "src/main/java/net/mcreator/rebirthinc/block/MetallurgicClayMoldBlock.java",
+          "src/main/resources/assets/rebirth_inc/models/item/metallurgic_clay_mold.json",
+          "src/main/resources/assets/rebirth_inc/models/block/metallurgic_clay_mold.json"
+        ]
+      },
+      "path": "~/Blocos"
+    },
+    {
+      "name": "MetallurgicClayMoldOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgic_clay_mold_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/MetallurgicClayMoldOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/procedure blocos"
+    },
+    {
+      "name": "StageMEetallurgicClayMold",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stage_m_eetallurgic_clay_mold",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/StageMEetallurgicClayMoldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/procedure blocos"
+    },
+    {
+      "name": "MetallurgicClayMoldOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgic_clay_mold_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/MetallurgicClayMoldOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/procedure blocos"
+    },
+    {
+      "name": "MetallurgicClayMoldBlockDestroyedByPlayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgic_clay_mold_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/MetallurgicClayMoldBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos"
+    },
+    {
+      "name": "Hzchat",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hzchat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/HzchatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
+    },
+    {
+      "name": "Hzchatgui",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hzchatgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/HzchatguiProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "HzReduz",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hz_reduz",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/HzReduzProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HzWave",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hz_wave",
+      "metadata": {
+        "return_type": "shape",
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/HzWaveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HzWaveGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hz_wave_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/HzWaveGUIProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Metallurgicclamp",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metallurgicclamp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/MetallurgicclampItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/metallurgicclamp.json"
+        ]
+      },
+      "path": "~/Itens"
     }
   ],
   "variable_elements": [
@@ -1383,6 +1663,12 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "ChatDelay",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -1418,6 +1704,9 @@
     ],
     "BLOCKS:minecraft:mineable/shovel": [
       "~CUSTOM:Minhocalhau"
+    ],
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:Metallurgicclamp"
     ],
     "BLOCKS:mod:ore": [
       "Blocks.IRON_ORE"
@@ -1462,34 +1751,38 @@
       "Worshop",
       "WorkShop",
       "MetallurgicSmelter",
-      "MetallurgicBucket"
+      "MetallurgicBucket",
+      "MetallurgicClayMold",
+      "Metallurgicclamp"
     ]
   },
   "language_map": {
     "en_us": {
       "item.rebirth_inc.acora_ira": "Acora Irá",
       "block.rebirth_inc.radio": "Radio",
-      "item.rebirth_inc.metallurgic_bucket": "Metallurgic Bucket",
-      "block.rebirth_inc.metallurgic_smelter": "Metallurgic Smelter",
       "attribute.rebirth_inc.dead": "Dead",
-      "block.rebirth_inc.workshop": "Workshop",
       "block.rebirth_inc.minhocalhau": "Minhocalhau",
       "block.rebirth_inc.backpack": "Backpack",
-      "item.rebirth_inc.folha": "Folha",
-      "item_group.rebirth_inc.teste": "Teste",
       "item.rebirth_inc.minhoca": "Minhoca",
       "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
-      "item.rebirth_inc.lavaitem": "Lavaitem",
-      "attribute.rebirth_inc.feedsize": "vaca da chuva feeding",
       "block.rebirth_inc.work_shop": "Work Shop",
       "item.rebirth_inc.nail": "Nail",
       "item.rebirth_inc.porcodemusgo_spawn_egg": "Porco de musgo Spawn Egg",
-      "subtitles.parry": "",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
-      "subtitles.ociloscopio_frequency": "",
       "item.rebirth_inc.metallurgic_bucketfull": "Metallurgic Bucket",
-      "item.rebirth_inc.ociloscopio": "Ociloscopio"
+      "item.rebirth_inc.ociloscopio": "Ociloscopio",
+      "item.rebirth_inc.metallurgic_bucket": "Metallurgic Bucket",
+      "block.rebirth_inc.metallurgic_smelter": "Metallurgic Smelter",
+      "block.rebirth_inc.workshop": "Workshop",
+      "item.rebirth_inc.folha": "Folha",
+      "item_group.rebirth_inc.teste": "Teste",
+      "item.rebirth_inc.metallurgicclamp": "Metallurgicclamp",
+      "item.rebirth_inc.lavaitem": "Lavaitem",
+      "attribute.rebirth_inc.feedsize": "vaca da chuva feeding",
+      "subtitles.parry": "",
+      "block.rebirth_inc.metallurgic_clay_mold": "Metallurgic Clay Mold",
+      "subtitles.ociloscopio_frequency": ""
     }
   },
   "foldersRoot": {
@@ -1534,7 +1827,12 @@
           },
           {
             "name": "procedure blocos",
-            "children": []
+            "children": [
+              {
+                "name": "MetallurgicSmelter",
+                "children": []
+              }
+            ]
           }
         ]
       },
@@ -1545,6 +1843,10 @@
       {
         "name": "Mecanicas",
         "children": [
+          {
+            "name": "Minerios",
+            "children": []
+          },
           {
             "name": "Sistema de Morte",
             "children": []
@@ -1573,10 +1875,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "photon",
       "pehkui",
       "nexus_compiled_mods",
       "geckolib",
-      "effekseer",
       "playeranimator"
     ],
     "currentGenerator": "forge-1.20.1",

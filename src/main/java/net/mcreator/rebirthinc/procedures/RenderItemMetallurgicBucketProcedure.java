@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -311,8 +312,17 @@ public class RenderItemMetallurgicBucketProcedure {
 											return blockEntity.getPersistentData().getDouble(tag);
 										return -1;
 									}
-								}.getValue(world, new BlockPos(positionx, positiony, positionz), "stage") >= 3) {
+								}.getValue(world, new BlockPos(positionx, positiony, positionz), "stage") == 3) {
 									renderItem(new ItemStack(RebirthIncModItems.LAVAITEM.get()), (positionx + 0.5), (positiony + 0.4), (positionz + 0.5), 0, 90, 0, (float) 0.4, false, true);
+								} else if (new Object() {
+									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getDouble(tag);
+										return -1;
+									}
+								}.getValue(world, new BlockPos(positionx, positiony, positionz), "stage") == 4) {
+									renderItem(new ItemStack(Blocks.COBBLESTONE), (positionx + 0.5), (positiony + 0.2), (positionz + 0.5), 0, 0, 0, (float) 0.7, false, false);
 								}
 							}
 						}

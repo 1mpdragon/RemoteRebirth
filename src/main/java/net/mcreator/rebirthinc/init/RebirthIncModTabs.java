@@ -30,5 +30,7 @@ public class RebirthIncModTabs {
 				tabData.accept(RebirthIncModBlocks.WORK_SHOP.get().asItem());
 				tabData.accept(RebirthIncModBlocks.METALLURGIC_SMELTER.get().asItem());
 				tabData.accept(RebirthIncModItems.METALLURGIC_BUCKET.get());
+				tabData.accept(RebirthIncModBlocks.METALLURGIC_CLAY_MOLD.get().asItem());
+				tabData.accept(RebirthIncModItems.METALLURGICCLAMP.get());
 			}).build());
 }

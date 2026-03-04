@@ -1,4 +1,32 @@
 repositories {
+  maven {
+      url = 'https://cursemaven.com/'
+  }
+}
+minecraft {
+runs {
+    client {
+        property 'mixin.env.remapRefMap', 'true'
+        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+    }
+
+    server {
+        property 'mixin.env.remapRefMap', 'true'
+        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+    }
+    data {
+        property 'mixin.env.remapRefMap', 'true'
+        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+    }
+  }
+}
+dependencies {
+  implementation fg.deobf("curse.maven:photon-871522:7381162")
+  implementation fg.deobf("curse.maven:ldlib-626676:7339338")
+}
+
+
+repositories {
     maven {
         url = "https://jitpack.io"
     }
@@ -104,46 +132,6 @@ minecraft {
         property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
     }
   }
-}
-
-
-repositories {
-    exclusiveContent {
-        forRepository {
-            maven {
-                name = "Modrinth"
-                url = "https://api.modrinth.com/maven"
-            }
-        }
-        forRepositories(fg.repository)
-        filter {
-            includeGroup "maven.modrinth"
-        }
-    }
-}
-
-dependencies {
-    implementation fg.deobf("maven.modrinth:aaa-particles:FqFiDhRL")
-    implementation fg.deobf("maven.modrinth:architectury-api:1MKTLiiG")
-}
-
-minecraft {
-    runs {
-        client {
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-        }
-
-        server {
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-        }
-
-        data {
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-        }
-    }
 }
 
 
