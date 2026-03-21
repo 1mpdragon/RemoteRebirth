@@ -1,0 +1,7 @@
+{
+  "_fv": 73,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"164\" y=\"113\"><field name=\"trigger\">renderplayerevent</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"compare_mcitems\"><value name=\"a\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Ociloscopio</field></block></value><value name=\"b\"><block type=\"entity_iteminhand\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></value></block></value><statement name=\"DO0\"><block type=\"set_arm_pose\"><field name=\"hand\">right</field><field name=\"arm_pose\">SPYGLASS</field><value name=\"arm\"><block type=\"custom_dependency_model\"><field name=\"NAME\">Model</field></block></value><next><block type=\"set_rotation\"><field name=\"model_part\">body</field><field name=\"coor\">x</field><value name=\"value\"><block type=\"math_number\"><field name=\"NUM\">10</field></block></value><value name=\"model\"><block type=\"custom_dependency_model\"><field name=\"NAME\">Model</field></block></value></block></next></block></statement></block></next></block></xml>"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "rebirth_inc:block/pedritas"
+    },
+    "facing=east": {
+      "model": "rebirth_inc:block/pedritas",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "rebirth_inc:block/pedritas",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "rebirth_inc:block/pedritas",
+      "y": 270
+    }
+  }
+}

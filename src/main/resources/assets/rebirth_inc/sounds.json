@@ -14,5 +14,22 @@
         "stream": false
       }
     ]
+  },
+  "pedradogrito_scream": {
+    "subtitle": "subtitles.pedradogrito_scream",
+    "sounds": [
+      {
+        "name": "rebirth_inc:pedradogritoscream",
+        "stream": false
+      }
+    ]
+  },
+  "evil_ass_bell": {
+    "sounds": [
+      {
+        "name": "rebirth_inc:evilassbell",
+        "stream": false
+      }
+    ]
   }
 }

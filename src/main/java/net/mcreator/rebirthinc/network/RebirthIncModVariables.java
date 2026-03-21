@@ -81,6 +81,7 @@ public class RebirthIncModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.Radio_Location_PlayerSync = original.Radio_Location_PlayerSync;
 			clone.ChatDelay = original.ChatDelay;
+			clone.PedradogritoJumpscare = original.PedradogritoJumpscare;
 			if (!event.isWasDeath()) {
 				clone.Hz = original.Hz;
 				clone.Ivunerabilidade = original.Ivunerabilidade;
@@ -155,6 +156,10 @@ public class RebirthIncModVariables {
 		public boolean rememberon = false;
 		public double number = 0.0;
 		public ArrayList<Object> Radio_Location = new ArrayList<>();
+		public double test_number = 0;
+		public double test_number_1 = 0;
+		public double test_number_2 = 0;
+		public double test_number_3 = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -175,6 +180,10 @@ public class RebirthIncModVariables {
 					Radio_Location.add(Radio_Location_list.getString(i));
 				}
 			}
+			test_number = nbt.getDouble("test_number");
+			test_number_1 = nbt.getDouble("test_number_1");
+			test_number_2 = nbt.getDouble("test_number_2");
+			test_number_3 = nbt.getDouble("test_number_3");
 		}
 
 		@Override
@@ -192,6 +201,10 @@ public class RebirthIncModVariables {
 				}
 				nbt.put("Radio_Location", Radio_Location_list);
 			}
+			nbt.putDouble("test_number", test_number);
+			nbt.putDouble("test_number_1", test_number_1);
+			nbt.putDouble("test_number_2", test_number_2);
+			nbt.putDouble("test_number_3", test_number_3);
 			return nbt;
 		}
 
@@ -288,6 +301,7 @@ public class RebirthIncModVariables {
 		public double Ivunerabilidade = 0.0;
 		public String Radio_Location_PlayerSync = "\"\"";
 		public double ChatDelay = 0;
+		public double PedradogritoJumpscare = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -300,6 +314,7 @@ public class RebirthIncModVariables {
 			nbt.putDouble("Ivunerabilidade", Ivunerabilidade);
 			nbt.putString("Radio_Location_PlayerSync", Radio_Location_PlayerSync);
 			nbt.putDouble("ChatDelay", ChatDelay);
+			nbt.putDouble("PedradogritoJumpscare", PedradogritoJumpscare);
 			return nbt;
 		}
 
@@ -309,6 +324,7 @@ public class RebirthIncModVariables {
 			Ivunerabilidade = nbt.getDouble("Ivunerabilidade");
 			Radio_Location_PlayerSync = nbt.getString("Radio_Location_PlayerSync");
 			ChatDelay = nbt.getDouble("ChatDelay");
+			PedradogritoJumpscare = nbt.getDouble("PedradogritoJumpscare");
 		}
 	}
 
@@ -337,6 +353,7 @@ public class RebirthIncModVariables {
 					variables.Ivunerabilidade = message.data.Ivunerabilidade;
 					variables.Radio_Location_PlayerSync = message.data.Radio_Location_PlayerSync;
 					variables.ChatDelay = message.data.ChatDelay;
+					variables.PedradogritoJumpscare = message.data.PedradogritoJumpscare;
 				}
 			});
 			context.setPacketHandled(true);

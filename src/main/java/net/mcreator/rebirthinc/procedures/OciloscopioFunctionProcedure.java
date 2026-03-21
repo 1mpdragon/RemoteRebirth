@@ -418,7 +418,7 @@ public class OciloscopioFunctionProcedure {
 				arrayIndex = 0;
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RebirthIncModItems.OCILOSCOPIO.get()) {
 					renderTexts(((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Hz + "Hz"), (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2),
-							(float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 - 25), 0, 0, (float) 0.8, 255 << 24 | 255 << 16 | 255 << 8 | 255, 1);
+							(float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 + 50), 0, 0, (float) 0.8, 255 << 24 | 255 << 16 | 255 << 8 | 255, 1);
 					RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "ociloscopain_all" + ".png")));
 					renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2), 0, 0, (float) (Minecraft.getInstance().getWindow().getGuiScale() * 1),
 							135 << 24 | 135 << 16 | 135 << 8 | 135, 4);

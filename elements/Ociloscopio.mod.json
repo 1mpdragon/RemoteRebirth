@@ -2,9 +2,9 @@
   "_fv": 73,
   "_type": "item",
   "definition": {
-    "renderType": 0,
-    "texture": "minecraft:spyglass",
-    "customModelName": "Normal",
+    "renderType": 1,
+    "texture": "ociloscopio",
+    "customModelName": "ociloscopio:default",
     "customProperties": {},
     "states": [],
     "name": "Ociloscopio",

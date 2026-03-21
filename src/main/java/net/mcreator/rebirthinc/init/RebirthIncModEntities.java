@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.rebirthinc.entity.VacadachuvaEntity;
 import net.mcreator.rebirthinc.entity.PorcodemusgoEntity;
+import net.mcreator.rebirthinc.entity.PedradogritoEntity;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -31,6 +32,10 @@ public class RebirthIncModEntities {
 			EntityType.Builder.<PorcodemusgoEntity>of(PorcodemusgoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PorcodemusgoEntity::new)
 
 					.sized(1.7f, 2f));
+	public static final RegistryObject<EntityType<PedradogritoEntity>> PEDRADOGRITO = register("pedradogrito",
+			EntityType.Builder.<PedradogritoEntity>of(PedradogritoEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PedradogritoEntity::new)
+
+					.sized(0.6f, 0.6f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -43,6 +48,7 @@ public class RebirthIncModEntities {
 		event.enqueueWork(() -> {
 			VacadachuvaEntity.init();
 			PorcodemusgoEntity.init();
+			PedradogritoEntity.init();
 		});
 	}
 
@@ -50,5 +56,6 @@ public class RebirthIncModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(VACADACHUVA.get(), VacadachuvaEntity.createAttributes().build());
 		event.put(PORCODEMUSGO.get(), PorcodemusgoEntity.createAttributes().build());
+		event.put(PEDRADOGRITO.get(), PedradogritoEntity.createAttributes().build());
 	}
 }

@@ -118,7 +118,7 @@ public class HzchatProcedure {
 							("tellraw " + entityiterator.getDisplayName().getString() + " [{\"text\":\""
 									+ ("<" + "Hz: " + (entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Hz + "> \\n" + CompletText) + "\",\"color\":\"green\"}]"));
 				{
-					double _setval = 320;
+					double _setval = 0;
 					entityiterator.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.ChatDelay = _setval;
 						capability.syncPlayerVariables(entityiterator);

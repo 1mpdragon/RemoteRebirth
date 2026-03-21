@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "rebirth_inc:custom/ociloscopio",
   "textures": {
-    "layer0": "minecraft:item/spyglass"
+    "0": "rebirth_inc:block/ociloscopio",
+    "particle": "rebirth_inc:item/ociloscopio"
   }
 }

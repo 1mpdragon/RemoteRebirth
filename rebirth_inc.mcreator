@@ -445,37 +445,6 @@
       "path": "~/Itens"
     },
     {
-      "name": "Backpack",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "backpack",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/world/inventory/BackpackMenu.java",
-          "src/main/java/net/mcreator/rebirthinc/client/gui/BackpackScreen.java"
-        ]
-      }
-    },
-    {
-      "name": "Backpacjk",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "backpack",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/block/entity/BackpacjkBlockEntity.java",
-          "src/main/resources/assets/rebirth_inc/models/item/backpack.json",
-          "src/main/resources/assets/rebirth_inc/models/block/backpack.json",
-          "src/main/java/net/mcreator/rebirthinc/block/BackpacjkBlock.java",
-          "src/main/resources/data/rebirth_inc/loot_tables/blocks/backpack.json",
-          "src/main/resources/assets/rebirth_inc/blockstates/backpack.json"
-        ]
-      },
-      "path": "~/Itens/Backpack"
-    },
-    {
       "name": "BackpackBlockDestroyedByPlayer",
       "type": "procedure",
       "compiles": true,
@@ -485,32 +454,7 @@
         "files": [
           "src/main/java/net/mcreator/rebirthinc/procedures/BackpackBlockDestroyedByPlayerProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "blockstate",
-            "type": "blockstate"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Itens/Backpack"
     },
@@ -1102,7 +1046,7 @@
     {
       "name": "MetallurgicSmelterOnBlockRightClicked",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "metallurgic_smelter_on_block_right_clicked",
       "metadata": {
@@ -1514,19 +1458,6 @@
       }
     },
     {
-      "name": "Hzchatgui",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hzchatgui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/HzchatguiProcedure.java"
-        ],
-        "dependencies": []
-      }
-    },
-    {
       "name": "HzReduz",
       "type": "procedure",
       "compiles": true,
@@ -1561,7 +1492,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Itens/Ociloscopio"
     },
     {
       "name": "HzWaveGUI",
@@ -1574,7 +1506,8 @@
           "src/main/java/net/mcreator/rebirthinc/procedures/HzWaveGUIProcedure.java"
         ],
         "dependencies": []
-      }
+      },
+      "path": "~/Itens/Ociloscopio/OciloscopioHud"
     },
     {
       "name": "Metallurgicclamp",
@@ -1589,6 +1522,279 @@
         ]
       },
       "path": "~/Itens"
+    },
+    {
+      "name": "Pedradogrito",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pedradogrito",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/entity/model/PedradogritoModel.java",
+          "src/main/java/net/mcreator/rebirthinc/client/renderer/PedradogritoRenderer.java",
+          "src/main/java/net/mcreator/rebirthinc/entity/PedradogritoEntity.java",
+          "src/main/resources/assets/rebirth_inc/models/item/pedradogrito_spawn_egg.json",
+          "src/main/resources/data/rebirth_inc/forge/biome_modifier/pedradogrito_biome_modifier.json"
+        ]
+      },
+      "path": "~/mobs"
+    },
+    {
+      "name": "ScreamCouldown",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scream_couldown",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/atributos"
+    },
+    {
+      "name": "PedradogritoScreenAtack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pedradogrito_screen_atack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/PedradogritoScreenAtackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/mobs/Procedure Mobs"
+    },
+    {
+      "name": "ScreamJumpscarePedradogritoWorldRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scream_jumpscare_pedradogrito_world_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/ScreamJumpscarePedradogritoWorldRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/mobs/Procedure Mobs"
+    },
+    {
+      "name": "FunctionEasing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "function_easing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/FunctionEasingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "invert",
+            "type": "logic"
+          },
+          {
+            "name": "Easing",
+            "type": "number"
+          },
+          {
+            "name": "Xi",
+            "type": "number"
+          },
+          {
+            "name": "Xmax",
+            "type": "number"
+          }
+        ],
+        "return_type": "number"
+      },
+      "path": "~/Mecanicas/Functions"
+    },
+    {
+      "name": "DebugCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/command/DebugCommandCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "DebugCommandProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_command_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/DebugCommandProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayerHandOciloscopio",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_hand_ociloscopio",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/PlayerHandOciloscopioProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "Model",
+            "type": "model"
+          }
+        ]
+      },
+      "path": "~/Itens/Ociloscopio"
+    },
+    {
+      "name": "Test",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/TestProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Mecanicas/Functions"
+    },
+    {
+      "name": "Pedritas",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pedritas",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/blockstates/pedritas.json",
+          "src/main/java/net/mcreator/rebirthinc/block/PedritasBlock.java",
+          "src/main/resources/assets/rebirth_inc/models/item/pedritas.json",
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/pedritas.json",
+          "src/main/resources/assets/rebirth_inc/models/block/pedritas.json"
+        ]
+      },
+      "path": "~/Blocos"
+    },
+    {
+      "name": "PedraDoGritoSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pedra_do_grito_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/PedraDoGritoSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/mobs/Procedure Mobs"
+    },
+    {
+      "name": "Backpackblock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpackblock",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/block/backpackblock.json",
+          "src/main/java/net/mcreator/rebirthinc/block/BackpackblockBlock.java",
+          "src/main/resources/assets/rebirth_inc/models/item/backpackblock.json",
+          "src/main/java/net/mcreator/rebirthinc/block/entity/BackpackblockBlockEntity.java",
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/backpackblock.json",
+          "src/main/resources/assets/rebirth_inc/blockstates/backpackblock.json"
+        ]
+      },
+      "path": "~/Itens/Backpack"
+    },
+    {
+      "name": "BackpackGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpack_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/client/gui/BackpackGUIScreen.java",
+          "src/main/java/net/mcreator/rebirthinc/world/inventory/BackpackGUIMenu.java"
+        ]
+      },
+      "path": "~/Itens/Backpack"
     }
   ],
   "variable_elements": [
@@ -1669,6 +1875,36 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "PedradogritoJumpscare",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "test_number",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "test_number_1",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "test_number_2",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "test_number_3",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -1686,6 +1922,22 @@
         "ociloscopiosound"
       ],
       "category": "ambient",
+      "subtitle": ""
+    },
+    {
+      "name": "pedradogrito_scream",
+      "files": [
+        "pedradogritoscream"
+      ],
+      "category": "hostile",
+      "subtitle": "grito"
+    },
+    {
+      "name": "evil_ass_bell",
+      "files": [
+        "evilassbell"
+      ],
+      "category": "hostile",
       "subtitle": ""
     }
   ],
@@ -1741,19 +1993,21 @@
     "CUSTOM:Teste": [
       "Vacadachuva",
       "Porcodemusgo",
-      "Nail",
+      "Pedradogrito",
       "Minhoca",
-      "Minhocalhau",
-      "AcoraIra",
-      "Backpacjk",
       "Ociloscopio",
       "Radio",
-      "Worshop",
-      "WorkShop",
+      "MetallurgicClayMold",
       "MetallurgicSmelter",
       "MetallurgicBucket",
-      "MetallurgicClayMold",
-      "Metallurgicclamp"
+      "Metallurgicclamp",
+      "Nail",
+      "AcoraIra",
+      "Minhocalhau",
+      "WorkShop",
+      "Folha",
+      "Pedritas",
+      "Backpackblock"
     ]
   },
   "language_map": {
@@ -1762,7 +2016,7 @@
       "block.rebirth_inc.radio": "Radio",
       "attribute.rebirth_inc.dead": "Dead",
       "block.rebirth_inc.minhocalhau": "Minhocalhau",
-      "block.rebirth_inc.backpack": "Backpack",
+      "block.rebirth_inc.backpackblock": "Backpackblock",
       "item.rebirth_inc.minhoca": "Minhoca",
       "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
       "block.rebirth_inc.work_shop": "Work Shop",
@@ -1770,16 +2024,22 @@
       "item.rebirth_inc.porcodemusgo_spawn_egg": "Porco de musgo Spawn Egg",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
+      "item.rebirth_inc.pedradogrito_spawn_egg": "Pedradogrito Spawn Egg",
+      "attribute.rebirth_inc.scream_couldown": "Scream Couldown",
       "item.rebirth_inc.metallurgic_bucketfull": "Metallurgic Bucket",
+      "subtitles.pedradogrito_scream": "grito",
       "item.rebirth_inc.ociloscopio": "Ociloscopio",
       "item.rebirth_inc.metallurgic_bucket": "Metallurgic Bucket",
       "block.rebirth_inc.metallurgic_smelter": "Metallurgic Smelter",
+      "block.rebirth_inc.pedritas": "Pedritas",
       "block.rebirth_inc.workshop": "Workshop",
       "item.rebirth_inc.folha": "Folha",
       "item_group.rebirth_inc.teste": "Teste",
       "item.rebirth_inc.metallurgicclamp": "Metallurgicclamp",
+      "entity.rebirth_inc.pedradogrito": "Pedradogrito",
       "item.rebirth_inc.lavaitem": "Lavaitem",
       "attribute.rebirth_inc.feedsize": "vaca da chuva feeding",
+      "subtitles.evil_ass_bell": "",
       "subtitles.parry": "",
       "block.rebirth_inc.metallurgic_clay_mold": "Metallurgic Clay Mold",
       "subtitles.ociloscopio_frequency": ""
@@ -1810,7 +2070,12 @@
           },
           {
             "name": "Ociloscopio",
-            "children": []
+            "children": [
+              {
+                "name": "OciloscopioHud",
+                "children": []
+              }
+            ]
           },
           {
             "name": "folha",
@@ -1857,6 +2122,10 @@
           },
           {
             "name": "Sons",
+            "children": []
+          },
+          {
+            "name": "Functions",
             "children": []
           }
         ]

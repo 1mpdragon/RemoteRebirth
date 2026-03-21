@@ -34,7 +34,6 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> NAIL = REGISTRY.register("nail", () -> new NailItem());
 	public static final RegistryObject<Item> MINHOCALHAU = block(RebirthIncModBlocks.MINHOCALHAU);
 	public static final RegistryObject<Item> ACORA_IRA = REGISTRY.register("acora_ira", () -> new AcoraIraItem());
-	public static final RegistryObject<Item> BACKPACK = block(RebirthIncModBlocks.BACKPACK);
 	public static final RegistryObject<Item> OCILOSCOPIO = REGISTRY.register("ociloscopio", () -> new OciloscopioItem());
 	public static final RegistryObject<Item> RADIO = REGISTRY.register(RebirthIncModBlocks.RADIO.getId().getPath(), () -> new RadioDisplayItem(RebirthIncModBlocks.RADIO.get(), new Item.Properties()));
 	public static final RegistryObject<Item> FOLHA = REGISTRY.register("folha", () -> new FolhaItem());
@@ -46,6 +45,9 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> LAVAITEM = REGISTRY.register("lavaitem", () -> new LavaitemItem());
 	public static final RegistryObject<Item> METALLURGIC_CLAY_MOLD = block(RebirthIncModBlocks.METALLURGIC_CLAY_MOLD);
 	public static final RegistryObject<Item> METALLURGICCLAMP = REGISTRY.register("metallurgicclamp", () -> new MetallurgicclampItem());
+	public static final RegistryObject<Item> PEDRADOGRITO_SPAWN_EGG = REGISTRY.register("pedradogrito_spawn_egg", () -> new ForgeSpawnEggItem(RebirthIncModEntities.PEDRADOGRITO, -6710785, -10092289, new Item.Properties()));
+	public static final RegistryObject<Item> PEDRITAS = block(RebirthIncModBlocks.PEDRITAS);
+	public static final RegistryObject<Item> BACKPACKBLOCK = block(RebirthIncModBlocks.BACKPACKBLOCK);
 
 	// Start of user code block custom items
 	// End of user code block custom items

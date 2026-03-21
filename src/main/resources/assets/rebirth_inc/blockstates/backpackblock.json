@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "rebirth_inc:block/backpackblock"
+    },
+    "facing=east": {
+      "model": "rebirth_inc:block/backpackblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "rebirth_inc:block/backpackblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "rebirth_inc:block/backpackblock",
+      "y": 270
+    }
+  }
+}

@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.rebirthinc.client.renderer.VacadachuvaRenderer;
 import net.mcreator.rebirthinc.client.renderer.PorcodemusgoRenderer;
+import net.mcreator.rebirthinc.client.renderer.PedradogritoRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class RebirthIncModEntityRenderers {
@@ -18,5 +19,6 @@ public class RebirthIncModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(RebirthIncModEntities.VACADACHUVA.get(), VacadachuvaRenderer::new);
 		event.registerEntityRenderer(RebirthIncModEntities.PORCODEMUSGO.get(), PorcodemusgoRenderer::new);
+		event.registerEntityRenderer(RebirthIncModEntities.PEDRADOGRITO.get(), PedradogritoRenderer::new);
 	}
 }

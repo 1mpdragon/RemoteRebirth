@@ -17,4 +17,6 @@ public class RebirthIncModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, RebirthIncMod.MODID);
 	public static final RegistryObject<SoundEvent> PARRY = REGISTRY.register("parry", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("rebirth_inc", "parry")));
 	public static final RegistryObject<SoundEvent> OCILOSCOPIO_FREQUENCY = REGISTRY.register("ociloscopio_frequency", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("rebirth_inc", "ociloscopio_frequency")));
+	public static final RegistryObject<SoundEvent> PEDRADOGRITO_SCREAM = REGISTRY.register("pedradogrito_scream", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("rebirth_inc", "pedradogrito_scream")));
+	public static final RegistryObject<SoundEvent> EVIL_ASS_BELL = REGISTRY.register("evil_ass_bell", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("rebirth_inc", "evil_ass_bell")));
 }

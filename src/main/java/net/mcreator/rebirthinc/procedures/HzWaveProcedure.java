@@ -90,7 +90,7 @@ public class HzWaveProcedure {
 		double Frequency = 0;
 		double repeat = 0;
 		if (begin(VertexFormat.Mode.DEBUG_LINE_STRIP, DefaultVertexFormat.POSITION_COLOR, true)) {
-			repeat = 70;
+			repeat = 100;
 			Frequency = (entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).Hz / 60;
 			L = 0;
 			for (int index0 = 0; index0 < (int) repeat; index0++) {

@@ -19,7 +19,6 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.renderer.texture.OverlayTexture;
@@ -34,6 +33,7 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.rebirthinc.network.RebirthIncModVariables;
+import net.mcreator.rebirthinc.init.RebirthIncModItems;
 
 import javax.annotation.Nullable;
 
@@ -52,7 +52,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.Lighting;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT)
-public class HzchatguiProcedure {
+public class TestProcedure {
 	private static Map<EntityType, Entity> data = new HashMap<>();
 	private static GuiGraphics guiGraphics = null;
 	private static float partialTick = 0.0F;
@@ -61,11 +61,11 @@ public class HzchatguiProcedure {
 
 	private static boolean target(int targetStage) {
 		if (targetStage == currentStage) {
-			HzchatguiProcedure.targetStage = targetStage;
+			TestProcedure.targetStage = targetStage;
 			return true;
 		} else if (targetStage == 1) {
 			if (currentStage != 0) {
-				HzchatguiProcedure.targetStage = currentStage;
+				TestProcedure.targetStage = currentStage;
 				return true;
 			}
 		}
@@ -396,11 +396,7 @@ public class HzchatguiProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
-		double i = 0;
-		double j = 0;
-		double k = 0;
-		double l = 0;
-		double X = 0;
+		double easing = 0;
 		if (target(2)) {
 			if (Minecraft.getInstance().player != null) {
 				Entity entity = Minecraft.getInstance().player;
@@ -409,15 +405,12 @@ public class HzchatguiProcedure {
 				double z = entity.getZ();
 				LevelAccessor world = entity.level();
 				ResourceKey<Level> dimension = entity.level().dimension();
-				if ((entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).ChatDelay < 100) {
-					X = (entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).ChatDelay - (-10);
-				} else {
-					X = 150;
-				}
-				RenderSystem.setShaderTexture(0, new ResourceLocation(("rebirth_inc" + ":textures/" + "fnafcamera" + ".png")));
-				renderTexture((float) X, 310, 0, 0, (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255, 5);
-				renderTexts(("" + (entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).ChatDelay), 100, 100, 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
-				renderTexts(("" + X), 100, 80, 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
+				easing = FunctionEasingProcedure.execute(false, RebirthIncModVariables.MapVariables.get(world).test_number,
+						(entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).ChatDelay, 320);
+				renderTexts(("" + (entity.getCapability(RebirthIncModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new RebirthIncModVariables.PlayerVariables())).ChatDelay), (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2),
+						40, 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
+				renderTexts(("" + easing), (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), 50, 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
+				renderItem(world, new ItemStack(RebirthIncModItems.OCILOSCOPIO.get()), (Minecraft.getInstance().getWindow().getGuiScaledWidth() * easing), 20, (-150), 0, 0, 0, 16);
 			}
 			release();
 		}

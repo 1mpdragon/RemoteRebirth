@@ -1,0 +1,9 @@
+{
+  "parent": "rebirth_inc:custom/pebbles",
+  "textures": {
+    "all": "rebirth_inc:block/pebbles",
+    "particle": "rebirth_inc:block/pebbles",
+    "0": "rebirth_inc:block/pebbles"
+  },
+  "render_type": "cutout"
+}

@@ -21,7 +21,7 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.rebirthinc.world.inventory.BackpackMenu;
+import net.mcreator.rebirthinc.world.inventory.BackpackGUIMenu;
 import net.mcreator.rebirthinc.init.RebirthIncModBlockEntities;
 
 import javax.annotation.Nullable;
@@ -30,12 +30,12 @@ import java.util.stream.IntStream;
 
 import io.netty.buffer.Unpooled;
 
-public class BackpacjkBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(54, ItemStack.EMPTY);
+public class BackpackblockBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(5, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-	public BackpacjkBlockEntity(BlockPos position, BlockState state) {
-		super(RebirthIncModBlockEntities.BACKPACK.get(), position, state);
+	public BackpackblockBlockEntity(BlockPos position, BlockState state) {
+		super(RebirthIncModBlockEntities.BACKPACKBLOCK.get(), position, state);
 	}
 
 	@Override
@@ -79,7 +79,7 @@ public class BackpacjkBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("backpack");
+		return Component.literal("backpackblock");
 	}
 
 	@Override
@@ -89,12 +89,12 @@ public class BackpacjkBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-		return new BackpackMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
+		return new BackpackGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
 	}
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Backpack");
+		return Component.literal("Backpackblock");
 	}
 
 	@Override
@@ -124,60 +124,6 @@ public class BackpacjkBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction) {
-		if (index == 0)
-			return false;
-		if (index == 1)
-			return false;
-		if (index == 2)
-			return false;
-		if (index == 3)
-			return false;
-		if (index == 4)
-			return false;
-		if (index == 5)
-			return false;
-		if (index == 6)
-			return false;
-		if (index == 7)
-			return false;
-		if (index == 8)
-			return false;
-		if (index == 9)
-			return false;
-		if (index == 10)
-			return false;
-		if (index == 11)
-			return false;
-		if (index == 12)
-			return false;
-		if (index == 13)
-			return false;
-		if (index == 14)
-			return false;
-		if (index == 15)
-			return false;
-		if (index == 16)
-			return false;
-		if (index == 17)
-			return false;
-		if (index == 18)
-			return false;
-		if (index == 19)
-			return false;
-		if (index == 20)
-			return false;
-		if (index == 21)
-			return false;
-		if (index == 22)
-			return false;
-		if (index == 23)
-			return false;
-		if (index == 24)
-			return false;
-		if (index == 25)
-			return false;
-		if (index == 26)
-			return false;
 		return true;
 	}
 

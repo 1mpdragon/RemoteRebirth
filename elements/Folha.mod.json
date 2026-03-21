@@ -9,7 +9,11 @@
     "states": [],
     "name": "Folha",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Teste"
+      }
+    ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,

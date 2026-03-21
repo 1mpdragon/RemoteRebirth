@@ -1,5 +1,5 @@
 {
-  "parent": "rebirth_inc:block/backpack",
+  "parent": "rebirth_inc:block/pedritas",
   "display": {
     "thirdperson": {
       "rotation": [

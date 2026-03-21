@@ -32,6 +32,8 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.rebirthinc.init.RebirthIncModItems;
+
 import javax.annotation.Nullable;
 
 import java.util.Map;
@@ -401,8 +403,12 @@ public class HzWaveGUIProcedure {
 			LevelAccessor world = entity.level();
 			ResourceKey<Level> dimension = entity.level().dimension();
 			if (target(2)) {
-				renderShape(HzWaveProcedure.execute(entity), (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 + 60), 0, 0, 0, 0, 1, 30, 30,
-						255 << 24 | 255 << 16 | 255 << 8 | 255);
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == RebirthIncModItems.OCILOSCOPIO.get()) {
+					renderShape(HzWaveProcedure.execute(entity), (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 + 100), (-181), 0, 0, 0, 1, 30, 30,
+							255 << 24 | 255 << 16 | 255 << 8 | 255);
+					renderTexts((Minecraft.getInstance().getWindow().getGuiScale() + "" + Minecraft.getInstance().getWindow().getGuiScaledHeight() + Minecraft.getInstance().getWindow().getGuiScaledWidth()),
+							(float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() / 2 + -10), 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
+				}
 				release();
 			}
 		}

@@ -1,0 +1,10 @@
+{
+  "_fv": 73,
+  "_type": "command",
+  "definition": {
+    "commandName": "numberDebug",
+    "type": "STANDARD",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"number_default\"><field name=\"name\">number_who</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">number</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">DebugCommandProcedure</field></block></statement></block></statement></block></next></block><block type=\"entity\" x=\"121\" y=\"270\"><field name=\"name\">name</field><field name=\"type\">player</field></block></xml>"
+  }
+}

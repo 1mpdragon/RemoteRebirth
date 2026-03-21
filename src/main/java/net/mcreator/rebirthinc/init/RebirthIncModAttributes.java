@@ -29,12 +29,15 @@ public class RebirthIncModAttributes {
 	public static final DeferredRegister<Attribute> REGISTRY = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, RebirthIncMod.MODID);
 	public static final RegistryObject<Attribute> FEEDSIZE = REGISTRY.register("feedsize", () -> new RangedAttribute("attribute.rebirth_inc.feedsize", 0, 0, 10).setSyncable(true));
 	public static final RegistryObject<Attribute> DEAD = REGISTRY.register("dead", () -> new RangedAttribute("attribute.rebirth_inc.dead", 0, 0, 6).setSyncable(true));
+	public static final RegistryObject<Attribute> SCREAM_COULDOWN = REGISTRY.register("scream_couldown", () -> new RangedAttribute("attribute.rebirth_inc.scream_couldown", 0, 0, 240).setSyncable(true));
 
 	@SubscribeEvent
 	public static void addAttributes(EntityAttributeModificationEvent event) {
 		List.of(RebirthIncModEntities.VACADACHUVA.get()).stream().filter(DefaultAttributes::hasSupplier).map(entityType -> (EntityType<? extends LivingEntity>) entityType).collect(Collectors.toList())
 				.forEach(entity -> event.add(entity, FEEDSIZE.get()));
 		event.add(EntityType.PLAYER, DEAD.get());
+		List.of(RebirthIncModEntities.PEDRADOGRITO.get()).stream().filter(DefaultAttributes::hasSupplier).map(entityType -> (EntityType<? extends LivingEntity>) entityType).collect(Collectors.toList())
+				.forEach(entity -> event.add(entity, SCREAM_COULDOWN.get()));
 	}
 
 	@Mod.EventBusSubscriber

@@ -1,0 +1,54 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "normal",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-2, 0, -1.75], "size": [4, 2.35, 3.5], "uv": [0, 34]},
+						{"origin": [-2, 0.75, -1.75], "size": [4, 0.85, 3.5], "inflate": 0.1, "pivot": [0, 0, 0], "rotation": [0, 180, 0], "uv": [14, 34]}
+					]
+				},
+				{
+					"name": "mouthOpen",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-5, -0.25, -4], "size": [10, 13.25, 8], "uv": [0, 0]},
+						{"origin": [-6, -0.5, -3], "size": [12, 5.5, 8], "uv": [0, 21]},
+						{"origin": [4.25, 12.25, -1.5], "size": [3, 3, 3], "uv": [28, 34]},
+						{"origin": [-7.25, 12.25, -1.5], "size": [3, 3, 3], "uv": [36, 0]},
+						{"origin": [-4.75, 0, -3.9], "size": [9.5, 12.2, 1.7], "uv": [0, 39]}
+					]
+				},
+				{
+					"name": "teeth",
+					"parent": "mouthOpen",
+					"pivot": [0, 0, -3.2],
+					"cubes": [
+						{"origin": [-4.75, -0.25, -3.925], "size": [9.5, 3.25, 0], "pivot": [0, 0, -3.925], "rotation": [-6, 0, 0], "uv": [0, 53]},
+						{"origin": [-4.75, 9.2, -3.925], "size": [9.5, 3.25, 0], "pivot": [0, 12.45, -3.925], "rotation": [5, 0, 0], "uv": [0, 56]}
+					]
+				},
+				{
+					"name": "Lingua",
+					"parent": "mouthOpen",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-2.75, 0, -3.25], "size": [5.5, 5, 2], "pivot": [0, 0, -2.25], "rotation": [7.5, 0, 0], "uv": [21, 41]},
+						{"origin": [-2.75, 4.56065, -3.75129], "size": [5.5, 5, 2], "pivot": [0, 4.56065, -2.75129], "rotation": [130, 0, 0], "uv": [21, 41]}
+					]
+				}
+			]
+		}
+	]
+}
