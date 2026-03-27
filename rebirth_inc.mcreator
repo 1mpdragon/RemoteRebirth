@@ -881,115 +881,6 @@
       "path": "~/Itens/Ociloscopio"
     },
     {
-      "name": "Folha",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "folha",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/item/FolhaItem.java",
-          "src/main/resources/assets/rebirth_inc/models/item/folha.json"
-        ]
-      },
-      "path": "~/Itens/folha"
-    },
-    {
-      "name": "FolhaGUI",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "folha_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/world/inventory/FolhaGUIMenu.java",
-          "src/main/java/net/mcreator/rebirthinc/client/gui/FolhaGUIScreen.java"
-        ]
-      },
-      "path": "~/Itens/folha"
-    },
-    {
-      "name": "FolhaOpenGui",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "folha_open_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/FolhaOpenGuiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Itens/folha"
-    },
-    {
-      "name": "FolhaText",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "folha_text",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/FolhaTextProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Itens/folha"
-    },
-    {
-      "name": "FolhaComando",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "folha_comando",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/FolhaComandoProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Itens/folha"
-    },
-    {
-      "name": "FolhaCommand",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "folha_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/command/FolhaCommandCommand.java"
-        ]
-      },
-      "path": "~/Itens/folha"
-    },
-    {
       "name": "WorkShop",
       "type": "block",
       "compiles": true,
@@ -1768,7 +1659,7 @@
       "name": "Backpackblock",
       "type": "block",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "backpackblock",
       "metadata": {
         "files": [
@@ -1792,6 +1683,171 @@
         "files": [
           "src/main/java/net/mcreator/rebirthinc/client/gui/BackpackGUIScreen.java",
           "src/main/java/net/mcreator/rebirthinc/world/inventory/BackpackGUIMenu.java"
+        ]
+      },
+      "path": "~/Itens/Backpack"
+    },
+    {
+      "name": "SaveDrawingPacket",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "save_drawing_packet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/SaveDrawingPacket.java"
+        ]
+      }
+    },
+    {
+      "name": "ModNetworking",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mod_networking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/ModNetworking.java"
+        ]
+      }
+    },
+    {
+      "name": "Folha",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "folha",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/FolhaItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/folha.json"
+        ]
+      },
+      "path": "~/Itens/folha"
+    },
+    {
+      "name": "AbrirMapaGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "abrir_mapa_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/AbrirMapaGUIProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Itens/folha"
+    },
+    {
+      "name": "CanetaBlack",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caneta_black",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/CanetaBlackItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/caneta_black.json"
+        ]
+      },
+      "path": "~/Itens/folha"
+    },
+    {
+      "name": "CanetaBlue",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caneta_blue",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/CanetaBlueItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/caneta_blue.json"
+        ]
+      },
+      "path": "~/Itens/folha"
+    },
+    {
+      "name": "CenetaRed",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ceneta_red",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/ceneta_red.json",
+          "src/main/java/net/mcreator/rebirthinc/item/CenetaRedItem.java"
+        ]
+      },
+      "path": "~/Itens/folha"
+    },
+    {
+      "name": "TrinketCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trinket_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/TrinketCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Itens/Backpack"
+    },
+    {
+      "name": "IncepcionBackPackCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "incepcion_back_pack_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/IncepcionBackPackCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Itens/Backpack"
+    },
+    {
+      "name": "BackpackGUIThisGUIIsOpened",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpack_gui_this_gui_is_opened",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/BackpackGUIThisGUIIsOpenedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
       "path": "~/Itens/Backpack"
@@ -1987,6 +2043,11 @@
       "Blocks.DEEPSLATE_COPPER_ORE",
       "Blocks.QUARTZ_ORE",
       "Blocks.NETHER_GOLD_ORE"
+    ],
+    "ITEMS:mod:pens": [
+      "CUSTOM:CanetaBlack",
+      "CUSTOM:CanetaBlue",
+      "CUSTOM:CenetaRed"
     ]
   },
   "tab_element_order": {
@@ -2005,9 +2066,9 @@
       "AcoraIra",
       "Minhocalhau",
       "WorkShop",
-      "Folha",
       "Pedritas",
-      "Backpackblock"
+      "Backpackblock",
+      "Folha"
     ]
   },
   "language_map": {
@@ -2029,8 +2090,10 @@
       "item.rebirth_inc.metallurgic_bucketfull": "Metallurgic Bucket",
       "subtitles.pedradogrito_scream": "grito",
       "item.rebirth_inc.ociloscopio": "Ociloscopio",
+      "item.rebirth_inc.ceneta_red": "Caneta Red",
       "item.rebirth_inc.metallurgic_bucket": "Metallurgic Bucket",
       "block.rebirth_inc.metallurgic_smelter": "Metallurgic Smelter",
+      "item.rebirth_inc.caneta_blue": "Caneta Blue",
       "block.rebirth_inc.pedritas": "Pedritas",
       "block.rebirth_inc.workshop": "Workshop",
       "item.rebirth_inc.folha": "Folha",
@@ -2042,7 +2105,8 @@
       "subtitles.evil_ass_bell": "",
       "subtitles.parry": "",
       "block.rebirth_inc.metallurgic_clay_mold": "Metallurgic Clay Mold",
-      "subtitles.ociloscopio_frequency": ""
+      "subtitles.ociloscopio_frequency": "",
+      "item.rebirth_inc.caneta_black": "Caneta Black"
     }
   },
   "foldersRoot": {

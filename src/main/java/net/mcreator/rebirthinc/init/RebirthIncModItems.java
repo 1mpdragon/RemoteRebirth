@@ -21,6 +21,9 @@ import net.mcreator.rebirthinc.item.MetallurgicBucketfullItem;
 import net.mcreator.rebirthinc.item.MetallurgicBucketItem;
 import net.mcreator.rebirthinc.item.LavaitemItem;
 import net.mcreator.rebirthinc.item.FolhaItem;
+import net.mcreator.rebirthinc.item.CenetaRedItem;
+import net.mcreator.rebirthinc.item.CanetaBlueItem;
+import net.mcreator.rebirthinc.item.CanetaBlackItem;
 import net.mcreator.rebirthinc.item.AcoraIraItem;
 import net.mcreator.rebirthinc.block.display.RadioDisplayItem;
 import net.mcreator.rebirthinc.block.display.MetallurgicSmelterDisplayItem;
@@ -36,7 +39,6 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> ACORA_IRA = REGISTRY.register("acora_ira", () -> new AcoraIraItem());
 	public static final RegistryObject<Item> OCILOSCOPIO = REGISTRY.register("ociloscopio", () -> new OciloscopioItem());
 	public static final RegistryObject<Item> RADIO = REGISTRY.register(RebirthIncModBlocks.RADIO.getId().getPath(), () -> new RadioDisplayItem(RebirthIncModBlocks.RADIO.get(), new Item.Properties()));
-	public static final RegistryObject<Item> FOLHA = REGISTRY.register("folha", () -> new FolhaItem());
 	public static final RegistryObject<Item> WORK_SHOP = block(RebirthIncModBlocks.WORK_SHOP);
 	public static final RegistryObject<Item> METALLURGIC_SMELTER = REGISTRY.register(RebirthIncModBlocks.METALLURGIC_SMELTER.getId().getPath(),
 			() -> new MetallurgicSmelterDisplayItem(RebirthIncModBlocks.METALLURGIC_SMELTER.get(), new Item.Properties()));
@@ -48,6 +50,10 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> PEDRADOGRITO_SPAWN_EGG = REGISTRY.register("pedradogrito_spawn_egg", () -> new ForgeSpawnEggItem(RebirthIncModEntities.PEDRADOGRITO, -6710785, -10092289, new Item.Properties()));
 	public static final RegistryObject<Item> PEDRITAS = block(RebirthIncModBlocks.PEDRITAS);
 	public static final RegistryObject<Item> BACKPACKBLOCK = block(RebirthIncModBlocks.BACKPACKBLOCK);
+	public static final RegistryObject<Item> FOLHA = REGISTRY.register("folha", () -> new FolhaItem());
+	public static final RegistryObject<Item> CANETA_BLACK = REGISTRY.register("caneta_black", () -> new CanetaBlackItem());
+	public static final RegistryObject<Item> CANETA_BLUE = REGISTRY.register("caneta_blue", () -> new CanetaBlueItem());
+	public static final RegistryObject<Item> CENETA_RED = REGISTRY.register("ceneta_red", () -> new CenetaRedItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

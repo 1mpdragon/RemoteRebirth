@@ -37,9 +37,9 @@ public class RebirthIncModTabs {
 				tabData.accept(RebirthIncModItems.ACORA_IRA.get());
 				tabData.accept(RebirthIncModBlocks.MINHOCALHAU.get().asItem());
 				tabData.accept(RebirthIncModBlocks.WORK_SHOP.get().asItem());
-				tabData.accept(RebirthIncModItems.FOLHA.get());
 				tabData.accept(RebirthIncModBlocks.PEDRITAS.get().asItem());
 				tabData.accept(RebirthIncModBlocks.BACKPACKBLOCK.get().asItem());
+				tabData.accept(RebirthIncModItems.FOLHA.get());
 			}).build());
 
 	@SubscribeEvent

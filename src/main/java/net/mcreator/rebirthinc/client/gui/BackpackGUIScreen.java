@@ -27,11 +27,9 @@ public class BackpackGUIScreen extends AbstractContainerScreen<BackpackGUIMenu> 
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
+		this.imageWidth = 172;
+		this.imageHeight = 238;
 	}
-
-	private static final ResourceLocation texture = new ResourceLocation("rebirth_inc:textures/screens/backpack_gui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -45,7 +43,11 @@ public class BackpackGUIScreen extends AbstractContainerScreen<BackpackGUIMenu> 
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		guiGraphics.blit(new ResourceLocation("rebirth_inc:textures/screens/backpackgui.png"), this.leftPos + -2, this.topPos + 3, 0, 0, 256, 300, 256, 300);
+
+		guiGraphics.blit(new ResourceLocation("rebirth_inc:textures/screens/backpackgui_inventory.png"), this.leftPos + -2, this.topPos + -9, 0, 0, 256, 300, 256, 300);
+
 		RenderSystem.disableBlend();
 	}
 

@@ -11,7 +11,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
-import net.mcreator.rebirthinc.client.gui.FolhaGUIScreen;
 import net.mcreator.rebirthinc.client.gui.BackpackGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -19,7 +18,6 @@ public class RebirthIncModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-			MenuScreens.register(RebirthIncModMenus.FOLHA_GUI.get(), FolhaGUIScreen::new);
 			MenuScreens.register(RebirthIncModMenus.BACKPACK_GUI.get(), BackpackGUIScreen::new);
 		});
 	}

@@ -11,12 +11,10 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 
 import net.minecraft.world.inventory.MenuType;
 
-import net.mcreator.rebirthinc.world.inventory.FolhaGUIMenu;
 import net.mcreator.rebirthinc.world.inventory.BackpackGUIMenu;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
 public class RebirthIncModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, RebirthIncMod.MODID);
-	public static final RegistryObject<MenuType<FolhaGUIMenu>> FOLHA_GUI = REGISTRY.register("folha_gui", () -> IForgeMenuType.create(FolhaGUIMenu::new));
 	public static final RegistryObject<MenuType<BackpackGUIMenu>> BACKPACK_GUI = REGISTRY.register("backpack_gui", () -> IForgeMenuType.create(BackpackGUIMenu::new));
 }

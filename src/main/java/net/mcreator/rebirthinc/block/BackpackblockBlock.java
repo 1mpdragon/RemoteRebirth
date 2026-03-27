@@ -152,7 +152,7 @@ public class BackpackblockBlock extends Block implements EntityBlock {
             	world.updateNeighbourForOutputSignal(pos, this);
         	}
     	}
-    	super.onRemove(state, world, pos, newState, isMoving); // ← fora do if agora
+    	super.onRemove(state, world, pos, newState, isMoving);
 }
 }
 

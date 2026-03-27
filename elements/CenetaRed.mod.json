@@ -3,17 +3,13 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "minecraft:filled_map",
+    "texture": "minecraft:red_candle",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Folha",
-    "rarity": "COMMON",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Teste"
-      }
-    ],
+    "name": "Caneta Red",
+    "rarity": "UNCOMMON",
+    "creativeTabs": [],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -36,9 +32,6 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "AbrirMapaGUI"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

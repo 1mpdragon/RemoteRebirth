@@ -16,8 +16,10 @@
   "item.rebirth_inc.metallurgic_bucketfull": "Metallurgic Bucket",
   "subtitles.pedradogrito_scream": "grito",
   "item.rebirth_inc.ociloscopio": "Ociloscopio",
+  "item.rebirth_inc.ceneta_red": "Caneta Red",
   "item.rebirth_inc.metallurgic_bucket": "Metallurgic Bucket",
   "block.rebirth_inc.metallurgic_smelter": "Metallurgic Smelter",
+  "item.rebirth_inc.caneta_blue": "Caneta Blue",
   "block.rebirth_inc.pedritas": "Pedritas",
   "block.rebirth_inc.workshop": "Workshop",
   "item.rebirth_inc.folha": "Folha",
@@ -29,5 +31,6 @@
   "subtitles.evil_ass_bell": "",
   "subtitles.parry": "",
   "block.rebirth_inc.metallurgic_clay_mold": "Metallurgic Clay Mold",
-  "subtitles.ociloscopio_frequency": ""
+  "subtitles.ociloscopio_frequency": "",
+  "item.rebirth_inc.caneta_black": "Caneta Black"
 }
