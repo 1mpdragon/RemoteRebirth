@@ -153,6 +153,6 @@ public class BackpackblockBlock extends Block implements EntityBlock {
         	}
     	}
     	super.onRemove(state, world, pos, newState, isMoving);
-}
+	}
 }
 
