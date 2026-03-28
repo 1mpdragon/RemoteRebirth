@@ -51,14 +51,12 @@ public class RebirthIncMod {
 		RebirthIncModBlockEntities.REGISTRY.register(bus);
 		RebirthIncModItems.REGISTRY.register(bus);
 		RebirthIncModEntities.REGISTRY.register(bus);
-
 		RebirthIncModTabs.REGISTRY.register(bus);
-
 		RebirthIncModParticleTypes.REGISTRY.register(bus);
-
 		RebirthIncModMenus.REGISTRY.register(bus);
 		RebirthIncModAttributes.REGISTRY.register(bus);
 		// Start of user code block mod init
+		net.mcreator.rebirthinc.network.ModNetworking.register();
 		// End of user code block mod init
 	}
 
