@@ -1,0 +1,9 @@
+{
+  "parent": "rebirth_inc:custom/pale_eye_leaves_layer_4",
+  "textures": {
+    "all": "rebirth_inc:block/pale_eye_leaves",
+    "particle": "rebirth_inc:block/pale_eye_leaves",
+    "0": "rebirth_inc:block/pale_eye_leaves"
+  },
+  "render_type": "cutout_mipped"
+}

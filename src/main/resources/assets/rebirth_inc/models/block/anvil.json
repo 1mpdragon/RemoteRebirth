@@ -1,0 +1,9 @@
+{
+  "parent": "rebirth_inc:custom/anvil_block",
+  "textures": {
+    "all": "rebirth_inc:block/forge_anvil",
+    "particle": "minecraft:block/anvil_top",
+    "0": "rebirth_inc:block/forge_anvil"
+  },
+  "render_type": "cutout"
+}

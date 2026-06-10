@@ -19,4 +19,5 @@ public class RebirthIncModSounds {
 	public static final RegistryObject<SoundEvent> OCILOSCOPIO_FREQUENCY = REGISTRY.register("ociloscopio_frequency", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("rebirth_inc", "ociloscopio_frequency")));
 	public static final RegistryObject<SoundEvent> PEDRADOGRITO_SCREAM = REGISTRY.register("pedradogrito_scream", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("rebirth_inc", "pedradogrito_scream")));
 	public static final RegistryObject<SoundEvent> EVIL_ASS_BELL = REGISTRY.register("evil_ass_bell", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("rebirth_inc", "evil_ass_bell")));
+	public static final RegistryObject<SoundEvent> ANVIL_HAMMERING = REGISTRY.register("anvil_hammering", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("rebirth_inc", "anvil_hammering")));
 }

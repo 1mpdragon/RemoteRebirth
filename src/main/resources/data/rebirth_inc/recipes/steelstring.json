@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:string"
+    },
+    "b": {
+      "item": "rebirth_inc:reel"
+    }
+  },
+  "result": {
+    "item": "rebirth_inc:reelstring",
+    "count": 1
+  }
+}

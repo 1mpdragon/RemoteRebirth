@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "minecraft:barrier"
+  },
+  "base": {
+    "item": "minecraft:barrier"
+  },
+  "addition": {
+    "item": "minecraft:barrier"
+  },
+  "result": {
+    "id": "minecraft:barrier",
+    "count": 1
+  }
+}

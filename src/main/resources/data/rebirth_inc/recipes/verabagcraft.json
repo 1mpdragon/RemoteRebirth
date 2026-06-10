@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "tag": "rebirth_inc:string"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "rebirth_inc:pin"
+    },
+    {
+      "item": "rebirth_inc:ironneddle"
+    }
+  ],
+  "result": {
+    "item": "rebirth_inc:verabag",
+    "count": 1
+  }
+}

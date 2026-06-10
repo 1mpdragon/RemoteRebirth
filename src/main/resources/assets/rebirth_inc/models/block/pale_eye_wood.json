@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "rebirth_inc:block/pale_eye_log_front",
+    "up": "rebirth_inc:block/pale_eye_log_sides",
+    "north": "rebirth_inc:block/pale_eye_log_front",
+    "east": "rebirth_inc:block/pale_eye_log_sides",
+    "south": "rebirth_inc:block/pale_eye_log_front",
+    "west": "rebirth_inc:block/pale_eye_log_sides",
+    "particle": "rebirth_inc:block/pale_eye_log_front"
+  },
+  "render_type": "solid"
+}

@@ -1,7 +1,5 @@
 package net.mcreator.rebirthinc.procedures;
 
-import org.joml.Matrix4f;
-
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -17,6 +15,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.SectionPos;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.GameRenderer;
@@ -30,6 +29,7 @@ import javax.annotation.Nullable;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
 
+import org.joml.Matrix4f;
 import com.mojang.blaze3d.vertex.VertexFormat;
 import com.mojang.blaze3d.vertex.VertexBuffer;
 import com.mojang.blaze3d.vertex.Tesselator;
@@ -263,6 +263,8 @@ public class RenderShapeMetallurgircBucketProcedure {
 											}
 										}.getValue(world, new BlockPos(positionx, positiony, positionz), "heating")) << 24 | 255 << 16 | 0 << 8 | 0);
 									}
+									if (!world.isClientSide() && world.getServer() != null)
+										world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Message"), false);
 								}
 							}
 						}

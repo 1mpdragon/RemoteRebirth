@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "pale_eye_leaves"
+      },
+      "name": "default"
+    }
+  }
+}

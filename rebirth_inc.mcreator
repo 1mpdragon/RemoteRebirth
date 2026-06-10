@@ -706,105 +706,6 @@
       "path": "~/Itens/Ociloscopio"
     },
     {
-      "name": "Esquiva",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "esquiva_timer",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/EsquivaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Mecanicas/Esquiva"
-    },
-    {
-      "name": "RealmenteEsquivar",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "realmente_esquivar",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/RealmenteEsquivarProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mecanicas/Esquiva"
-    },
-    {
-      "name": "EsquivaVizualize",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "esquiva_vizualize",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/EsquivaVizualizeProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Mecanicas/Esquiva"
-    },
-    {
-      "name": "BackpacjkBlockIsPlacedBy",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "backpacjk_block_is_placed_by",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/BackpacjkBlockIsPlacedByProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mecanicas/Esquiva"
-    },
-    {
       "name": "HandTickSync",
       "type": "procedure",
       "compiles": true,
@@ -998,7 +899,8 @@
           "src/main/java/net/mcreator/rebirthinc/item/MetallurgicBucketfullItem.java",
           "src/main/resources/assets/rebirth_inc/models/item/metallurgic_bucketfull.json"
         ]
-      }
+      },
+      "path": "~/Itens"
     },
     {
       "name": "RenderItemMetallurgicBucket",
@@ -1308,7 +1210,7 @@
           }
         ]
       },
-      "path": "~/Blocos"
+      "path": "~/Blocos/procedure blocos"
     },
     {
       "name": "Hzchat",
@@ -1688,58 +1590,6 @@
       "path": "~/Itens/Backpack"
     },
     {
-      "name": "SaveDrawingPacket",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "save_drawing_packet",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/SaveDrawingPacket.java"
-        ]
-      }
-    },
-    {
-      "name": "ModNetworking",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "mod_networking",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/ModNetworking.java"
-        ]
-      }
-    },
-    {
-      "name": "Folha",
-      "type": "item",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "folha",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/item/FolhaItem.java",
-          "src/main/resources/assets/rebirth_inc/models/item/folha.json"
-        ]
-      },
-      "path": "~/Itens/folha"
-    },
-    {
-      "name": "AbrirMapaGUI",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "abrir_mapa_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/rebirthinc/procedures/AbrirMapaGUIProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Itens/folha"
-    },
-    {
       "name": "CanetaBlack",
       "type": "item",
       "compiles": true,
@@ -1851,6 +1701,750 @@
         ]
       },
       "path": "~/Itens/Backpack"
+    },
+    {
+      "name": "Ironneddle",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironneddle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/ironneddle.json",
+          "src/main/java/net/mcreator/rebirthinc/item/IronneddleItem.java"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "Costura",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "costura",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/CreativeTabs"
+    },
+    {
+      "name": "Reel",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/reel.json",
+          "src/main/java/net/mcreator/rebirthinc/item/ReelItem.java"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "Reelstring",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reelstring",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/reelstring.json",
+          "src/main/java/net/mcreator/rebirthinc/item/ReelstringItem.java"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "Steelstring",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelstring",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/rebirth_inc/recipes/steelstring.json"
+        ]
+      },
+      "path": "~/Itens/Craftings"
+    },
+    {
+      "name": "Vera",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vera",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/vera.json",
+          "src/main/java/net/mcreator/rebirthinc/item/VeraItem.java"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "Pin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pin",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/pin.json",
+          "src/main/java/net/mcreator/rebirthinc/item/PinItem.java"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "Verabag",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verabag",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/VerabagItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/verabag.json"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "Verabagcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verabagcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/rebirth_inc/recipes/verabagcraft.json"
+        ]
+      },
+      "path": "~/Itens/Craftings"
+    },
+    {
+      "name": "Tomato",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomato",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/TomatoItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/tomato.json"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "Farming",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "farming",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/CreativeTabs"
+    },
+    {
+      "name": "Tomatoseed",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomatoseed",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/tomatoseed.json",
+          "src/main/java/net/mcreator/rebirthinc/item/TomatoseedItem.java"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "RockHammer",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rock_hammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/rock_hammer.json",
+          "src/main/java/net/mcreator/rebirthinc/item/RockHammerItem.java"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "HammeringTier",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hammering_tier",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/HammeringTierProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "hammer",
+            "type": "itemstack"
+          },
+          {
+            "name": "ingot",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Mecanicas/Hammering"
+    },
+    {
+      "name": "Blacksmith",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacksmith",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/CreativeTabs"
+    },
+    {
+      "name": "Ironaxepart",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironaxepart",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/IronaxepartItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/ironaxepart.json"
+        ]
+      },
+      "path": "~/Itens/forge_parts"
+    },
+    {
+      "name": "Ironmediumswordpart",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironmediumswordpart",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/item/ironmediumswordpart.json",
+          "src/main/java/net/mcreator/rebirthinc/item/IronmediumswordpartItem.java"
+        ]
+      },
+      "path": "~/Itens/forge_parts"
+    },
+    {
+      "name": "Ironshovelpart",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironshovelpart",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/IronshovelpartItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/ironshovelpart.json"
+        ]
+      },
+      "path": "~/Itens/forge_parts"
+    },
+    {
+      "name": "Ironpickaxepart",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironpickaxepart",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/IronpickaxepartItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/ironpickaxepart.json"
+        ]
+      },
+      "path": "~/Itens/forge_parts"
+    },
+    {
+      "name": "Ironhoepart",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironhoepart",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/IronhoepartItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/ironhoepart.json"
+        ]
+      },
+      "path": "~/Itens/forge_parts"
+    },
+    {
+      "name": "Ironplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironplate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/item/IronplateItem.java",
+          "src/main/resources/assets/rebirth_inc/models/item/ironplate.json"
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "Anvil",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anvil",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/block/AnvilBlock.java",
+          "src/main/resources/assets/rebirth_inc/models/block/anvil.json",
+          "src/main/java/net/mcreator/rebirthinc/block/entity/AnvilBlockEntity.java",
+          "src/main/resources/assets/rebirth_inc/models/item/anvil.json",
+          "src/main/resources/assets/rebirth_inc/blockstates/anvil.json",
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/anvil.json"
+        ]
+      },
+      "path": "~/Blocos"
+    },
+    {
+      "name": "AnvilOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anvil_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/AnvilOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/procedure blocos"
+    },
+    {
+      "name": "BatendoComMartelo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "batendo_com_martelo",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/BatendoComMarteloProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "AnvilOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anvil_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/AnvilOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Itens"
+    },
+    {
+      "name": "IngotStageAnvil",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ingot_stage_anvil",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/IngotStageAnvilProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/procedure blocos"
+    },
+    {
+      "name": "HammeringIngotPhase",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hammering_ingot_phase",
+      "metadata": {
+        "return_type": "itemstack",
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/HammeringIngotPhaseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "ingot",
+            "type": "itemstack"
+          },
+          {
+            "name": "batidas",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Mecanicas/Hammering"
+    },
+    {
+      "name": "ClientKeysCancell",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "client_keys_cancell",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/mixins/ClientKeysCancellMixin.java"
+        ]
+      }
+    },
+    {
+      "name": "ClientRecipeBook",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "client_recipe_book",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/mixins/ClientRecipeBookMixin.java"
+        ]
+      }
+    },
+    {
+      "name": "ClientRecipeBookButton",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "client_recipe_book_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/mixins/ClientRecipeBookButtonMixin.java"
+        ]
+      }
+    },
+    {
+      "name": "BreakingWood",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "breaking_wood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/BreakingWoodProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "breakspeed",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Mecanicas"
+    },
+    {
+      "name": "PaleEyeLog",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_eye_log",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/block/PaleEyeLogBlock.java",
+          "src/main/resources/assets/rebirth_inc/blockstates/pale_eye_log.json",
+          "src/main/resources/assets/rebirth_inc/models/item/pale_eye_log.json",
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_log.json",
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/pale_eye_log.json"
+        ]
+      },
+      "path": "~/Blocos/PaleEyeTree"
+    },
+    {
+      "name": "Nature",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nature",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/CreativeTabs"
+    },
+    {
+      "name": "PaleEyeWood",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_eye_wood",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/pale_eye_wood.json",
+          "src/main/resources/assets/rebirth_inc/blockstates/pale_eye_wood.json",
+          "src/main/java/net/mcreator/rebirthinc/block/PaleEyeWoodBlock.java",
+          "src/main/resources/assets/rebirth_inc/models/item/pale_eye_wood.json",
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_wood.json"
+        ]
+      },
+      "path": "~/Blocos/PaleEyeTree"
+    },
+    {
+      "name": "PaleEyeLeaves",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_eye_leaves",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/pale_eye_leaves.json",
+          "src/main/java/net/mcreator/rebirthinc/block/PaleEyeLeavesBlock.java",
+          "src/main/resources/assets/rebirth_inc/models/item/pale_eye_leaves.json",
+          "src/main/resources/assets/rebirth_inc/blockstates/pale_eye_leaves.json",
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_leaves.json"
+        ]
+      },
+      "path": "~/Blocos/PaleEyeTree"
+    },
+    {
+      "name": "PaleEyeFlorest",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_eye_florest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/rebirth_inc/worldgen/biome/pale_eye_florest.json",
+          "src/main/resources/data/rebirth_inc/worldgen/configured_feature/pale_eye_florest_tree.json",
+          "src/main/resources/data/rebirth_inc/worldgen/placed_feature/pale_eye_florest_tree.json"
+        ]
+      }
+    },
+    {
+      "name": "PaleEyeLeaveLayer",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_eye_leave_layer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_leave_layer.json",
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/pale_eye_leave_layer.json",
+          "src/main/resources/assets/rebirth_inc/blockstates/pale_eye_leave_layer.json",
+          "src/main/java/net/mcreator/rebirthinc/block/PaleEyeLeaveLayerBlock.java",
+          "src/main/resources/assets/rebirth_inc/models/item/pale_eye_leave_layer.json"
+        ]
+      },
+      "path": "~/Blocos/PaleEyeTree"
+    },
+    {
+      "name": "PaleEyeLeavesLayers",
+      "type": "blockstates",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_eye_leaves_layers",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_leaves_layers_blockstate_4.json",
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_leaves_layers_blockstate_3.json",
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_leaves_layers_blockstate_0.json",
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_leaves_layers_blockstate_2.json",
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_leaves_layers_blockstate_1.json",
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_leaves_layers_blockstate_5.json",
+          "src/main/resources/assets/rebirth_inc/models/block/pale_eye_leaves_layers_blockstate_6.json"
+        ]
+      },
+      "path": "~/Blocos/PaleEyeTree"
+    },
+    {
+      "name": "PaleEyeLeaveLayerOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_eye_leave_layer_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/PaleEyeLeaveLayerOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/PaleEyeTree"
+    },
+    {
+      "name": "PaleEyeLeaveLayerBlockValidPlacementCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_eye_leave_layer_block_valid_placement_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/PaleEyeLeaveLayerBlockValidPlacementConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/PaleEyeTree"
+    },
+    {
+      "name": "PaleEyeLeavesOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_eye_leaves_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/PaleEyeLeavesOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/PaleEyeTree"
     }
   ],
   "variable_elements": [
@@ -1961,6 +2555,30 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "OciloscopSoundTick",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "OciloscopSoundWait",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "OciloscopSoundLock",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OciloscopSoundReplace",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -1995,6 +2613,18 @@
       ],
       "category": "hostile",
       "subtitle": ""
+    },
+    {
+      "name": "anvil_hammering",
+      "files": [
+        "anvilhammer",
+        "anvilhammer_2",
+        "anvilhammer_3",
+        "anvilhammer_4",
+        "anvilhammer_5"
+      ],
+      "category": "block",
+      "subtitle": "hammering"
     }
   ],
   "tag_elements": {
@@ -2007,14 +2637,39 @@
       "Blocks.LAVA",
       "Blocks.LAVA_CAULDRON"
     ],
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:PaleEyeLeaveLayer"
+    ],
+    "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:PaleEyeLeaves"
+    ],
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:Ironneddle",
+      "~CUSTOM:Metallurgicclamp"
+    ],
+    "BLOCKS:minecraft:logs": [
+      "CUSTOM:PaleEyeLog",
+      "CUSTOM:PaleEyeWood"
+    ],
+    "BLOCKS:minecraft:leaves": [
+      "~CUSTOM:PaleEyeLeaves"
+    ],
+    "ITEMS:mod:string": [
+      "CUSTOM:Reelstring",
+      "Items.STRING"
+    ],
+    "ITEMS:mod:forge_hammer": [
+      "CUSTOM:RockHammer"
+    ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:MetallurgicSmelter"
     ],
+    "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:PaleEyeWood",
+      "~CUSTOM:PaleEyeLog"
+    ],
     "BLOCKS:minecraft:mineable/shovel": [
       "~CUSTOM:Minhocalhau"
-    ],
-    "ITEMS:minecraft:pickaxes": [
-      "~CUSTOM:Metallurgicclamp"
     ],
     "BLOCKS:mod:ore": [
       "Blocks.IRON_ORE"
@@ -2044,6 +2699,9 @@
       "Blocks.QUARTZ_ORE",
       "Blocks.NETHER_GOLD_ORE"
     ],
+    "ITEMS:mod:ingot": [
+      "Items.IRON_INGOT"
+    ],
     "ITEMS:mod:pens": [
       "CUSTOM:CanetaBlack",
       "CUSTOM:CanetaBlue",
@@ -2059,53 +2717,89 @@
       "Ociloscopio",
       "Radio",
       "MetallurgicClayMold",
-      "MetallurgicSmelter",
-      "MetallurgicBucket",
-      "Metallurgicclamp",
       "Nail",
       "AcoraIra",
       "Minhocalhau",
       "WorkShop",
       "Pedritas",
       "Backpackblock",
-      "Folha"
+      "Vera",
+      "Verabag"
+    ],
+    "CUSTOM:Blacksmith": [
+      "MetallurgicSmelter",
+      "MetallurgicBucket",
+      "Metallurgicclamp",
+      "RockHammer",
+      "Ironplate",
+      "Ironaxepart",
+      "Ironmediumswordpart",
+      "Ironshovelpart",
+      "Ironpickaxepart",
+      "Ironhoepart",
+      "Anvil"
     ]
   },
   "language_map": {
     "en_us": {
-      "item.rebirth_inc.acora_ira": "Acora Irá",
       "block.rebirth_inc.radio": "Radio",
-      "attribute.rebirth_inc.dead": "Dead",
+      "item.rebirth_inc.verabag": "Verabag",
+      "item.rebirth_inc.ironpickaxepart": "Iron pickaxe part",
       "block.rebirth_inc.minhocalhau": "Minhocalhau",
       "block.rebirth_inc.backpackblock": "Backpackblock",
+      "block.rebirth_inc.pale_eye_wood": "Pale Eye Wood",
+      "block.rebirth_inc.pale_eye_leave_layer": "Pale Eye Leave Layer",
+      "item.rebirth_inc.tomato": "Tomato",
+      "item.rebirth_inc.nail": "Nail",
+      "block.rebirth_inc.pale_eye_log": "Pale eye Log",
+      "block.rebirth_inc.pale_eye_leaves": "Pale Eye Leaves",
+      "item.rebirth_inc.ironneddle": "agulha de ferro",
+      "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
+      "item.rebirth_inc.vera": "Vera",
+      "attribute.rebirth_inc.scream_couldown": "Scream Couldown",
+      "item.rebirth_inc.reel": "carretel",
+      "item.rebirth_inc.ociloscopio": "Ociloscopio",
+      "item.rebirth_inc.ironmediumswordpart": "Iron medium sword part",
+      "item.rebirth_inc.ceneta_red": "Caneta Red",
+      "block.rebirth_inc.pedritas": "Pedritas",
+      "item_group.rebirth_inc.costura": "Costura",
+      "biome.rebirth_inc.pale_eye_florest": "Pale Eye Florest",
+      "item.rebirth_inc.lavaitem": "Lavaitem",
+      "item.rebirth_inc.rock_hammer": "Rock Hammer",
+      "item.rebirth_inc.acora_ira": "Acora Irá",
+      "block.rebirth_inc.anvil": "Anvil",
+      "attribute.rebirth_inc.dead": "Dead",
+      "item.rebirth_inc.pin": "Pin",
+      "item_group.rebirth_inc.nature": "Nature",
+      "subtitles.anvil_hammering": "hammering",
       "item.rebirth_inc.minhoca": "Minhoca",
       "entity.rebirth_inc.vacadachuva": "Vaca da chuva",
       "block.rebirth_inc.work_shop": "Work Shop",
-      "item.rebirth_inc.nail": "Nail",
+      "item.rebirth_inc.ironhoepart": "Iron hoe part",
       "item.rebirth_inc.porcodemusgo_spawn_egg": "Porco de musgo Spawn Egg",
-      "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
       "item.rebirth_inc.vacadachuva_spawn_egg": "Vaca da chuva Spawn Egg",
       "item.rebirth_inc.pedradogrito_spawn_egg": "Pedradogrito Spawn Egg",
-      "attribute.rebirth_inc.scream_couldown": "Scream Couldown",
       "item.rebirth_inc.metallurgic_bucketfull": "Metallurgic Bucket",
       "subtitles.pedradogrito_scream": "grito",
-      "item.rebirth_inc.ociloscopio": "Ociloscopio",
-      "item.rebirth_inc.ceneta_red": "Caneta Red",
+      "item.rebirth_inc.ironplate": "Iron plate",
+      "item.rebirth_inc.tomatoseed": "Tomato seed",
       "item.rebirth_inc.metallurgic_bucket": "Metallurgic Bucket",
       "block.rebirth_inc.metallurgic_smelter": "Metallurgic Smelter",
       "item.rebirth_inc.caneta_blue": "Caneta Blue",
-      "block.rebirth_inc.pedritas": "Pedritas",
       "block.rebirth_inc.workshop": "Workshop",
-      "item.rebirth_inc.folha": "Folha",
+      "item.rebirth_inc.ironshovelpart": "Ironshovelpart",
       "item_group.rebirth_inc.teste": "Teste",
       "item.rebirth_inc.metallurgicclamp": "Metallurgicclamp",
       "entity.rebirth_inc.pedradogrito": "Pedradogrito",
-      "item.rebirth_inc.lavaitem": "Lavaitem",
       "attribute.rebirth_inc.feedsize": "vaca da chuva feeding",
+      "item.rebirth_inc.reelstring": "Carretel com linha",
+      "item_group.rebirth_inc.blacksmith": "Blacksmith",
+      "item.rebirth_inc.ironaxepart": "Ironaxepart",
       "subtitles.evil_ass_bell": "",
       "subtitles.parry": "",
       "block.rebirth_inc.metallurgic_clay_mold": "Metallurgic Clay Mold",
       "subtitles.ociloscopio_frequency": "",
+      "item_group.rebirth_inc.farming": "Farming",
       "item.rebirth_inc.caneta_black": "Caneta Black"
     }
   },
@@ -2144,6 +2838,14 @@
           {
             "name": "folha",
             "children": []
+          },
+          {
+            "name": "Craftings",
+            "children": []
+          },
+          {
+            "name": "forge_parts",
+            "children": []
           }
         ]
       },
@@ -2162,6 +2864,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "PaleEyeTree",
+            "children": []
           }
         ]
       },
@@ -2181,18 +2887,22 @@
             "children": []
           },
           {
-            "name": "Esquiva",
-            "children": []
-          },
-          {
             "name": "Sons",
             "children": []
           },
           {
             "name": "Functions",
             "children": []
+          },
+          {
+            "name": "Hammering",
+            "children": []
           }
         ]
+      },
+      {
+        "name": "CreativeTabs",
+        "children": []
       }
     ]
   },

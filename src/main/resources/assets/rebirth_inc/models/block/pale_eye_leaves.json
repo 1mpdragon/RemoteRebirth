@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "rebirth_inc:block/pale_eye_leaves",
+    "particle": "rebirth_inc:block/pale_eye_leaves"
+  }
+}

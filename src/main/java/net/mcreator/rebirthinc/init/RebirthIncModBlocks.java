@@ -13,10 +13,15 @@ import net.minecraft.world.level.block.Block;
 import net.mcreator.rebirthinc.block.WorkShopBlock;
 import net.mcreator.rebirthinc.block.RadioBlock;
 import net.mcreator.rebirthinc.block.PedritasBlock;
+import net.mcreator.rebirthinc.block.PaleEyeWoodBlock;
+import net.mcreator.rebirthinc.block.PaleEyeLogBlock;
+import net.mcreator.rebirthinc.block.PaleEyeLeavesBlock;
+import net.mcreator.rebirthinc.block.PaleEyeLeaveLayerBlock;
 import net.mcreator.rebirthinc.block.MinhocalhauBlock;
 import net.mcreator.rebirthinc.block.MetallurgicSmelterBlock;
 import net.mcreator.rebirthinc.block.MetallurgicClayMoldBlock;
 import net.mcreator.rebirthinc.block.BackpackblockBlock;
+import net.mcreator.rebirthinc.block.AnvilBlock;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
 public class RebirthIncModBlocks {
@@ -28,6 +33,11 @@ public class RebirthIncModBlocks {
 	public static final RegistryObject<Block> METALLURGIC_CLAY_MOLD = REGISTRY.register("metallurgic_clay_mold", () -> new MetallurgicClayMoldBlock());
 	public static final RegistryObject<Block> PEDRITAS = REGISTRY.register("pedritas", () -> new PedritasBlock());
 	public static final RegistryObject<Block> BACKPACKBLOCK = REGISTRY.register("backpackblock", () -> new BackpackblockBlock());
+	public static final RegistryObject<Block> ANVIL = REGISTRY.register("anvil", () -> new AnvilBlock());
+	public static final RegistryObject<Block> PALE_EYE_LOG = REGISTRY.register("pale_eye_log", () -> new PaleEyeLogBlock());
+	public static final RegistryObject<Block> PALE_EYE_WOOD = REGISTRY.register("pale_eye_wood", () -> new PaleEyeWoodBlock());
+	public static final RegistryObject<Block> PALE_EYE_LEAVES = REGISTRY.register("pale_eye_leaves", () -> new PaleEyeLeavesBlock());
+	public static final RegistryObject<Block> PALE_EYE_LEAVE_LAYER = REGISTRY.register("pale_eye_leave_layer", () -> new PaleEyeLeaveLayerBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

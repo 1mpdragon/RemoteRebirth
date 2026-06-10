@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "rebirth_inc:block/pale_eye_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "rebirth_inc:block/pale_eye_log"
+    },
+    "axis=z": {
+      "model": "rebirth_inc:block/pale_eye_log",
+      "x": 90
+    }
+  }
+}

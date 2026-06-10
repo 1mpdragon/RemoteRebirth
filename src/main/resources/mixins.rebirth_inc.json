@@ -5,7 +5,9 @@
   "refmap": "mixins.rebirth_inc.refmap.json",
   "mixins": [],
   "client": [
-    "KeyCancell"
+    "ClientKeysCancellMixin",
+    "ClientRecipeBookMixin",
+    "ClientRecipeBookButtonMixin"
   ],
   "minVersion": "0.8"
 }

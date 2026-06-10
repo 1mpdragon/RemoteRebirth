@@ -15,6 +15,7 @@ import net.mcreator.rebirthinc.block.entity.RadioTileEntity;
 import net.mcreator.rebirthinc.block.entity.MetallurgicSmelterTileEntity;
 import net.mcreator.rebirthinc.block.entity.MetallurgicClayMoldBlockEntity;
 import net.mcreator.rebirthinc.block.entity.BackpackblockBlockEntity;
+import net.mcreator.rebirthinc.block.entity.AnvilBlockEntity;
 import net.mcreator.rebirthinc.RebirthIncMod;
 
 public class RebirthIncModBlockEntities {
@@ -24,6 +25,7 @@ public class RebirthIncModBlockEntities {
 			() -> BlockEntityType.Builder.of(MetallurgicSmelterTileEntity::new, RebirthIncModBlocks.METALLURGIC_SMELTER.get()).build(null));
 	public static final RegistryObject<BlockEntityType<?>> METALLURGIC_CLAY_MOLD = register("metallurgic_clay_mold", RebirthIncModBlocks.METALLURGIC_CLAY_MOLD, MetallurgicClayMoldBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> BACKPACKBLOCK = register("backpackblock", RebirthIncModBlocks.BACKPACKBLOCK, BackpackblockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ANVIL = register("anvil", RebirthIncModBlocks.ANVIL, AnvilBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "blockstate=0": {
+      "model": "rebirth_inc:block/pale_eye_leave_layer"
+    },
+    "blockstate=1": {
+      "model": "rebirth_inc:block/pale_eye_leaves_layers_blockstate_0"
+    },
+    "blockstate=2": {
+      "model": "rebirth_inc:block/pale_eye_leaves_layers_blockstate_1"
+    },
+    "blockstate=3": {
+      "model": "rebirth_inc:block/pale_eye_leaves_layers_blockstate_2"
+    },
+    "blockstate=4": {
+      "model": "rebirth_inc:block/pale_eye_leaves_layers_blockstate_3"
+    },
+    "blockstate=5": {
+      "model": "rebirth_inc:block/pale_eye_leaves_layers_blockstate_4"
+    },
+    "blockstate=6": {
+      "model": "rebirth_inc:block/pale_eye_leaves_layers_blockstate_5"
+    },
+    "blockstate=7": {
+      "model": "rebirth_inc:block/pale_eye_leaves_layers_blockstate_6"
+    }
+  }
+}

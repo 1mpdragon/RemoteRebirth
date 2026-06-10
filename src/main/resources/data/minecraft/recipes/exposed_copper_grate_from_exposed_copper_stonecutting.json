@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:barrier"
+  },
+  "result": {
+    "id": "minecraft:barrier",
+    "count": 1
+  }
+}

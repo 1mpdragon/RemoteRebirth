@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "rebirth_inc:block/anvil"
+    },
+    "facing=east": {
+      "model": "rebirth_inc:block/anvil",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "rebirth_inc:block/anvil",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "rebirth_inc:block/anvil",
+      "y": 270
+    }
+  }
+}

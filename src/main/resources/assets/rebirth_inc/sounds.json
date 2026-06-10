@@ -31,5 +31,30 @@
         "stream": false
       }
     ]
+  },
+  "anvil_hammering": {
+    "subtitle": "subtitles.anvil_hammering",
+    "sounds": [
+      {
+        "name": "rebirth_inc:anvilhammer",
+        "stream": false
+      },
+      {
+        "name": "rebirth_inc:anvilhammer_2",
+        "stream": false
+      },
+      {
+        "name": "rebirth_inc:anvilhammer_3",
+        "stream": false
+      },
+      {
+        "name": "rebirth_inc:anvilhammer_4",
+        "stream": false
+      },
+      {
+        "name": "rebirth_inc:anvilhammer_5",
+        "stream": false
+      }
+    ]
   }
 }

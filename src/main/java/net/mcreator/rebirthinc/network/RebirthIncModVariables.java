@@ -82,6 +82,10 @@ public class RebirthIncModVariables {
 			clone.Radio_Location_PlayerSync = original.Radio_Location_PlayerSync;
 			clone.ChatDelay = original.ChatDelay;
 			clone.PedradogritoJumpscare = original.PedradogritoJumpscare;
+			clone.OciloscopSoundTick = original.OciloscopSoundTick;
+			clone.OciloscopSoundWait = original.OciloscopSoundWait;
+			clone.OciloscopSoundLock = original.OciloscopSoundLock;
+			clone.OciloscopSoundReplace = original.OciloscopSoundReplace;
 			if (!event.isWasDeath()) {
 				clone.Hz = original.Hz;
 				clone.Ivunerabilidade = original.Ivunerabilidade;
@@ -302,6 +306,10 @@ public class RebirthIncModVariables {
 		public String Radio_Location_PlayerSync = "\"\"";
 		public double ChatDelay = 0;
 		public double PedradogritoJumpscare = 0;
+		public double OciloscopSoundTick = 0;
+		public double OciloscopSoundWait = 0;
+		public boolean OciloscopSoundLock = false;
+		public boolean OciloscopSoundReplace = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -315,6 +323,10 @@ public class RebirthIncModVariables {
 			nbt.putString("Radio_Location_PlayerSync", Radio_Location_PlayerSync);
 			nbt.putDouble("ChatDelay", ChatDelay);
 			nbt.putDouble("PedradogritoJumpscare", PedradogritoJumpscare);
+			nbt.putDouble("OciloscopSoundTick", OciloscopSoundTick);
+			nbt.putDouble("OciloscopSoundWait", OciloscopSoundWait);
+			nbt.putBoolean("OciloscopSoundLock", OciloscopSoundLock);
+			nbt.putBoolean("OciloscopSoundReplace", OciloscopSoundReplace);
 			return nbt;
 		}
 
@@ -325,6 +337,10 @@ public class RebirthIncModVariables {
 			Radio_Location_PlayerSync = nbt.getString("Radio_Location_PlayerSync");
 			ChatDelay = nbt.getDouble("ChatDelay");
 			PedradogritoJumpscare = nbt.getDouble("PedradogritoJumpscare");
+			OciloscopSoundTick = nbt.getDouble("OciloscopSoundTick");
+			OciloscopSoundWait = nbt.getDouble("OciloscopSoundWait");
+			OciloscopSoundLock = nbt.getBoolean("OciloscopSoundLock");
+			OciloscopSoundReplace = nbt.getBoolean("OciloscopSoundReplace");
 		}
 	}
 
@@ -354,6 +370,10 @@ public class RebirthIncModVariables {
 					variables.Radio_Location_PlayerSync = message.data.Radio_Location_PlayerSync;
 					variables.ChatDelay = message.data.ChatDelay;
 					variables.PedradogritoJumpscare = message.data.PedradogritoJumpscare;
+					variables.OciloscopSoundTick = message.data.OciloscopSoundTick;
+					variables.OciloscopSoundWait = message.data.OciloscopSoundWait;
+					variables.OciloscopSoundLock = message.data.OciloscopSoundLock;
+					variables.OciloscopSoundReplace = message.data.OciloscopSoundReplace;
 				}
 			});
 			context.setPacketHandled(true);
