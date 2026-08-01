@@ -87,6 +87,8 @@ public class RebirthIncModItems {
 	public static final RegistryObject<Item> PALE_EYE_WOOD = block(RebirthIncModBlocks.PALE_EYE_WOOD);
 	public static final RegistryObject<Item> PALE_EYE_LEAVES = block(RebirthIncModBlocks.PALE_EYE_LEAVES);
 	public static final RegistryObject<Item> PALE_EYE_LEAVE_LAYER = block(RebirthIncModBlocks.PALE_EYE_LEAVE_LAYER);
+	public static final RegistryObject<Item> MAGNETIC_CORE = block(RebirthIncModBlocks.MAGNETIC_CORE);
+	public static final RegistryObject<Item> GOLDEN_BLOSSOM_TREE_LEAVE = block(RebirthIncModBlocks.GOLDEN_BLOSSOM_TREE_LEAVE);
 
 	// Start of user code block custom items
 	// End of user code block custom items

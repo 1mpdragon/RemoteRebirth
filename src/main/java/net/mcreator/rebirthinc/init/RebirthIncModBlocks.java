@@ -20,6 +20,8 @@ import net.mcreator.rebirthinc.block.PaleEyeLeaveLayerBlock;
 import net.mcreator.rebirthinc.block.MinhocalhauBlock;
 import net.mcreator.rebirthinc.block.MetallurgicSmelterBlock;
 import net.mcreator.rebirthinc.block.MetallurgicClayMoldBlock;
+import net.mcreator.rebirthinc.block.MagneticCoreBlock;
+import net.mcreator.rebirthinc.block.GoldenBlossomTreeLeaveBlock;
 import net.mcreator.rebirthinc.block.BackpackblockBlock;
 import net.mcreator.rebirthinc.block.AnvilBlock;
 import net.mcreator.rebirthinc.RebirthIncMod;
@@ -38,6 +40,8 @@ public class RebirthIncModBlocks {
 	public static final RegistryObject<Block> PALE_EYE_WOOD = REGISTRY.register("pale_eye_wood", () -> new PaleEyeWoodBlock());
 	public static final RegistryObject<Block> PALE_EYE_LEAVES = REGISTRY.register("pale_eye_leaves", () -> new PaleEyeLeavesBlock());
 	public static final RegistryObject<Block> PALE_EYE_LEAVE_LAYER = REGISTRY.register("pale_eye_leave_layer", () -> new PaleEyeLeaveLayerBlock());
+	public static final RegistryObject<Block> MAGNETIC_CORE = REGISTRY.register("magnetic_core", () -> new MagneticCoreBlock());
+	public static final RegistryObject<Block> GOLDEN_BLOSSOM_TREE_LEAVE = REGISTRY.register("golden_blossom_tree_leave", () -> new GoldenBlossomTreeLeaveBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

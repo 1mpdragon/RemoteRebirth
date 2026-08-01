@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "rebirth_inc:block/golden_blosson_leaves",
+    "particle": "rebirth_inc:block/golden_blosson_leaves"
+  }
+}

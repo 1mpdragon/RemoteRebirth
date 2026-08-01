@@ -69,6 +69,8 @@ public class RebirthIncModTabs {
 				tabData.accept(RebirthIncModBlocks.PALE_EYE_LOG.get().asItem());
 				tabData.accept(RebirthIncModBlocks.PALE_EYE_WOOD.get().asItem());
 				tabData.accept(RebirthIncModBlocks.PALE_EYE_LEAVES.get().asItem());
+				tabData.accept(RebirthIncModBlocks.PALE_EYE_LEAVE_LAYER.get().asItem());
+				tabData.accept(RebirthIncModBlocks.GOLDEN_BLOSSOM_TREE_LEAVE.get().asItem());
 			}).withSearchBar().withTabsBefore(FARMING.getId()).build());
 
 	@SubscribeEvent

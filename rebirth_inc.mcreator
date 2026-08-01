@@ -2306,7 +2306,8 @@
           "src/main/resources/data/rebirth_inc/worldgen/configured_feature/pale_eye_florest_tree.json",
           "src/main/resources/data/rebirth_inc/worldgen/placed_feature/pale_eye_florest_tree.json"
         ]
-      }
+      },
+      "path": "~/Biomes"
     },
     {
       "name": "PaleEyeLeaveLayer",
@@ -2445,6 +2446,121 @@
         ]
       },
       "path": "~/Blocos/PaleEyeTree"
+    },
+    {
+      "name": "MagneticField",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetic_field",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/rebirth_inc/worldgen/biome/magnetic_field.json",
+          "src/main/resources/data/rebirth_inc/worldgen/placed_feature/magnetic_field_tree.json",
+          "src/main/resources/data/rebirth_inc/worldgen/configured_feature/magnetic_field_tree.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "MagneticCore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetic_core",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/magnetic_core.json",
+          "src/main/resources/assets/rebirth_inc/blockstates/magnetic_core.json",
+          "src/main/resources/assets/rebirth_inc/models/item/magnetic_core.json",
+          "src/main/resources/assets/rebirth_inc/models/block/magnetic_core.json",
+          "src/main/java/net/mcreator/rebirthinc/block/MagneticCoreBlock.java"
+        ]
+      },
+      "path": "~/Blocos"
+    },
+    {
+      "name": "MagneticCoreDestructionProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetic_core_destruction_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/MagneticCoreDestructionProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/procedure blocos"
+    },
+    {
+      "name": "MagneticCoreAtraction",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetic_core_atraction",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/procedures/MagneticCoreAtractionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocos/procedure blocos"
+    },
+    {
+      "name": "GoldenBlossomTreeLeave",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_blossom_tree_leave",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/rebirthinc/block/GoldenBlossomTreeLeaveBlock.java",
+          "src/main/resources/assets/rebirth_inc/blockstates/golden_blossom_tree_leave.json",
+          "src/main/resources/assets/rebirth_inc/models/block/golden_blossom_tree_leave.json",
+          "src/main/resources/data/rebirth_inc/loot_tables/blocks/golden_blossom_tree_leave.json",
+          "src/main/resources/assets/rebirth_inc/models/item/golden_blossom_tree_leave.json"
+        ]
+      },
+      "path": "~/Blocos/GoldenBlossonTree"
     }
   ],
   "variable_elements": [
@@ -2641,6 +2757,7 @@
       "~CUSTOM:PaleEyeLeaveLayer"
     ],
     "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:GoldenBlossomTreeLeave",
       "~CUSTOM:PaleEyeLeaves"
     ],
     "ITEMS:minecraft:pickaxes": [
@@ -2652,6 +2769,7 @@
       "CUSTOM:PaleEyeWood"
     ],
     "BLOCKS:minecraft:leaves": [
+      "~CUSTOM:GoldenBlossomTreeLeave",
       "~CUSTOM:PaleEyeLeaves"
     ],
     "ITEMS:mod:string": [
@@ -2751,12 +2869,14 @@
       "block.rebirth_inc.pale_eye_leave_layer": "Pale Eye Leave Layer",
       "item.rebirth_inc.tomato": "Tomato",
       "item.rebirth_inc.nail": "Nail",
+      "biome.rebirth_inc.magnetic_field": "Magnetic Field",
       "block.rebirth_inc.pale_eye_log": "Pale eye Log",
       "block.rebirth_inc.pale_eye_leaves": "Pale Eye Leaves",
       "item.rebirth_inc.ironneddle": "agulha de ferro",
       "entity.rebirth_inc.porcodemusgo": "Porco de musgo",
-      "item.rebirth_inc.vera": "Vera",
       "attribute.rebirth_inc.scream_couldown": "Scream Couldown",
+      "item.rebirth_inc.vera": "Vera",
+      "block.rebirth_inc.magnetic_core": "Magnetic Core",
       "item.rebirth_inc.reel": "carretel",
       "item.rebirth_inc.ociloscopio": "Ociloscopio",
       "item.rebirth_inc.ironmediumswordpart": "Iron medium sword part",
@@ -2766,6 +2886,7 @@
       "biome.rebirth_inc.pale_eye_florest": "Pale Eye Florest",
       "item.rebirth_inc.lavaitem": "Lavaitem",
       "item.rebirth_inc.rock_hammer": "Rock Hammer",
+      "block.rebirth_inc.golden_blossom_tree_leave": "Golden Blossom Tree Leave",
       "item.rebirth_inc.acora_ira": "Acora Irá",
       "block.rebirth_inc.anvil": "Anvil",
       "attribute.rebirth_inc.dead": "Dead",
@@ -2806,6 +2927,10 @@
   "foldersRoot": {
     "name": "~",
     "children": [
+      {
+        "name": "atributos",
+        "children": []
+      },
       {
         "name": "mobs",
         "children": [
@@ -2868,12 +2993,12 @@
           {
             "name": "PaleEyeTree",
             "children": []
+          },
+          {
+            "name": "GoldenBlossonTree",
+            "children": []
           }
         ]
-      },
-      {
-        "name": "atributos",
-        "children": []
       },
       {
         "name": "Mecanicas",
@@ -2902,6 +3027,10 @@
       },
       {
         "name": "CreativeTabs",
+        "children": []
+      },
+      {
+        "name": "Biomes",
         "children": []
       }
     ]

@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "biome",
   "definition": {
-    "name": "Pale Eye Florest",
+    "name": "Magnetic Field",
     "groundBlock": {
       "value": "Blocks.GRASS"
     },
@@ -11,14 +11,6 @@
     },
     "underwaterBlock": {
       "value": ""
-    },
-    "fogColor": {
-      "value": -1,
-      "falpha": 0.0
-    },
-    "grassColor": {
-      "value": -1108165,
-      "falpha": 0.0
     },
     "ambientSound": {
       "value": ""
@@ -38,11 +30,11 @@
       "value": "CUSTOM:Smoke1"
     },
     "particlesProbability": 0.5,
-    "rainingPossibility": 0.5,
+    "rainingPossibility": 0.1,
     "temperature": 0.5,
     "spawnBiome": true,
     "spawnInCaves": false,
-    "spawnBiomeNether": true,
+    "spawnBiomeNether": false,
     "genTemperature": {
       "min": -0.5,
       "max": 0.5
